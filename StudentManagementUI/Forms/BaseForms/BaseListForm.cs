@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,26 @@ namespace StudentManagementUI.Forms.BaseForms
         public BaseListForm()
         {
             InitializeComponent();
+        }
+
+        private void EventsLoad()
+        {
+            foreach (var item in ribbonControl.Items)
+            {
+                switch (item)
+                {
+                    case BarItem button:
+                        button.ItemClick += Button_ItemClick;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void Button_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
         }
     }
 }
