@@ -66,6 +66,7 @@
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,9 +108,10 @@
             this.barSendDescription,
             this.barExit,
             this.barExitDescription,
-            this.btnActivePassiveList});
+            this.btnActivePassiveList,
+            this.barSubItem1});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 34;
+            this.ribbonControl.MaxItemId = 35;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -214,6 +216,8 @@
             this.btnSend.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSend.ImageOptions.Image")));
             this.btnSend.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSend.ImageOptions.LargeImage")));
             this.btnSend.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F12);
+            this.btnSend.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1)});
             this.btnSend.Name = "btnSend";
             // 
             // barInsert
@@ -452,6 +456,12 @@
             // 
             this.defaultLookAndFeel.LookAndFeel.SkinName = "DevExpress Style";
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Excel Files";
+            this.barSubItem1.Id = 34;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
             // BaseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,5 +518,6 @@
         private DevExpress.XtraBars.BarStaticItem barExit;
         private DevExpress.XtraBars.BarStaticItem barExitDescription;
         private DevExpress.XtraBars.BarButtonItem btnActivePassiveList;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
     }
 }
