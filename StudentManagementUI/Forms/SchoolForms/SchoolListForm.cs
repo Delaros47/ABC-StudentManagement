@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
 using Business.DependencyResolvers.AutoFac;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Forms.BaseForms;
 using System;
 using System.Collections.Generic;
@@ -25,12 +27,31 @@ namespace StudentManagementUI.Forms.SchoolForms
 
         private void SchoolListForm_Load(object sender, EventArgs e)
         {
-            GetSchoolDetailDto();
+            //GetSchoolDetailDto();
         }
 
         private void GetSchoolDetailDto()
         {
             gridControlSchoolList.DataSource = _schoolService.GetSchoolDetailDto().Data;
+        }
+
+        protected override void btnActivePassiveList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (e.Item.Caption=="Active List")
+            {
+                gridControlSchoolList.DataSource = _schoolService.GetSchoolDetailDtoPassive().Data;
+                e.Item.Caption = "Passive List";
+            }
+            else
+            {
+                gridControlSchoolList.DataSource = _schoolService.GetSchoolDetailDtoActive().Data;
+                e.Item.Caption = "Active List";
+            }
+        }
+
+        protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CreateForms<SchoolEditForm>.ShowDialogEditForm();
         }
 
     }

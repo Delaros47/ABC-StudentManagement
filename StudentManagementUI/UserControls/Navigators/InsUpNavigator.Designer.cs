@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsUpNavigator));
-            this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
+            this.controlNavigator = new DevExpress.XtraEditors.ControlNavigator();
             this.imageCollection = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection)).BeginInit();
             this.SuspendLayout();
             // 
-            // controlNavigator1
+            // controlNavigator
             // 
-            this.controlNavigator1.Buttons.Append.ImageIndex = 6;
-            this.controlNavigator1.Buttons.CancelEdit.Visible = false;
-            this.controlNavigator1.Buttons.Edit.Visible = false;
-            this.controlNavigator1.Buttons.EndEdit.Visible = false;
-            this.controlNavigator1.Buttons.First.ImageIndex = 0;
-            this.controlNavigator1.Buttons.ImageList = this.imageCollection;
-            this.controlNavigator1.Buttons.Last.ImageIndex = 5;
-            this.controlNavigator1.Buttons.Next.ImageIndex = 3;
-            this.controlNavigator1.Buttons.NextPage.Visible = false;
-            this.controlNavigator1.Buttons.Prev.ImageIndex = 2;
-            this.controlNavigator1.Buttons.PrevPage.Visible = false;
-            this.controlNavigator1.Buttons.Remove.ImageIndex = 7;
-            this.controlNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.controlNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.controlNavigator1.Name = "controlNavigator1";
-            this.controlNavigator1.Size = new System.Drawing.Size(600, 24);
-            this.controlNavigator1.TabIndex = 0;
-            this.controlNavigator1.Text = "controlNavigator1";
+            this.controlNavigator.Buttons.Append.ImageIndex = 6;
+            this.controlNavigator.Buttons.CancelEdit.Visible = false;
+            this.controlNavigator.Buttons.Edit.Visible = false;
+            this.controlNavigator.Buttons.EndEdit.Visible = false;
+            this.controlNavigator.Buttons.First.ImageIndex = 0;
+            this.controlNavigator.Buttons.ImageList = this.imageCollection;
+            this.controlNavigator.Buttons.Last.ImageIndex = 5;
+            this.controlNavigator.Buttons.Next.ImageIndex = 3;
+            this.controlNavigator.Buttons.NextPage.Visible = false;
+            this.controlNavigator.Buttons.Prev.ImageIndex = 2;
+            this.controlNavigator.Buttons.PrevPage.Visible = false;
+            this.controlNavigator.Buttons.Remove.ImageIndex = 7;
+            this.controlNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.controlNavigator.Location = new System.Drawing.Point(0, 0);
+            this.controlNavigator.Name = "controlNavigator";
+            this.controlNavigator.Size = new System.Drawing.Size(600, 24);
+            this.controlNavigator.TabIndex = 0;
+            this.controlNavigator.Text = "controlNavigator1";
             // 
             // imageCollection
             // 
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.controlNavigator1);
+            this.Controls.Add(this.controlNavigator);
             this.Name = "InsUpNavigator";
             this.Size = new System.Drawing.Size(600, 24);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection)).EndInit();
@@ -81,8 +81,7 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.ControlNavigator controlNavigator1;
         private DevExpress.Utils.ImageCollection imageCollection;
+        public DevExpress.XtraEditors.ControlNavigator controlNavigator;
     }
 }

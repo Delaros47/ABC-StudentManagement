@@ -14,7 +14,7 @@ namespace Entities.Concrete
         public bool State { get; set; }
         public int CityId { get; set; }
         public string DistrictName { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
     }
 }

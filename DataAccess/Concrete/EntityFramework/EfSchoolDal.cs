@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfSchoolDal : EfEntityRepositoryBase<School, StudentManagementContext>, ISchoolDal
     {
-        public List<SchoolDetailDto> GetSchoolDetailDto()
+        public IQueryable<SchoolDetailDto> GetSchoolDetailDto()
         {
             using (var context = new StudentManagementContext())
             {
@@ -32,7 +32,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  CityName = c.CityName,
                                  DistrictName = d.DistrictName
                              };
-                return result.ToList();
+                return result;
             }
         }
     }

@@ -46,7 +46,17 @@ namespace Business.Concrete
 
         public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDto()
         {
-            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto());
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto().ToList());
+        }
+
+        public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoActive()
+        {
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto().Where(s => s.State == true).ToList());
+        }
+
+        public IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoPassive()
+        {
+            return new SuccessDataResult<List<SchoolDetailDto>>(_schoolDal.GetSchoolDetailDto().Where(s=>s.State==false).ToList());
         }
 
         public IResult Update(School school)

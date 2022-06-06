@@ -15,7 +15,7 @@ namespace Entities.Concrete
         public string SchoolName { get; set; }
         public int CityId { get; set; }
         public int DistrictId { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
 
     }

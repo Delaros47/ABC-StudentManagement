@@ -95,7 +95,7 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(390, 189);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(390, 191);
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
@@ -109,7 +109,7 @@
             this.txtSchoolName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSchoolName.Properties.MaxLength = 50;
             this.txtSchoolName.Size = new System.Drawing.Size(294, 20);
-            this.txtSchoolName.StatusBarDescription = null;
+            this.txtSchoolName.StatusBarDescription = "Enter the School name.";
             this.txtSchoolName.StyleController = this.myDataLayoutControl;
             this.txtSchoolName.TabIndex = 11;
             // 
@@ -158,7 +158,7 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(294, 69);
+            this.txtDescription.Size = new System.Drawing.Size(294, 71);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl;
             this.txtDescription.TabIndex = 8;
@@ -178,9 +178,10 @@
             this.btnDistrict.Size = new System.Drawing.Size(124, 20);
             this.btnDistrict.StatusBarDescription = null;
             this.btnDistrict.StatusBarShortcut = "F4 :";
-            this.btnDistrict.StatusBarShortcutDescription = null;
+            this.btnDistrict.StatusBarShortcutDescription = "Choose the District";
             this.btnDistrict.StyleController = this.myDataLayoutControl;
             this.btnDistrict.TabIndex = 7;
+            this.btnDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDistrict_ButtonClick);
             // 
             // btnCity
             // 
@@ -197,9 +198,10 @@
             this.btnCity.Size = new System.Drawing.Size(124, 20);
             this.btnCity.StatusBarDescription = null;
             this.btnCity.StatusBarShortcut = "F4 :";
-            this.btnCity.StatusBarShortcutDescription = null;
+            this.btnCity.StatusBarShortcutDescription = "Choose the City";
             this.btnCity.StyleController = this.myDataLayoutControl;
             this.btnCity.TabIndex = 6;
+            this.btnCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCity_ButtonClick);
             // 
             // Root
             // 
@@ -240,7 +242,7 @@
             rowDefinition3,
             rowDefinition4,
             rowDefinition5});
-            this.Root.Size = new System.Drawing.Size(390, 189);
+            this.Root.Size = new System.Drawing.Size(390, 191);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem3
@@ -292,7 +294,7 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem5.Size = new System.Drawing.Size(370, 73);
+            this.layoutControlItem5.Size = new System.Drawing.Size(370, 75);
             this.layoutControlItem5.Text = "Description";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(62, 13);
@@ -335,6 +337,7 @@
             this.IconOptions.ShowIcon = false;
             this.MinimumSize = new System.Drawing.Size(400, 325);
             this.Name = "SchoolEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "School Edit";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
@@ -364,7 +367,6 @@
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private UserControls.Controls.MyToggleSwitch tglState;
         private UserControls.Controls.MyMemoEdit txtDescription;
-        private UserControls.Controls.MyButtonEdit btnDistrict;
         private UserControls.Controls.MyButtonEdit btnCity;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -375,5 +377,6 @@
         private UserControls.Controls.MyPrivateCodeTextEdit txtPrivateCode;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        protected UserControls.Controls.MyButtonEdit btnDistrict;
     }
 }

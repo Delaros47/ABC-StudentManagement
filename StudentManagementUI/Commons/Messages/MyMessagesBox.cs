@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagementUI.Commons.Messages
 {
-    public class Messages
+    public class MyMessagesBox
     {
         public static void ErrorMessage(string errorMessage)
         {
@@ -28,5 +28,21 @@ namespace StudentManagementUI.Commons.Messages
         {
             return NoSelectedYesNo($"Selected {formType} will be deleted. Are you sure?","Deleting confirmation");
         }
+
+        public static void AddedMessage(string message)
+        {
+            XtraMessageBox.Show(message,"Adding a new",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        public static void UpdatedMessage(string message)
+        {
+            XtraMessageBox.Show(message, "Updating a new", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        public static void GridRowWrongSelectedMessage()
+        {
+            XtraMessageBox.Show("Please click on the proper Rows", "Erorr", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
     }
 }

@@ -59,7 +59,7 @@
             // longNavigator1
             // 
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 344);
+            this.longNavigator1.Location = new System.Drawing.Point(0, 342);
             this.longNavigator1.Name = "longNavigator1";
             this.longNavigator1.Size = new System.Drawing.Size(1110, 24);
             this.longNavigator1.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.gridControlSchoolList.MainView = this.gridViewSchoolList;
             this.gridControlSchoolList.MenuManager = this.ribbonControl;
             this.gridControlSchoolList.Name = "gridControlSchoolList";
-            this.gridControlSchoolList.Size = new System.Drawing.Size(1110, 242);
+            this.gridControlSchoolList.Size = new System.Drawing.Size(1110, 240);
             this.gridControlSchoolList.TabIndex = 3;
             this.gridControlSchoolList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSchoolList});

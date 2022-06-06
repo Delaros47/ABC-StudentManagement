@@ -13,7 +13,7 @@ namespace Entities.Concrete
         public string PrivateCode { get; set; }
         public bool State { get; set; }
         public string CityName { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
     }
 }

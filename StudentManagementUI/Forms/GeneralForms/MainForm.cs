@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraBars;
+using StudentManagementUI.Commons.Functions;
+using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
@@ -39,10 +41,12 @@ namespace StudentManagementUI.Forms.GeneralForms
         {
 
             if (e.Item==btnSchools)
+            {             
+                CreateForms<SchoolListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnCities)
             {
-                SchoolListForm schoolListForm = new SchoolListForm();
-                schoolListForm.MdiParent = ActiveForm;
-                schoolListForm.Show();
+                CreateForms<CityListForm>.ShowDialogListForm();
             }
         }
     }

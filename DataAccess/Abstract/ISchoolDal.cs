@@ -11,6 +11,6 @@ namespace DataAccess.Abstract
 {
     public interface ISchoolDal:IEntityRepository<School>
     {
-        List<SchoolDetailDto> GetSchoolDetailDto();
+        IQueryable<SchoolDetailDto> GetSchoolDetailDto();
     }
 }
