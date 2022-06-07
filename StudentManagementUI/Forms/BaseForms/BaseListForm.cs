@@ -362,5 +362,10 @@ namespace StudentManagementUI.Forms.BaseForms
         {
 
         }
+
+        protected virtual void btnConnectedCards_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

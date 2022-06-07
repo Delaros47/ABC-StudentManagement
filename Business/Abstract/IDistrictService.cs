@@ -13,6 +13,8 @@ namespace Business.Abstract
         IDataResult<List<District>> GetAll();
         IDataResult<List<District>> GetAllActive();
         IDataResult<List<District>> GetAllPassive();
+        IDataResult<List<District>> GetAllDistrictsByCityId(int cityId);
+        IDataResult<District> GetLastDistrictPrivateCode();
         IDataResult<District> Get(int districtId);
         IResult Add(District district);
         IResult Update(District district);

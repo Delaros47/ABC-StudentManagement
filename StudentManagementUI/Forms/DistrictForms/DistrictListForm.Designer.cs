@@ -109,6 +109,7 @@
             this.gridViewDistricts.StatusBarShortcut = null;
             this.gridViewDistricts.StatusBarShortcutDescription = null;
             this.gridViewDistricts.ViewCaption = "Districts";
+            this.gridViewDistricts.DoubleClick += new System.EventHandler(this.gridViewDistricts_DoubleClick);
             // 
             // colId
             // 

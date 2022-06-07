@@ -69,11 +69,11 @@
             this.barExit = new DevExpress.XtraBars.BarStaticItem();
             this.barExitDescription = new DevExpress.XtraBars.BarStaticItem();
             this.btnActivePassiveList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConnectedCards = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.btnConnectedCards = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -501,6 +501,16 @@
             this.btnActivePassiveList.Name = "btnActivePassiveList";
             this.btnActivePassiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActivePassiveList_ItemClick);
             // 
+            // btnConnectedCards
+            // 
+            this.btnConnectedCards.Caption = "Connected Card";
+            this.btnConnectedCards.Id = 41;
+            this.btnConnectedCards.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConnectedCards.ImageOptions.Image")));
+            this.btnConnectedCards.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnConnectedCards.ImageOptions.LargeImage")));
+            this.btnConnectedCards.Name = "btnConnectedCards";
+            this.btnConnectedCards.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.btnConnectedCards.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnConnectedCards_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -555,15 +565,6 @@
             // defaultLookAndFeel
             // 
             this.defaultLookAndFeel.LookAndFeel.SkinName = "DevExpress Style";
-            // 
-            // btnConnectedCards
-            // 
-            this.btnConnectedCards.Caption = "Connected Card";
-            this.btnConnectedCards.Id = 41;
-            this.btnConnectedCards.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConnectedCards.ImageOptions.Image")));
-            this.btnConnectedCards.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnConnectedCards.ImageOptions.LargeImage")));
-            this.btnConnectedCards.Name = "btnConnectedCards";
-            this.btnConnectedCards.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // BaseListForm
             // 

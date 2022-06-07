@@ -27,8 +27,9 @@ namespace StudentManagementUI.Forms.CityForms
         {
             InitializeComponent();
             _cityService = InstanceFactory.GetInstance<ICityService>();
+            btnConnectedCards.Caption = "Districts";
+            btnConnectedCards.Visibility = BarItemVisibility.Always;
         }
-
 
         public void CityListForm_Load(object sender, EventArgs e)
         {
@@ -66,6 +67,16 @@ namespace StudentManagementUI.Forms.CityForms
 
         }
 
+        protected override void btnConnectedCards_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (Convert.ToInt32(gridViewCities.GetFocusedRowCellValue("Id").ToString()) > 0)
+            {
+                DistrictListForm.CityId = Convert.ToInt32(gridViewCities.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<DistrictListForm>.ShowDialogListForm();
+            }
+
+        }
+
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
             CityEditForm.Id = -1;
@@ -97,9 +108,6 @@ namespace StudentManagementUI.Forms.CityForms
 
         }
 
-        private void btnDistricts_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CreateForms<DistrictListForm>.ShowDialogListForm();
-        }
+
     }
 }

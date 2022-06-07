@@ -27,19 +27,19 @@ namespace StudentManagementUI.Commons.Functions
             }
             int increse = Convert.ToInt32(number);
             increse += 1;
-            if (increse>9)
+            if (increse<9)
             {
                 final = entity + "-000" + increse;
             }
-            else if (increse>99)
+            else if (increse<99)
             {
                 final = entity + "-00" + increse;
             }
-            else if (increse>999)
+            else if (increse<999)
             {
                 final = entity + "-0" + increse;
             }
-            else if (increse>9999)
+            else if (increse<9999)
             {
                 final = entity + "-" + increse;
             }

@@ -50,6 +50,34 @@ namespace StudentManagementUI.Forms.DistrictForms
             }
         }
 
+        protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var result = _districtService.Update(new District
+            {
+                Id= DistrictId,
+                PrivateCode = txtPrivateCode.Text,
+                DistrictName = txtDistrictName.Text,
+                Description = txtDescription.Text,
+                State = tglState.IsOn,
+                CityId = CityId
+            });
+            if (result.Success)
+            {
+                MyMessagesBox.UpdatedMessage(result.Message);
+            }
+        }
+
+        protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            GetPrivateCode();
+        }
+
+        private void GetPrivateCode()
+        {
+            string privateCode = _districtService.GetLastDistrictPrivateCode().Data.PrivateCode;
+            txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+        }
+
         protected override void btnClear_ItemClick(object sender, ItemClickEventArgs e)
         {
             CleanAllComponants();
@@ -57,8 +85,26 @@ namespace StudentManagementUI.Forms.DistrictForms
 
         private void CleanAllComponants()
         {
-
             ClearAll.Clean(myDataLayoutControl1);
+        }
+
+        private void DistrictEditForm_Load(object sender, EventArgs e)
+        {
+            if (DistrictId!=-1)
+            {
+                var result = _districtService.Get(DistrictId);
+                if (result.Success)
+                {
+                    txtPrivateCode.Text = result.Data.PrivateCode;
+                    txtDistrictName.Text = result.Data.DistrictName;
+                    txtDescription.Text = result.Data.Description;
+                    tglState.IsOn = result.Data.State;
+                }
+            }
+            else
+            {
+                GetPrivateCode();
+            }
         }
     }
 }

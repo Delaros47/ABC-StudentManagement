@@ -48,9 +48,19 @@ namespace Business.Concrete
             return new SuccessDataResult<List<District>>(_districtDal.GetAll(d=>d.State==true));
         }
 
+        public IDataResult<List<District>> GetAllDistrictsByCityId(int cityId)
+        {
+            return new SuccessDataResult<List<District>>(_districtDal.GetAll(d=>d.CityId==cityId));
+        }
+
         public IDataResult<List<District>> GetAllPassive()
         {
             return new SuccessDataResult<List<District>>(_districtDal.GetAll(d=>d.State==false));
+        }
+
+        public IDataResult<District> GetLastDistrictPrivateCode()
+        {
+            return new SuccessDataResult<District>(_districtDal.GetAll().Last());
         }
 
         public IResult Update(District district)

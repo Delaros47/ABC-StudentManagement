@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CityListForm));
             this.gridControlCities = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewCities = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -36,7 +35,6 @@
             this.colCityName = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colDescription = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
-            this.btnDistricts = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCities)).BeginInit();
@@ -45,9 +43,6 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnDistricts});
-            this.ribbonControl.MaxItemId = 42;
             // 
             // 
             // 
@@ -65,7 +60,7 @@
             this.gridControlCities.MainView = this.gridViewCities;
             this.gridControlCities.MenuManager = this.ribbonControl;
             this.gridControlCities.Name = "gridControlCities";
-            this.gridControlCities.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlCities.Size = new System.Drawing.Size(1120, 236);
             this.gridControlCities.TabIndex = 3;
             this.gridControlCities.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCities});
@@ -163,19 +158,10 @@
             // longNavigator
             // 
             this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 340);
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
             this.longNavigator.Name = "longNavigator";
             this.longNavigator.Size = new System.Drawing.Size(1120, 24);
             this.longNavigator.TabIndex = 4;
-            // 
-            // btnDistricts
-            // 
-            this.btnDistricts.Caption = "Districts";
-            this.btnDistricts.Id = 41;
-            this.btnDistricts.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDistricts.ImageOptions.Image")));
-            this.btnDistricts.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDistricts.ImageOptions.LargeImage")));
-            this.btnDistricts.Name = "btnDistricts";
-            this.btnDistricts.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDistricts_ItemClick);
             // 
             // CityListForm
             // 
@@ -207,6 +193,5 @@
         private UserControls.Grids.MyGridColumn colCityName;
         private UserControls.Grids.MyGridColumn colDescription;
         private UserControls.Navigators.LongNavigator longNavigator;
-        private DevExpress.XtraBars.BarButtonItem btnDistricts;
     }
 }
