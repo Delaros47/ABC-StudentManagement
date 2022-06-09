@@ -21,7 +21,7 @@ namespace StudentManagementUI.Forms.BaseForms
         }
 
       
-
+       
         protected virtual void btnExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             

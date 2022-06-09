@@ -2,6 +2,7 @@
 using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
@@ -108,6 +109,33 @@ namespace StudentManagementUI.Forms.CityForms
 
         }
 
+        protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        protected override void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            gridViewCities_DoubleClick(null, null);
+        }
+
+        protected override void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dialogResult = MyMessagesBox.DeletedMessage("City");
+            if (DialogResult.Yes==dialogResult)
+            {
+                var result = _cityService.Delete(new City
+                {
+                    Id = Convert.ToInt32(gridViewCities.GetFocusedRowCellValue("Id").ToString())
+                });
+                if (result.Success)
+                {
+                    MyMessagesBox.DeleteMessage(result.Message);
+                    GetAllCities();
+                }
+            }
+            
+        }
 
     }
 }

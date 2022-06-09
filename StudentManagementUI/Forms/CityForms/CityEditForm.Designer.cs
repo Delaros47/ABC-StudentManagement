@@ -81,6 +81,7 @@
             this.myDataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myDataLayoutControl1.Location = new System.Drawing.Point(0, 102);
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
+            this.myDataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(442, 1, 650, 400);
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
             this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 191);
@@ -118,6 +119,8 @@
             this.txtCityName.StatusBarDescription = "Enter the City name.";
             this.txtCityName.StyleController = this.myDataLayoutControl1;
             this.txtCityName.TabIndex = 0;
+            this.txtCityName.Enter += new System.EventHandler(this.txtCityName_Enter);
+            this.txtCityName.Leave += new System.EventHandler(this.txtCityName_Leave);
             // 
             // txtPrivateCode
             // 
@@ -136,6 +139,8 @@
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 3;
+            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
+            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // txtDescription
             // 
@@ -150,6 +155,8 @@
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 1;
+            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
+            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // Root
             // 

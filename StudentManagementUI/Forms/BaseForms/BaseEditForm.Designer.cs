@@ -172,10 +172,10 @@
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarDescription);
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarShortcut);
             this.ribbonStatusBar.ItemLinks.Add(this.statusBarShortcutDescription);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 362);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 364);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 33);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
             // 
             // defaultLookAndFeel
             // 
@@ -212,8 +212,8 @@
         private DevExpress.XtraBars.BarButtonItem btnClear;
         private DevExpress.XtraBars.BarButtonItem btnExit;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarStaticItem statusBarDescription;
-        private DevExpress.XtraBars.BarStaticItem statusBarShortcut;
-        private DevExpress.XtraBars.BarStaticItem statusBarShortcutDescription;
+        protected DevExpress.XtraBars.BarStaticItem statusBarDescription;
+        protected DevExpress.XtraBars.BarStaticItem statusBarShortcut;
+        protected DevExpress.XtraBars.BarStaticItem statusBarShortcutDescription;
     }
 }

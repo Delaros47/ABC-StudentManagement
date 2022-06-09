@@ -32,7 +32,6 @@ namespace StudentManagementUI.Forms.CityForms
         private void CityEditForm_Load(object sender, EventArgs e)
         {
             GetTheCity();
-            txtDescription.Focus();
         }
         private void GetTheCity()
         {
@@ -112,6 +111,38 @@ namespace StudentManagementUI.Forms.CityForms
         {
             ClearAll.Clean(myDataLayoutControl1);
             GetPrivateCode();
+        }
+
+    
+
+        private void txtPrivateCode_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
+        }
+
+        private void txtPrivateCode_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtCityName_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtCityName.StatusBarDescription;
+        }
+
+        private void txtCityName_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtDescription_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtDescription.StatusBarDescription;
+        }
+
+        private void txtDescription_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
         }
     }
 }

@@ -83,7 +83,7 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 189);
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 191);
             this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
@@ -96,10 +96,12 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(293, 117);
+            this.txtDescription.Size = new System.Drawing.Size(293, 119);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 1;
+            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
+            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // tglState
             // 
@@ -132,6 +134,8 @@
             this.txtDistrictName.StatusBarDescription = "Enter the District name.";
             this.txtDistrictName.StyleController = this.myDataLayoutControl1;
             this.txtDistrictName.TabIndex = 0;
+            this.txtDistrictName.Enter += new System.EventHandler(this.txtDistrictName_Enter);
+            this.txtDistrictName.Leave += new System.EventHandler(this.txtDistrictName_Leave);
             // 
             // txtPrivateCode
             // 
@@ -150,6 +154,8 @@
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 3;
+            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
+            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // Root
             // 
@@ -182,7 +188,7 @@
             rowDefinition1,
             rowDefinition2,
             rowDefinition3});
-            this.Root.Size = new System.Drawing.Size(390, 189);
+            this.Root.Size = new System.Drawing.Size(390, 191);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -233,7 +239,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem4.Size = new System.Drawing.Size(370, 121);
+            this.layoutControlItem4.Size = new System.Drawing.Size(370, 123);
             this.layoutControlItem4.Text = "Description";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(63, 13);
@@ -250,6 +256,7 @@
             this.Name = "DistrictEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "District Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DistrictEditForm_FormClosing);
             this.Load += new System.EventHandler(this.DistrictEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);

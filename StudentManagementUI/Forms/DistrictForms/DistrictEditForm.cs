@@ -27,6 +27,7 @@ namespace StudentManagementUI.Forms.DistrictForms
         {
             InitializeComponent();
             _districtService = InstanceFactory.GetInstance<IDistrictService>();
+           
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -47,6 +48,7 @@ namespace StudentManagementUI.Forms.DistrictForms
             if (result.Success)
             {
                 MyMessagesBox.AddedMessage(result.Message);
+                CleanAllComponants();
             }
         }
 
@@ -64,11 +66,13 @@ namespace StudentManagementUI.Forms.DistrictForms
             if (result.Success)
             {
                 MyMessagesBox.UpdatedMessage(result.Message);
+                CleanAllComponants();
             }
         }
-
+        
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
+            CleanAllComponants();
             GetPrivateCode();
         }
 
@@ -81,11 +85,13 @@ namespace StudentManagementUI.Forms.DistrictForms
         protected override void btnClear_ItemClick(object sender, ItemClickEventArgs e)
         {
             CleanAllComponants();
+            
         }
 
         private void CleanAllComponants()
         {
             ClearAll.Clean(myDataLayoutControl1);
+            GetPrivateCode();
         }
 
         private void DistrictEditForm_Load(object sender, EventArgs e)
@@ -105,6 +111,42 @@ namespace StudentManagementUI.Forms.DistrictForms
             {
                 GetPrivateCode();
             }
+        }
+
+        private void txtPrivateCode_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
+        }
+
+        private void txtPrivateCode_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtDistrictName_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtDistrictName.StatusBarDescription;
+        }
+
+        private void txtDistrictName_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtDescription_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtDescription.StatusBarDescription;
+        }
+
+        private void txtDescription_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void DistrictEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DistrictListForm districtListForm = new DistrictListForm();
+            districtListForm.Refresh();
         }
     }
 }

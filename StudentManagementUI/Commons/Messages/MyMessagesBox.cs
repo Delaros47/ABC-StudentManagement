@@ -11,12 +11,12 @@ namespace StudentManagementUI.Commons.Messages
     {
         public static void ErrorMessage(string errorMessage)
         {
-            XtraMessageBox.Show(errorMessage,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            XtraMessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public static DialogResult YesSelectedYesNo(string message,string title)
+        public static DialogResult YesSelectedYesNo(string message, string title)
         {
-           return  XtraMessageBox.Show(message,title,MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1);
+            return XtraMessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
         }
 
         public static DialogResult NoSelectedYesNo(string message, string title)
@@ -24,14 +24,19 @@ namespace StudentManagementUI.Commons.Messages
             return XtraMessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
 
-        public static DialogResult DeleteMessage(string formType)
+        public static void DeleteMessage(string message)
         {
-            return NoSelectedYesNo($"Selected {formType} will be deleted. Are you sure?","Deleting confirmation");
+            XtraMessageBox.Show(message, "Deleting a new", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static DialogResult DeletedMessage(string formType)
+        {
+            return YesSelectedYesNo($"Selected {formType} will be deleted. Are you sure?", "Deleting confirmation");
         }
 
         public static void AddedMessage(string message)
         {
-            XtraMessageBox.Show(message,"Adding a new",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            XtraMessageBox.Show(message, "Adding a new", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void UpdatedMessage(string message)
