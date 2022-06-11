@@ -112,6 +112,8 @@
             this.txtSchoolName.StatusBarDescription = "Enter the School name.";
             this.txtSchoolName.StyleController = this.myDataLayoutControl;
             this.txtSchoolName.TabIndex = 11;
+            this.txtSchoolName.Enter += new System.EventHandler(this.txtSchoolName_Enter);
+            this.txtSchoolName.Leave += new System.EventHandler(this.txtSchoolName_Leave);
             // 
             // txtPrivateCode
             // 
@@ -130,6 +132,8 @@
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl;
             this.txtPrivateCode.TabIndex = 10;
+            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
+            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // tglState
             // 
@@ -162,6 +166,8 @@
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl;
             this.txtDescription.TabIndex = 8;
+            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
+            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // btnDistrict
             // 
@@ -176,12 +182,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnDistrict.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnDistrict.Size = new System.Drawing.Size(124, 20);
-            this.btnDistrict.StatusBarDescription = null;
+            this.btnDistrict.StatusBarDescription = "Choose the District";
             this.btnDistrict.StatusBarShortcut = "F4 :";
             this.btnDistrict.StatusBarShortcutDescription = "Choose the District";
             this.btnDistrict.StyleController = this.myDataLayoutControl;
             this.btnDistrict.TabIndex = 7;
             this.btnDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDistrict_ButtonClick);
+            this.btnDistrict.Enter += new System.EventHandler(this.btnDistrict_Enter);
+            this.btnDistrict.Leave += new System.EventHandler(this.btnDistrict_Leave);
             // 
             // btnCity
             // 
@@ -196,12 +204,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnCity.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnCity.Size = new System.Drawing.Size(124, 20);
-            this.btnCity.StatusBarDescription = null;
+            this.btnCity.StatusBarDescription = "Choose the City";
             this.btnCity.StatusBarShortcut = "F4 :";
             this.btnCity.StatusBarShortcutDescription = "Choose the City";
             this.btnCity.StyleController = this.myDataLayoutControl;
             this.btnCity.TabIndex = 6;
             this.btnCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCity_ButtonClick);
+            this.btnCity.Enter += new System.EventHandler(this.btnCity_Enter);
+            this.btnCity.Leave += new System.EventHandler(this.btnCity_Leave);
             // 
             // Root
             // 
@@ -339,6 +349,7 @@
             this.Name = "SchoolEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "School Edit";
+            this.Load += new System.EventHandler(this.SchoolEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();

@@ -1,6 +1,9 @@
 ﻿using DevExpress.XtraBars;
 using StudentManagementUI.Commons.Functions;
+using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CityForms;
+using StudentManagementUI.Forms.FamilyInformationForms;
+using StudentManagementUI.Forms.ForeignLanguageForms;
 using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
@@ -47,6 +50,18 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnCities)
             {
                 CreateForms<CityListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnFamilyInformation)
+            {
+                CreateForms<FamilyInformationListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnCancelReason)
+            {
+                CreateForms<CancelReasonListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnForeignLanguages)
+            {
+                CreateForms<ForeignLanguageListForm>.ShowDialogListForm();
             }
         }
     }

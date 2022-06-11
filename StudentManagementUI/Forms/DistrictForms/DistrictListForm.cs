@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,10 +38,10 @@ namespace StudentManagementUI.Forms.DistrictForms
 
         private void GetAllDistrictsByCityId()
         {
-            if (CityId!=-1)
+            if (CityId != -1)
             {
                 gridControlDistricts.DataSource = _districtService.GetAllDistrictsByCityId(CityId).Data;
-                this.Text ="District List - "+ _cityService.Get(CityId).Data.CityName;
+                this.Text = "District List - " + _cityService.Get(CityId).Data.CityName;
             }
         }
 
@@ -54,7 +55,7 @@ namespace StudentManagementUI.Forms.DistrictForms
 
         protected override void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            gridViewDistricts_DoubleClick(null,null);
+            gridViewDistricts_DoubleClick(null, null);
         }
 
         private void GetAllActiveDistricts()
@@ -71,13 +72,24 @@ namespace StudentManagementUI.Forms.DistrictForms
         {
             DistrictEditForm.DistrictId = Convert.ToInt32(gridViewDistricts.GetFocusedRowCellValue("Id").ToString());
             DistrictEditForm.CityId = CityId;
-            CreateForms<DistrictEditForm>.ShowDialogEditForm();
+            
+            if (SchoolEditForm.ControlForm)
+            {
+                SchoolEditForm.DistrictId = Convert.ToInt32(gridViewDistricts.GetFocusedRowCellValue("Id").ToString());
+                SchoolEditForm.ControlForm = false;
+                this.Close();
+            }
+            else
+            {
+                CreateForms<DistrictEditForm>.ShowDialogEditForm();
+            }
+
             GetAllDistrictsByCityId();
         }
 
         protected override void btnActivePassiveList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (e.Item.Caption=="Passive List")
+            if (e.Item.Caption == "Passive List")
             {
                 gridControlDistricts.DataSource = _districtService.GetAllPassive().Data;
                 e.Item.Caption = "Active List";
@@ -103,7 +115,7 @@ namespace StudentManagementUI.Forms.DistrictForms
         protected override void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
             DialogResult dialogresult = MyMessagesBox.DeletedMessage("District");
-            if (dialogresult==DialogResult.Yes)
+            if (dialogresult == DialogResult.Yes)
             {
                 var result = _districtService.Delete(new District
                 {
@@ -115,7 +127,7 @@ namespace StudentManagementUI.Forms.DistrictForms
                     GetAllDistrictsByCityId();
                 }
             }
-            
+
         }
     }
 }

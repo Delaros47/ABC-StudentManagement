@@ -135,6 +135,8 @@
             this.statusBarDescription.Id = 11;
             this.statusBarDescription.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("statusBarDescription.ImageOptions.Image")));
             this.statusBarDescription.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("statusBarDescription.ImageOptions.LargeImage")));
+            this.statusBarDescription.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.statusBarDescription.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarDescription.Name = "statusBarDescription";
             this.statusBarDescription.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -142,12 +144,18 @@
             // 
             this.statusBarShortcut.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.statusBarShortcut.Id = 12;
+            this.statusBarShortcut.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.statusBarShortcut.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Green;
+            this.statusBarShortcut.ItemAppearance.Normal.Options.UseFont = true;
+            this.statusBarShortcut.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarShortcut.Name = "statusBarShortcut";
             // 
             // statusBarShortcutDescription
             // 
             this.statusBarShortcutDescription.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.statusBarShortcutDescription.Id = 13;
+            this.statusBarShortcutDescription.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Green;
+            this.statusBarShortcutDescription.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarShortcutDescription.Name = "statusBarShortcutDescription";
             // 
             // ribbonPage1

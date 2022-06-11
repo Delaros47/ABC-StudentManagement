@@ -1,5 +1,4 @@
 ﻿using Entities.Concrete;
-using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +8,8 @@ using Universal.DataAccess;
 
 namespace DataAccess.Abstract
 {
-    public interface ISchoolDal:IEntityRepository<School>
+    public interface IFamilyInformationDal:IEntityRepository<FamilyInformation>
     {
-        List<SchoolDetailDto> GetSchoolDetailDto();
+
     }
 }

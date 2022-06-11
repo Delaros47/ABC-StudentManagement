@@ -24,6 +24,12 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<DistrictManager>().As<IDistrictService>().SingleInstance();
             builder.RegisterType<EfDistrictDal>().As<IDistrictDal>().SingleInstance();
 
+            builder.RegisterType<FamilyInformationManager>().As<IFamilyInformationService>().SingleInstance();
+            builder.RegisterType<EfFamilyInformationDal>().As<IFamilyInformationDal>().SingleInstance();
+
+            builder.RegisterType<CancelReasonManager>().As<ICancelReasonService>().SingleInstance();
+            builder.RegisterType<EfCancelReasonDal>().As<ICancelReasonDal>().SingleInstance();
+
         }
     }
 }

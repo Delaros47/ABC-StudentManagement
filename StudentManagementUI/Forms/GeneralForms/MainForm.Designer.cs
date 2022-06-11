@@ -32,11 +32,16 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSchools = new DevExpress.XtraBars.BarButtonItem();
             this.btnCities = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnFamilyInformation = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancelReason = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnForeignLanguages = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -48,12 +53,15 @@
             this.ribbonControl.ExpandCollapseItem,
             this.ribbonControl.SearchEditItem,
             this.btnSchools,
-            this.btnCities});
+            this.btnCities,
+            this.btnFamilyInformation,
+            this.btnCancelReason,
+            this.btnForeignLanguages});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 3;
+            this.ribbonControl.MaxItemId = 6;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPageStudent});
             this.ribbonControl.Size = new System.Drawing.Size(1162, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
@@ -69,18 +77,38 @@
             this.btnCities.Id = 2;
             this.btnCities.Name = "btnCities";
             // 
-            // ribbonPage1
+            // btnFamilyInformation
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.btnFamilyInformation.Caption = "Family Information";
+            this.btnFamilyInformation.Id = 3;
+            this.btnFamilyInformation.Name = "btnFamilyInformation";
+            // 
+            // btnCancelReason
+            // 
+            this.btnCancelReason.Caption = "Cancel Reason";
+            this.btnCancelReason.Id = 4;
+            this.btnCancelReason.Name = "btnCancelReason";
+            // 
+            // ribbonPageStudent
+            // 
+            this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup3});
+            this.ribbonPageStudent.Name = "ribbonPageStudent";
+            this.ribbonPageStudent.Text = "Student";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSchools);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnCities);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnFamilyInformation);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCities);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCancelReason);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnForeignLanguages);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // ribbonStatusBar
             // 
@@ -96,6 +124,17 @@
             // xtraTabbedMdiManager
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
+            // btnForeignLanguages
+            // 
+            this.btnForeignLanguages.Caption = "Foreign Languages";
+            this.btnForeignLanguages.Id = 5;
+            this.btnForeignLanguages.Name = "btnForeignLanguages";
             // 
             // MainForm
             // 
@@ -120,12 +159,17 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageStudent;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnSchools;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
         private DevExpress.XtraBars.BarButtonItem btnCities;
+        private DevExpress.XtraBars.BarButtonItem btnFamilyInformation;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.BarButtonItem btnCancelReason;
+        private DevExpress.XtraBars.BarButtonItem btnForeignLanguages;
     }
 }

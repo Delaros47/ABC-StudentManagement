@@ -60,7 +60,7 @@
             this.gridControlCities.MainView = this.gridViewCities;
             this.gridControlCities.MenuManager = this.ribbonControl;
             this.gridControlCities.Name = "gridControlCities";
-            this.gridControlCities.Size = new System.Drawing.Size(1120, 236);
+            this.gridControlCities.Size = new System.Drawing.Size(1120, 238);
             this.gridControlCities.TabIndex = 3;
             this.gridControlCities.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCities});
@@ -158,7 +158,7 @@
             // longNavigator
             // 
             this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Location = new System.Drawing.Point(0, 340);
             this.longNavigator.Name = "longNavigator";
             this.longNavigator.Size = new System.Drawing.Size(1120, 24);
             this.longNavigator.TabIndex = 4;

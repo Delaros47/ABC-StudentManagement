@@ -19,6 +19,9 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<School> Schools { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<District> Districts { get; set; }
+        public DbSet<FamilyInformation> FamilyInformations { get; set; }
+        public DbSet<CancelReason> CancelReasons { get; set; }
+        public DbSet<ForeignLanguage> ForeignLanguages { get; set; }
 
 
     }

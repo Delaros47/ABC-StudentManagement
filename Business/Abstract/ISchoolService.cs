@@ -16,6 +16,7 @@ namespace Business.Abstract
         IDataResult<List<SchoolDetailDto>> GetSchoolDetailDto();
         IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoActive();
         IDataResult<List<SchoolDetailDto>> GetSchoolDetailDtoPassive();
+        IDataResult<School> GetLastSchoolPrivateCode();
         IResult Add(School school);
         IResult Update(School school);
         IResult Delete(School school);
