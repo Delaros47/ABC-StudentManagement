@@ -22,6 +22,14 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<FamilyInformation> FamilyInformations { get; set; }
         public DbSet<CancelReason> CancelReasons { get; set; }
         public DbSet<ForeignLanguage> ForeignLanguages { get; set; }
+        public DbSet<Incentive> Incentives { get; set; }
+        public DbSet<Quota> Quotas { get; set; }
+        public DbSet<GuidanceCounselor> GuidanceCounselors { get; set; }
+        public DbSet<ClassGroup> ClassGroups { get; set; }
+        public DbSet<Occupation> Occupations { get; set; }
+        public DbSet<FamilyIntimacy> FamilyIntimacies { get; set; }
+        public DbSet<Workplace> Workplaces { get; set; }
+
 
 
     }

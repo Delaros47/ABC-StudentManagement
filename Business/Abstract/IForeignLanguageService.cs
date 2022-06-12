@@ -12,9 +12,9 @@ namespace Business.Abstract
     {
         IDataResult<List<ForeignLanguage>> GetAll();
         IDataResult<ForeignLanguage> Get(int foreignLanguageId);
-        IDataResult<List<ForeignLanguage>> GetforeignLanguageActive();
-        IDataResult<List<ForeignLanguage>> GetforeignLanguagePassive();
-        IDataResult<ForeignLanguage> GetLastforeignLanguagePrivateCode();
+        IDataResult<List<ForeignLanguage>> GetForeignLanguageActive();
+        IDataResult<List<ForeignLanguage>> GetForeignLanguagePassive();
+        IDataResult<ForeignLanguage> GetLastForeignLanguagePrivateCode();
         IResult Add(ForeignLanguage foreignLanguage);
         IResult Update(ForeignLanguage foreignLanguage);
         IResult Delete(ForeignLanguage foreignLanguage);

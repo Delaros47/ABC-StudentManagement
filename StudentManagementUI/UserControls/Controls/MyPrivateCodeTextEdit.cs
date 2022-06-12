@@ -15,7 +15,7 @@ namespace StudentManagementUI.UserControls.Controls
         {
             Properties.Appearance.BackColor = Color.PaleGoldenrod;
             Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
-            Properties.MaxLength = 20;
+            Properties.MaxLength = 30;
             StatusBarDescription = "Enter the Private Code";
         }
 

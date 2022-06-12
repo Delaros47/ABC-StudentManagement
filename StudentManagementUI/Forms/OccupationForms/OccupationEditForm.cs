@@ -16,16 +16,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentManagementUI.Forms.CancelReasonForms
+namespace StudentManagementUI.Forms.OccupationForms
 {
-    public partial class CancelReasonEditForm : BaseEditForm
+    public partial class OccupationEditForm : BaseEditForm
     {
-        public static int CancelReasonId = -1;
-        private readonly ICancelReasonService _cancelReasonService;
-        public CancelReasonEditForm()
+        public static int OccupationId = -1;
+        private readonly IOccupationService _occupationService;
+        public OccupationEditForm()
         {
             InitializeComponent();
-            _cancelReasonService = InstanceFactory.GetInstance<ICancelReasonService> ();
+            _occupationService = InstanceFactory.GetInstance<IOccupationService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -46,8 +46,9 @@ namespace StudentManagementUI.Forms.CancelReasonForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _cancelReasonService.GetLastCancelReasonPrivateCode().Data.PrivateCode;
+            string privateCode = _occupationService.GetLastOccupationPrivateCode().Data.PrivateCode;
             txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+
         }
 
         private void CleanAllComponants()
@@ -57,10 +58,10 @@ namespace StudentManagementUI.Forms.CancelReasonForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _cancelReasonService.Add(new CancelReason
+            var result = _occupationService.Add(new Occupation
             {
                 PrivateCode = txtPrivateCode.Text,
-                CancelReasonName = txtCancelReasonName.Text,
+                OccupationName = txtOccupationName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -73,11 +74,11 @@ namespace StudentManagementUI.Forms.CancelReasonForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _cancelReasonService.Update(new CancelReason
+            var result = _occupationService.Update(new Occupation
             {
-                Id = CancelReasonId,
+                Id = OccupationId,
                 PrivateCode = txtPrivateCode.Text,
-                CancelReasonName = txtCancelReasonName.Text,
+                OccupationName = txtOccupationName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -88,15 +89,15 @@ namespace StudentManagementUI.Forms.CancelReasonForms
             }
         }
 
-        private void CancelReasonEditForm_Load(object sender, EventArgs e)
+        private void OccupationEditForm_Load(object sender, EventArgs e)
         {
-            if (CancelReasonId != -1)
+            if (OccupationId != -1)
             {
-                var result = _cancelReasonService.Get(CancelReasonId);
+                var result = _occupationService.Get(OccupationId);
                 if (result.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtCancelReasonName.Text = result.Data.CancelReasonName;
+                    txtOccupationName.Text = result.Data.OccupationName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
                 }
@@ -105,36 +106,6 @@ namespace StudentManagementUI.Forms.CancelReasonForms
             {
                 GeneratePrivateCode();
             }
-        }
-
-        private void txtPrivateCode_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtPrivateCode_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
-        }
-
-        private void txtCancelReasonName_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtCancelReasonName.StatusBarDescription;
-        }
-
-        private void txtCancelReasonName_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtDescription.StatusBarDescription;
         }
     }
 }

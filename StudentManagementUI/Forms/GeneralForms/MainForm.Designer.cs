@@ -32,16 +32,26 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSchools = new DevExpress.XtraBars.BarButtonItem();
             this.btnCities = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFamilyInformation = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCancelReason = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFamilyInformations = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancelReasons = new DevExpress.XtraBars.BarButtonItem();
+            this.btnForeignLanguages = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIncentives = new DevExpress.XtraBars.BarButtonItem();
+            this.btnQuotas = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGuidanceCounselors = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClassGroups = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOccupations = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupGeneral = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageParent = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupParent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnForeignLanguages = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnFamilyIntimacies = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -54,14 +64,21 @@
             this.ribbonControl.SearchEditItem,
             this.btnSchools,
             this.btnCities,
-            this.btnFamilyInformation,
-            this.btnCancelReason,
-            this.btnForeignLanguages});
+            this.btnFamilyInformations,
+            this.btnCancelReasons,
+            this.btnForeignLanguages,
+            this.btnIncentives,
+            this.btnQuotas,
+            this.btnGuidanceCounselors,
+            this.btnClassGroups,
+            this.btnOccupations,
+            this.btnFamilyIntimacies});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 6;
+            this.ribbonControl.MaxItemId = 12;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPageStudent});
+            this.ribbonPageStudent,
+            this.ribbonPageParent});
             this.ribbonControl.Size = new System.Drawing.Size(1162, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
@@ -77,38 +94,100 @@
             this.btnCities.Id = 2;
             this.btnCities.Name = "btnCities";
             // 
-            // btnFamilyInformation
+            // btnFamilyInformations
             // 
-            this.btnFamilyInformation.Caption = "Family Information";
-            this.btnFamilyInformation.Id = 3;
-            this.btnFamilyInformation.Name = "btnFamilyInformation";
+            this.btnFamilyInformations.Caption = "Family Informations";
+            this.btnFamilyInformations.Id = 3;
+            this.btnFamilyInformations.Name = "btnFamilyInformations";
             // 
-            // btnCancelReason
+            // btnCancelReasons
             // 
-            this.btnCancelReason.Caption = "Cancel Reason";
-            this.btnCancelReason.Id = 4;
-            this.btnCancelReason.Name = "btnCancelReason";
+            this.btnCancelReasons.Caption = "Cancel Reasons";
+            this.btnCancelReasons.Id = 4;
+            this.btnCancelReasons.Name = "btnCancelReasons";
+            // 
+            // btnForeignLanguages
+            // 
+            this.btnForeignLanguages.Caption = "Foreign Languages";
+            this.btnForeignLanguages.Id = 5;
+            this.btnForeignLanguages.Name = "btnForeignLanguages";
+            // 
+            // btnIncentives
+            // 
+            this.btnIncentives.Caption = "Incentives";
+            this.btnIncentives.Id = 6;
+            this.btnIncentives.Name = "btnIncentives";
+            // 
+            // btnQuotas
+            // 
+            this.btnQuotas.Caption = "Quotas";
+            this.btnQuotas.Id = 7;
+            this.btnQuotas.Name = "btnQuotas";
+            // 
+            // btnGuidanceCounselors
+            // 
+            this.btnGuidanceCounselors.Caption = "Guidance Counselors";
+            this.btnGuidanceCounselors.Id = 8;
+            this.btnGuidanceCounselors.Name = "btnGuidanceCounselors";
+            // 
+            // btnClassGroups
+            // 
+            this.btnClassGroups.Caption = "Class Groups";
+            this.btnClassGroups.Id = 9;
+            this.btnClassGroups.Name = "btnClassGroups";
+            // 
+            // btnOccupations
+            // 
+            this.btnOccupations.Caption = "Occupations";
+            this.btnOccupations.Id = 10;
+            this.btnOccupations.Name = "btnOccupations";
             // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroupStudent,
+            this.ribbonPageGroupClass,
+            this.ribbonPageGroupGeneral});
             this.ribbonPageStudent.Name = "ribbonPageStudent";
             this.ribbonPageStudent.Text = "Student";
             // 
-            // ribbonPageGroup1
+            // ribbonPageGroupStudent
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnSchools);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroupStudent.Name = "ribbonPageGroupStudent";
+            this.ribbonPageGroupStudent.Text = "Student";
             // 
-            // ribbonPageGroup3
+            // ribbonPageGroupClass
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnFamilyInformation);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnCities);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnCancelReason);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnForeignLanguages);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroupClass.ItemLinks.Add(this.btnClassGroups);
+            this.ribbonPageGroupClass.Name = "ribbonPageGroupClass";
+            this.ribbonPageGroupClass.Text = "Class";
+            // 
+            // ribbonPageGroupGeneral
+            // 
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnFamilyInformations);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnCities);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnCancelReasons);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnForeignLanguages);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnIncentives);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnQuotas);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnGuidanceCounselors);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnSchools);
+            this.ribbonPageGroupGeneral.Name = "ribbonPageGroupGeneral";
+            this.ribbonPageGroupGeneral.Text = "General";
+            // 
+            // ribbonPageParent
+            // 
+            this.ribbonPageParent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupParent});
+            this.ribbonPageParent.Name = "ribbonPageParent";
+            this.ribbonPageParent.Text = "Parent";
+            // 
+            // ribbonPageGroupParent
+            // 
+            this.ribbonPageGroupParent.ItemLinks.Add(this.btnOccupations);
+            this.ribbonPageGroupParent.ItemLinks.Add(this.btnFamilyIntimacies);
+            this.ribbonPageGroupParent.Name = "ribbonPageGroupParent";
+            this.ribbonPageGroupParent.Text = "Parent";
             // 
             // ribbonStatusBar
             // 
@@ -130,11 +209,16 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // btnForeignLanguages
+            // ribbonPage3
             // 
-            this.btnForeignLanguages.Caption = "Foreign Languages";
-            this.btnForeignLanguages.Id = 5;
-            this.btnForeignLanguages.Name = "btnForeignLanguages";
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "ribbonPage3";
+            // 
+            // btnFamilyIntimacies
+            // 
+            this.btnFamilyIntimacies.Caption = "Family Intimacies";
+            this.btnFamilyIntimacies.Id = 11;
+            this.btnFamilyIntimacies.Name = "btnFamilyIntimacies";
             // 
             // MainForm
             // 
@@ -160,16 +244,26 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageStudent;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupClass;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnSchools;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
         private DevExpress.XtraBars.BarButtonItem btnCities;
-        private DevExpress.XtraBars.BarButtonItem btnFamilyInformation;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnFamilyInformations;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupGeneral;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarButtonItem btnCancelReason;
+        private DevExpress.XtraBars.BarButtonItem btnCancelReasons;
         private DevExpress.XtraBars.BarButtonItem btnForeignLanguages;
+        private DevExpress.XtraBars.BarButtonItem btnIncentives;
+        private DevExpress.XtraBars.BarButtonItem btnQuotas;
+        private DevExpress.XtraBars.BarButtonItem btnGuidanceCounselors;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupStudent;
+        private DevExpress.XtraBars.BarButtonItem btnClassGroups;
+        private DevExpress.XtraBars.BarButtonItem btnOccupations;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageParent;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupParent;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.BarButtonItem btnFamilyIntimacies;
     }
 }

@@ -83,8 +83,8 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(382, 189);
-            this.myDataLayoutControl1.TabIndex = 2;
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(382, 191);
+            this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
             // tglState
@@ -103,7 +103,7 @@
             this.tglState.Size = new System.Drawing.Size(109, 20);
             this.tglState.StatusBarDescription = "Choose the state of the form.";
             this.tglState.StyleController = this.myDataLayoutControl1;
-            this.tglState.TabIndex = 7;
+            this.tglState.TabIndex = 2;
             // 
             // txtDescription
             // 
@@ -114,10 +114,10 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(262, 117);
+            this.txtDescription.Size = new System.Drawing.Size(262, 119);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
-            this.txtDescription.TabIndex = 6;
+            this.txtDescription.TabIndex = 1;
             this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
             this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
@@ -131,9 +131,9 @@
             this.txtForeignLanguage.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtForeignLanguage.Properties.MaxLength = 50;
             this.txtForeignLanguage.Size = new System.Drawing.Size(262, 20);
-            this.txtForeignLanguage.StatusBarDescription = null;
+            this.txtForeignLanguage.StatusBarDescription = "Enter the foreign language.";
             this.txtForeignLanguage.StyleController = this.myDataLayoutControl1;
-            this.txtForeignLanguage.TabIndex = 5;
+            this.txtForeignLanguage.TabIndex = 0;
             this.txtForeignLanguage.Enter += new System.EventHandler(this.txtForeignLanguage_Enter);
             this.txtForeignLanguage.Leave += new System.EventHandler(this.txtForeignLanguage_Leave);
             // 
@@ -153,7 +153,7 @@
             this.txtPrivateCode.Size = new System.Drawing.Size(145, 20);
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
-            this.txtPrivateCode.TabIndex = 4;
+            this.txtPrivateCode.TabIndex = 3;
             this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
             this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
@@ -188,7 +188,7 @@
             rowDefinition1,
             rowDefinition2,
             rowDefinition3});
-            this.Root.Size = new System.Drawing.Size(382, 189);
+            this.Root.Size = new System.Drawing.Size(382, 191);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -228,7 +228,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem3.Size = new System.Drawing.Size(362, 121);
+            this.layoutControlItem3.Size = new System.Drawing.Size(362, 123);
             this.layoutControlItem3.Text = "Description";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(86, 13);

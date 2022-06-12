@@ -46,8 +46,8 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _foreignLanguageService.GetLastforeignLanguagePrivateCode().Data.PrivateCode;
-            layoutControlItem1.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+            string privateCode = _foreignLanguageService.GetLastForeignLanguagePrivateCode().Data.PrivateCode;
+            txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
         }
 
         private void CleanAllComponants()
@@ -59,7 +59,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
         {
             var result = _foreignLanguageService.Add(new ForeignLanguage
             {
-                PrivateCode = layoutControlItem1.Text,
+                PrivateCode = txtPrivateCode.Text,
                 ForeignLanguageName = txtForeignLanguage.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
@@ -76,7 +76,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
             var result = _foreignLanguageService.Update(new ForeignLanguage
             {
                 Id = ForeignLanguageId,
-                PrivateCode = layoutControlItem1.Text,
+                PrivateCode = txtPrivateCode.Text,
                 ForeignLanguageName = txtForeignLanguage.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
@@ -96,7 +96,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
                 var result = _foreignLanguageService.Get(ForeignLanguageId);
                 if (result.Success)
                 {
-                    layoutControlItem1.Text = result.Data.PrivateCode;
+                    txtPrivateCode.Text = result.Data.PrivateCode;
                     txtForeignLanguage.Text = result.Data.ForeignLanguageName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
@@ -107,6 +107,8 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
                 GeneratePrivateCode();
             }
         }
+
+        
 
         private void txtForeignLanguage_Enter(object sender, EventArgs e)
         {

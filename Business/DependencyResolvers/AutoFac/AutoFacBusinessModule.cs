@@ -30,6 +30,28 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<CancelReasonManager>().As<ICancelReasonService>().SingleInstance();
             builder.RegisterType<EfCancelReasonDal>().As<ICancelReasonDal>().SingleInstance();
 
+            builder.RegisterType<ForeignLanguageManager>().As<IForeignLanguageService>().SingleInstance();
+            builder.RegisterType<EfForeignLanguageDal>().As<IForeignLanguageDal>().SingleInstance();
+
+            builder.RegisterType<IncentiveManager>().As<IIncentiveService>().SingleInstance();
+            builder.RegisterType<EfIncentiveDal>().As<IIncentiveDal>().SingleInstance();
+
+            builder.RegisterType<QuotaManager>().As<IQuotaService>().SingleInstance();
+            builder.RegisterType<EfQuotaDal>().As<IQuotaDal>().SingleInstance();
+
+            builder.RegisterType<GuidanceCounselorManager>().As<IGuidanceCounselorService>().SingleInstance();
+            builder.RegisterType<EfGuidanceCounselorDal>().As<IGuidanceCounselorDal>().SingleInstance();
+
+            builder.RegisterType<ClassGroupManager>().As<IClassGroupService>().SingleInstance();
+            builder.RegisterType<EfClassGroupDal>().As<IClassGroupDal>().SingleInstance();
+
+            builder.RegisterType<OccupationManager>().As<IOccupationService>().SingleInstance();
+            builder.RegisterType<EfOccupationDal>().As<IOccupationDal>().SingleInstance();
+
+            builder.RegisterType<FamilyIntimacyManager>().As<IFamilyIntimacyService>().SingleInstance();
+            builder.RegisterType<EfFamilyIntimacyDal>().As<IFamilyIntimacyDal>().SingleInstance();
+
+
         }
     }
 }

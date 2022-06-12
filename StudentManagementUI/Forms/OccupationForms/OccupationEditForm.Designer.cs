@@ -1,6 +1,6 @@
-﻿namespace StudentManagementUI.Forms.CancelReasonForms
+﻿namespace StudentManagementUI.Forms.OccupationForms
 {
-    partial class CancelReasonEditForm
+    partial class OccupationEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.myDataLayoutControl1 = new StudentManagementUI.UserControls.Controls.MyDataLayoutControl();
             this.tglState = new StudentManagementUI.UserControls.Controls.MyToggleSwitch();
             this.txtDescription = new StudentManagementUI.UserControls.Controls.MyMemoEdit();
-            this.txtCancelReasonName = new StudentManagementUI.UserControls.Controls.MyTextEdit();
+            this.txtOccupationName = new StudentManagementUI.UserControls.Controls.MyTextEdit();
             this.txtPrivateCode = new StudentManagementUI.UserControls.Controls.MyPrivateCodeTextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -49,7 +49,7 @@
             this.myDataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCancelReasonName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOccupationName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -76,7 +76,7 @@
             // 
             this.myDataLayoutControl1.Controls.Add(this.tglState);
             this.myDataLayoutControl1.Controls.Add(this.txtDescription);
-            this.myDataLayoutControl1.Controls.Add(this.txtCancelReasonName);
+            this.myDataLayoutControl1.Controls.Add(this.txtOccupationName);
             this.myDataLayoutControl1.Controls.Add(this.txtPrivateCode);
             this.myDataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myDataLayoutControl1.Location = new System.Drawing.Point(0, 102);
@@ -108,39 +108,35 @@
             // txtDescription
             // 
             this.txtDescription.EnterMoveNextControl = true;
-            this.txtDescription.Location = new System.Drawing.Point(123, 60);
+            this.txtDescription.Location = new System.Drawing.Point(106, 60);
             this.txtDescription.MenuManager = this.ribbonControl;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(255, 119);
+            this.txtDescription.Size = new System.Drawing.Size(272, 119);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 1;
-            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
-            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
-            // txtCancelReasonName
+            // txtOccupationName
             // 
-            this.txtCancelReasonName.EnterMoveNextControl = true;
-            this.txtCancelReasonName.Location = new System.Drawing.Point(123, 36);
-            this.txtCancelReasonName.MenuManager = this.ribbonControl;
-            this.txtCancelReasonName.Name = "txtCancelReasonName";
-            this.txtCancelReasonName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtCancelReasonName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCancelReasonName.Properties.MaxLength = 50;
-            this.txtCancelReasonName.Size = new System.Drawing.Size(255, 20);
-            this.txtCancelReasonName.StatusBarDescription = "Enter Cancel Reason Name.";
-            this.txtCancelReasonName.StyleController = this.myDataLayoutControl1;
-            this.txtCancelReasonName.TabIndex = 0;
-            this.txtCancelReasonName.Enter += new System.EventHandler(this.txtCancelReasonName_Enter);
-            this.txtCancelReasonName.Leave += new System.EventHandler(this.txtCancelReasonName_Leave);
+            this.txtOccupationName.EnterMoveNextControl = true;
+            this.txtOccupationName.Location = new System.Drawing.Point(106, 36);
+            this.txtOccupationName.MenuManager = this.ribbonControl;
+            this.txtOccupationName.Name = "txtOccupationName";
+            this.txtOccupationName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtOccupationName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOccupationName.Properties.MaxLength = 50;
+            this.txtOccupationName.Size = new System.Drawing.Size(272, 20);
+            this.txtOccupationName.StatusBarDescription = null;
+            this.txtOccupationName.StyleController = this.myDataLayoutControl1;
+            this.txtOccupationName.TabIndex = 0;
             // 
             // txtPrivateCode
             // 
             this.txtPrivateCode.EnterMoveNextControl = true;
-            this.txtPrivateCode.Location = new System.Drawing.Point(123, 12);
+            this.txtPrivateCode.Location = new System.Drawing.Point(106, 12);
             this.txtPrivateCode.MenuManager = this.ribbonControl;
             this.txtPrivateCode.Name = "txtPrivateCode";
             this.txtPrivateCode.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -149,13 +145,11 @@
             this.txtPrivateCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPrivateCode.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPrivateCode.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPrivateCode.Properties.MaxLength = 20;
-            this.txtPrivateCode.Size = new System.Drawing.Size(125, 20);
+            this.txtPrivateCode.Properties.MaxLength = 30;
+            this.txtPrivateCode.Size = new System.Drawing.Size(142, 20);
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 3;
-            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
-            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // Root
             // 
@@ -200,23 +194,23 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem1.Text = "Private Code";
-            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(101, 13);
-            this.layoutControlItem1.TextToControlDistance = 10;
+            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 13);
+            this.layoutControlItem1.TextToControlDistance = 32;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem2.Control = this.txtCancelReasonName;
+            this.layoutControlItem2.Control = this.txtOccupationName;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem2.Size = new System.Drawing.Size(370, 24);
-            this.layoutControlItem2.Text = "Cancel Reason Name";
-            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(101, 13);
+            this.layoutControlItem2.Text = "Occupation Name";
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(84, 13);
             this.layoutControlItem2.TextToControlDistance = 10;
             // 
             // layoutControlItem3
@@ -230,9 +224,9 @@
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
             this.layoutControlItem3.Size = new System.Drawing.Size(370, 123);
             this.layoutControlItem3.Text = "Description";
-            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(53, 13);
-            this.layoutControlItem3.TextToControlDistance = 58;
+            this.layoutControlItem3.TextToControlDistance = 41;
             // 
             // layoutControlItem4
             // 
@@ -246,7 +240,7 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // CancelReasonEditForm
+            // OccupationEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,10 +248,10 @@
             this.Controls.Add(this.myDataLayoutControl1);
             this.IconOptions.ShowIcon = false;
             this.MinimumSize = new System.Drawing.Size(400, 325);
-            this.Name = "CancelReasonEditForm";
+            this.Name = "OccupationEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Cancel Reason Edit";
-            this.Load += new System.EventHandler(this.CancelReasonEditForm_Load);
+            this.Text = "Occupation Edit";
+            this.Load += new System.EventHandler(this.OccupationEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -265,7 +259,7 @@
             this.myDataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCancelReasonName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOccupationName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -280,11 +274,11 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup Root;
         private UserControls.Controls.MyToggleSwitch tglState;
         private UserControls.Controls.MyMemoEdit txtDescription;
-        private UserControls.Controls.MyTextEdit txtCancelReasonName;
+        private UserControls.Controls.MyTextEdit txtOccupationName;
         private UserControls.Controls.MyPrivateCodeTextEdit txtPrivateCode;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;

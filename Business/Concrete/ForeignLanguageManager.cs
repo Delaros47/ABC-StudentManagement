@@ -42,17 +42,17 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ForeignLanguage>>(_foreignLanguageDal.GetAll());
         }
 
-        public IDataResult<List<ForeignLanguage>> GetforeignLanguageActive()
+        public IDataResult<List<ForeignLanguage>> GetForeignLanguageActive()
         {
             return new SuccessDataResult<List<ForeignLanguage>>(_foreignLanguageDal.GetAll(f=>f.State==true));
         }
 
-        public IDataResult<List<ForeignLanguage>> GetforeignLanguagePassive()
+        public IDataResult<List<ForeignLanguage>> GetForeignLanguagePassive()
         {
             return new SuccessDataResult<List<ForeignLanguage>>(_foreignLanguageDal.GetAll(f => f.State == false));
         }
 
-        public IDataResult<ForeignLanguage> GetLastforeignLanguagePrivateCode()
+        public IDataResult<ForeignLanguage> GetLastForeignLanguagePrivateCode()
         {
             return new SuccessDataResult<ForeignLanguage>(_foreignLanguageDal.GetAll().Last());
         }

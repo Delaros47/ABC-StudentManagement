@@ -47,7 +47,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
 
         private void GetAllForeignLanguageServiceActive()
         {
-            gridControlForeignLanguage.DataSource = _foreignLanguageService.GetforeignLanguageActive().Data;
+            gridControlForeignLanguage.DataSource = _foreignLanguageService.GetForeignLanguageActive().Data;
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -57,6 +57,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
 
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
+            ForeignLanguageEditForm.ForeignLanguageId = -1;
             CreateForms<ForeignLanguageEditForm>.ShowDialogEditForm();
             GetAllForeignLanguageServiceActive();
         }
@@ -77,12 +78,12 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
         {
             if (e.Item.Caption == "Passive List")
             {
-                gridControlForeignLanguage.DataSource = _foreignLanguageService.GetforeignLanguageActive().Data;
+                gridControlForeignLanguage.DataSource = _foreignLanguageService.GetForeignLanguageActive().Data;
                 e.Item.Caption = "Active List";
             }
             else
             {
-                gridControlForeignLanguage.DataSource = _foreignLanguageService.GetforeignLanguagePassive().Data;
+                gridControlForeignLanguage.DataSource = _foreignLanguageService.GetForeignLanguagePassive().Data;
                 e.Item.Caption = "Passive List";
             }
         }

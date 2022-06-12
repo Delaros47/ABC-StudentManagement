@@ -2,8 +2,14 @@
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CityForms;
+using StudentManagementUI.Forms.ClassGroupForms;
 using StudentManagementUI.Forms.FamilyInformationForms;
+using StudentManagementUI.Forms.FamilyIntimacyForms;
 using StudentManagementUI.Forms.ForeignLanguageForms;
+using StudentManagementUI.Forms.GuidanceCounselorForms;
+using StudentManagementUI.Forms.IncentiveForms;
+using StudentManagementUI.Forms.OccupationForms;
+using StudentManagementUI.Forms.QuotaForms;
 using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
@@ -51,17 +57,41 @@ namespace StudentManagementUI.Forms.GeneralForms
             {
                 CreateForms<CityListForm>.ShowDialogListForm();
             }
-            else if (e.Item==btnFamilyInformation)
+            else if (e.Item==btnFamilyInformations)
             {
                 CreateForms<FamilyInformationListForm>.ShowDialogListForm();
             }
-            else if (e.Item==btnCancelReason)
+            else if (e.Item==btnCancelReasons)
             {
                 CreateForms<CancelReasonListForm>.ShowDialogListForm();
             }
             else if (e.Item==btnForeignLanguages)
             {
                 CreateForms<ForeignLanguageListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnIncentives)
+            {
+                CreateForms<IncentiveListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnQuotas)
+            {
+                CreateForms<QuotaListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnGuidanceCounselors)
+            {
+                CreateForms<GuidanceCounselorListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnClassGroups)
+            {
+                CreateForms<ClassGroupListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnOccupations)
+            {
+                CreateForms<OccupationListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnFamilyIntimacies)
+            {
+                CreateForms<FamilyIntimacyListForm>.ShowDialogListForm();
             }
         }
     }

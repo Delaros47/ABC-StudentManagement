@@ -16,16 +16,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentManagementUI.Forms.CancelReasonForms
+namespace StudentManagementUI.Forms.IncentiveForms
 {
-    public partial class CancelReasonEditForm : BaseEditForm
+    public partial class IncentiveEditForm : BaseEditForm
     {
-        public static int CancelReasonId = -1;
-        private readonly ICancelReasonService _cancelReasonService;
-        public CancelReasonEditForm()
+        public static int IncentiveId = -1;
+        private readonly IIncentiveService _incentiveService;
+        public IncentiveEditForm()
         {
             InitializeComponent();
-            _cancelReasonService = InstanceFactory.GetInstance<ICancelReasonService> ();
+            _incentiveService = InstanceFactory.GetInstance<IIncentiveService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -46,7 +46,7 @@ namespace StudentManagementUI.Forms.CancelReasonForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _cancelReasonService.GetLastCancelReasonPrivateCode().Data.PrivateCode;
+            string privateCode = _incentiveService.GetLastIncentivePrivateCode().Data.PrivateCode;
             txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
         }
 
@@ -57,10 +57,10 @@ namespace StudentManagementUI.Forms.CancelReasonForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _cancelReasonService.Add(new CancelReason
+            var result = _incentiveService.Add(new Incentive
             {
                 PrivateCode = txtPrivateCode.Text,
-                CancelReasonName = txtCancelReasonName.Text,
+                IncentiveName=txtIncentiveName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -73,11 +73,11 @@ namespace StudentManagementUI.Forms.CancelReasonForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _cancelReasonService.Update(new CancelReason
+            var result = _incentiveService.Update(new Incentive
             {
-                Id = CancelReasonId,
+                Id = IncentiveId,
                 PrivateCode = txtPrivateCode.Text,
-                CancelReasonName = txtCancelReasonName.Text,
+                IncentiveName = txtIncentiveName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -88,15 +88,15 @@ namespace StudentManagementUI.Forms.CancelReasonForms
             }
         }
 
-        private void CancelReasonEditForm_Load(object sender, EventArgs e)
+        private void IncentiveEditForm_Load(object sender, EventArgs e)
         {
-            if (CancelReasonId != -1)
+            if (IncentiveId != -1)
             {
-                var result = _cancelReasonService.Get(CancelReasonId);
+                var result = _incentiveService.Get(IncentiveId);
                 if (result.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtCancelReasonName.Text = result.Data.CancelReasonName;
+                    txtIncentiveName.Text = result.Data.IncentiveName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
                 }
@@ -114,27 +114,28 @@ namespace StudentManagementUI.Forms.CancelReasonForms
 
         private void txtPrivateCode_Enter(object sender, EventArgs e)
         {
+
             statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
         }
 
-        private void txtCancelReasonName_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtCancelReasonName.StatusBarDescription;
-        }
-
-        private void txtCancelReasonName_Leave(object sender, EventArgs e)
+        private void txtIncentiveName_Leave(object sender, EventArgs e)
         {
             statusBarDescription.Caption = "";
         }
 
-        private void txtDescription_Leave(object sender, EventArgs e)
+        private void txtIncentiveName_Enter(object sender, EventArgs e)
         {
-            statusBarDescription.Caption = "";
+            statusBarDescription.Caption = txtIncentiveName.StatusBarDescription;
         }
 
         private void txtDescription_Enter(object sender, EventArgs e)
         {
             statusBarDescription.Caption = txtDescription.StatusBarDescription;
+        }
+
+        private void txtDescription_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
         }
     }
 }
