@@ -3,6 +3,7 @@ using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.ClassGroupForms;
+using StudentManagementUI.Forms.DutyForms;
 using StudentManagementUI.Forms.FamilyInformationForms;
 using StudentManagementUI.Forms.FamilyIntimacyForms;
 using StudentManagementUI.Forms.ForeignLanguageForms;
@@ -11,6 +12,7 @@ using StudentManagementUI.Forms.IncentiveForms;
 using StudentManagementUI.Forms.OccupationForms;
 using StudentManagementUI.Forms.QuotaForms;
 using StudentManagementUI.Forms.SchoolForms;
+using StudentManagementUI.Forms.WorkplaceForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,6 +94,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnFamilyIntimacies)
             {
                 CreateForms<FamilyIntimacyListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnWorkplace)
+            {
+                CreateForms<WorkplaceListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnDuties)
+            {
+                CreateForms<DutyListForm>.ShowDialogListForm();
             }
         }
     }

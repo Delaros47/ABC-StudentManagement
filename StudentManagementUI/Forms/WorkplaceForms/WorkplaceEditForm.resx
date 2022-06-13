@@ -57,32 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ribbonPageStudent.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAIXRFWHRUaXRsZQBUZW1wbGF0
-        ZTtQYWdlO0FydGljbGU7UGFwZXINrCyXAAAAY0lEQVQ4T2P4//8/RRjOaGlp+Y8H/4PSxsiaQRjFAHwA
-        JN/X13cX3RAMA3acfYyBQQAq/wvdEJIMQMZAgN0AYgBeA9BtRubDxAa5AcQAol2ADYPAIDeAGIDTAFIw
-        hgHk4f8MAE+zMq8gsrU0AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ribbonPageParent.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAIXRFWHRUaXRsZQBUZW1wbGF0
-        ZTtQYWdlO0FydGljbGU7UGFwZXINrCyXAAAAY0lEQVQ4T2P4//8/RRjOaGlp+Y8H/4PSxsiaQRjFAHwA
-        JN/X13cX3RAMA3acfYyBQQAq/wvdEJIMQMZAgN0AYgBeA9BtRubDxAa5AcQAol2ADYPAIDeAGIDTAFIw
-        hgHk4f8MAE+zMq8gsrU0AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="defaultLookAndFeel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="xtraTabbedMdiManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>184, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>49</value>
-  </metadata>
 </root>

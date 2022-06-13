@@ -29,6 +29,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<Occupation> Occupations { get; set; }
         public DbSet<FamilyIntimacy> FamilyIntimacies { get; set; }
         public DbSet<Workplace> Workplaces { get; set; }
+        public DbSet<Duty> Duties { get; set; }
 
 
 

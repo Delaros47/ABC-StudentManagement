@@ -51,6 +51,14 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<FamilyIntimacyManager>().As<IFamilyIntimacyService>().SingleInstance();
             builder.RegisterType<EfFamilyIntimacyDal>().As<IFamilyIntimacyDal>().SingleInstance();
 
+            builder.RegisterType<WorkplaceManager>().As<IWorkplaceService>().SingleInstance();
+            builder.RegisterType<EfWorkplaceDal>().As<IWorkplaceDal>().SingleInstance();
+
+            builder.RegisterType<DutyManager>().As<IDutyService>().SingleInstance();
+            builder.RegisterType<EfDutyDal>().As<IDutyDal>().SingleInstance();
+
+
+
 
         }
     }
