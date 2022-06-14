@@ -1,6 +1,6 @@
-﻿namespace StudentManagementUI.Forms.DutyForms
+﻿namespace StudentManagementUI.Forms.DiscountTypeForms
 {
-    partial class DutyEditForm
+    partial class DiscountTypeEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl1 = new StudentManagementUI.UserControls.Controls.MyDataLayoutControl();
-            this.txtDescription = new StudentManagementUI.UserControls.Controls.MyMemoEdit();
             this.tglState = new StudentManagementUI.UserControls.Controls.MyToggleSwitch();
-            this.txtDutyName = new StudentManagementUI.UserControls.Controls.MyTextEdit();
+            this.txtDescription = new StudentManagementUI.UserControls.Controls.MyMemoEdit();
+            this.txtDiscountType = new StudentManagementUI.UserControls.Controls.MyTextEdit();
             this.txtPrivateCode = new StudentManagementUI.UserControls.Controls.MyPrivateCodeTextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -47,9 +47,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             this.myDataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDutyName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscountType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -74,9 +74,9 @@
             // 
             // myDataLayoutControl1
             // 
-            this.myDataLayoutControl1.Controls.Add(this.txtDescription);
             this.myDataLayoutControl1.Controls.Add(this.tglState);
-            this.myDataLayoutControl1.Controls.Add(this.txtDutyName);
+            this.myDataLayoutControl1.Controls.Add(this.txtDescription);
+            this.myDataLayoutControl1.Controls.Add(this.txtDiscountType);
             this.myDataLayoutControl1.Controls.Add(this.txtPrivateCode);
             this.myDataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myDataLayoutControl1.Location = new System.Drawing.Point(0, 102);
@@ -86,22 +86,6 @@
             this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 191);
             this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.EnterMoveNextControl = true;
-            this.txtDescription.Location = new System.Drawing.Point(115, 60);
-            this.txtDescription.MenuManager = this.ribbonControl;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(263, 119);
-            this.txtDescription.StatusBarDescription = "Enter the description.";
-            this.txtDescription.StyleController = this.myDataLayoutControl1;
-            this.txtDescription.TabIndex = 1;
-            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
-            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // tglState
             // 
@@ -121,21 +105,33 @@
             this.tglState.StyleController = this.myDataLayoutControl1;
             this.tglState.TabIndex = 2;
             // 
-            // txtDutyName
+            // txtDescription
             // 
-            this.txtDutyName.EnterMoveNextControl = true;
-            this.txtDutyName.Location = new System.Drawing.Point(115, 36);
-            this.txtDutyName.MenuManager = this.ribbonControl;
-            this.txtDutyName.Name = "txtDutyName";
-            this.txtDutyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDutyName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDutyName.Properties.MaxLength = 50;
-            this.txtDutyName.Size = new System.Drawing.Size(263, 20);
-            this.txtDutyName.StatusBarDescription = "Enter the Duty name.";
-            this.txtDutyName.StyleController = this.myDataLayoutControl1;
-            this.txtDutyName.TabIndex = 0;
-            this.txtDutyName.Enter += new System.EventHandler(this.txtDutyName_Enter);
-            this.txtDutyName.Leave += new System.EventHandler(this.txtDutyName_Leave);
+            this.txtDescription.EnterMoveNextControl = true;
+            this.txtDescription.Location = new System.Drawing.Point(115, 60);
+            this.txtDescription.MenuManager = this.ribbonControl;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDescription.Properties.MaxLength = 500;
+            this.txtDescription.Size = new System.Drawing.Size(263, 119);
+            this.txtDescription.StatusBarDescription = "Enter the description.";
+            this.txtDescription.StyleController = this.myDataLayoutControl1;
+            this.txtDescription.TabIndex = 1;
+            // 
+            // txtDiscountType
+            // 
+            this.txtDiscountType.EnterMoveNextControl = true;
+            this.txtDiscountType.Location = new System.Drawing.Point(115, 36);
+            this.txtDiscountType.MenuManager = this.ribbonControl;
+            this.txtDiscountType.Name = "txtDiscountType";
+            this.txtDiscountType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDiscountType.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDiscountType.Properties.MaxLength = 50;
+            this.txtDiscountType.Size = new System.Drawing.Size(263, 20);
+            this.txtDiscountType.StatusBarDescription = null;
+            this.txtDiscountType.StyleController = this.myDataLayoutControl1;
+            this.txtDiscountType.TabIndex = 0;
             // 
             // txtPrivateCode
             // 
@@ -154,8 +150,6 @@
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 3;
-            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
-            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // Root
             // 
@@ -208,13 +202,13 @@
             // 
             this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem2.Control = this.txtDutyName;
+            this.layoutControlItem2.Control = this.txtDiscountType;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem2.Size = new System.Drawing.Size(370, 24);
-            this.layoutControlItem2.Text = "Duty Name";
+            this.layoutControlItem2.Text = "Discount Type";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(93, 13);
             this.layoutControlItem2.TextToControlDistance = 10;
@@ -223,30 +217,30 @@
             // 
             this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem3.Control = this.tglState;
-            this.layoutControlItem3.Location = new System.Drawing.Point(260, 0);
+            this.layoutControlItem3.Control = this.txtDescription;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem3.Size = new System.Drawing.Size(110, 24);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
+            this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem3.Size = new System.Drawing.Size(370, 123);
+            this.layoutControlItem3.Text = "Description";
+            this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem3.TextToControlDistance = 10;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem4.Control = this.txtDescription;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Control = this.tglState;
+            this.layoutControlItem4.Location = new System.Drawing.Point(260, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem4.Size = new System.Drawing.Size(370, 123);
-            this.layoutControlItem4.Text = "Description";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 13);
-            this.layoutControlItem4.TextToControlDistance = 10;
+            this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem4.Size = new System.Drawing.Size(110, 24);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
-            // DutyEditForm
+            // DiscountTypeEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,18 +248,18 @@
             this.Controls.Add(this.myDataLayoutControl1);
             this.IconOptions.ShowIcon = false;
             this.MinimumSize = new System.Drawing.Size(400, 325);
-            this.Name = "DutyEditForm";
+            this.Name = "DiscountTypeEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Duty Edit";
-            this.Load += new System.EventHandler(this.DutyEditForm_Load);
+            this.Text = "Discount Type Edit";
+            this.Load += new System.EventHandler(this.DiscountTypeEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             this.myDataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDutyName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscountType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -280,9 +274,9 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl1;
-        private UserControls.Controls.MyMemoEdit txtDescription;
         private UserControls.Controls.MyToggleSwitch tglState;
-        private UserControls.Controls.MyTextEdit txtDutyName;
+        private UserControls.Controls.MyMemoEdit txtDescription;
+        private UserControls.Controls.MyTextEdit txtDiscountType;
         private UserControls.Controls.MyPrivateCodeTextEdit txtPrivateCode;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;

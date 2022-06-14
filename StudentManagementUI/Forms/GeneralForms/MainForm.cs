@@ -3,6 +3,8 @@ using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.ClassGroupForms;
+using StudentManagementUI.Forms.DiscountTypeForms;
+using StudentManagementUI.Forms.DocumentForms;
 using StudentManagementUI.Forms.DutyForms;
 using StudentManagementUI.Forms.FamilyInformationForms;
 using StudentManagementUI.Forms.FamilyIntimacyForms;
@@ -102,6 +104,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnDuties)
             {
                 CreateForms<DutyListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnDiscountType)
+            {
+                CreateForms<DiscountTypeListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnDocuments)
+            {
+                CreateForms<DocumentListForm>.ShowDialogListForm();
             }
         }
     }

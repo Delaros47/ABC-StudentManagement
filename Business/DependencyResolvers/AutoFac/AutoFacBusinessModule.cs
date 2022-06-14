@@ -57,7 +57,11 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<DutyManager>().As<IDutyService>().SingleInstance();
             builder.RegisterType<EfDutyDal>().As<IDutyDal>().SingleInstance();
 
+            builder.RegisterType<DiscountTypeManager>().As<IDiscountTypeService>().SingleInstance();
+            builder.RegisterType<EfDiscountTypeDal>().As<IDiscountTypeDal>().SingleInstance();
 
+            builder.RegisterType<DocumentManager>().As<IDocumentService>().SingleInstance();
+            builder.RegisterType<EfDocumentDal>().As<IDocumentDal>().SingleInstance();
 
 
         }

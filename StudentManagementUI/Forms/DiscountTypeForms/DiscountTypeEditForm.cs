@@ -16,16 +16,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentManagementUI.Forms.DutyForms
+namespace StudentManagementUI.Forms.DiscountTypeForms
 {
-    public partial class DutyEditForm : BaseEditForm
+    public partial class DiscountTypeEditForm : BaseEditForm
     {
-        public static int DutyId = -1;
-        private readonly IDutyService _dutyService;
-        public DutyEditForm()
+        public static int DiscountTypeId = -1;
+        private readonly IDiscountTypeService _discountTypeService;
+        public DiscountTypeEditForm()
         {
             InitializeComponent();
-            _dutyService = InstanceFactory.GetInstance<IDutyService>();
+            _discountTypeService = InstanceFactory.GetInstance<IDiscountTypeService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -46,8 +46,12 @@ namespace StudentManagementUI.Forms.DutyForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _dutyService.GetLastDutyPrivateCode().Data.PrivateCode;
-            txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+            if (_discountTypeService.GetLastDiscountTypePrivateCode().Data!=null)
+            {
+                string privateCode = _discountTypeService.GetLastDiscountTypePrivateCode().Data.PrivateCode;
+                txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+            }
+            
         }
 
         private void CleanAllComponants()
@@ -57,10 +61,10 @@ namespace StudentManagementUI.Forms.DutyForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _dutyService.Add(new Duty
+            var result = _discountTypeService.Add(new DiscountType
             {
                 PrivateCode = txtPrivateCode.Text,
-                DutyName = txtDutyName.Text,
+                DiscountTypeName = txtDiscountType.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -73,11 +77,11 @@ namespace StudentManagementUI.Forms.DutyForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _dutyService.Update(new Duty
+            var result = _discountTypeService.Update(new DiscountType
             {
-                Id = DutyId,
+                Id = DiscountTypeId,
                 PrivateCode = txtPrivateCode.Text,
-                DutyName = txtDutyName.Text,
+                DiscountTypeName = txtDiscountType.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -88,15 +92,15 @@ namespace StudentManagementUI.Forms.DutyForms
             }
         }
 
-        private void DutyEditForm_Load(object sender, EventArgs e)
+        private void DiscountTypeEditForm_Load(object sender, EventArgs e)
         {
-            if (DutyId != -1)
+            if (DiscountTypeId != -1)
             {
-                var result = _dutyService.Get(DutyId);
+                var result = _discountTypeService.Get(DiscountTypeId);
                 if (result.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtDutyName.Text = result.Data.DutyName;
+                    txtDiscountType.Text = result.Data.DiscountTypeName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
                 }
@@ -105,36 +109,6 @@ namespace StudentManagementUI.Forms.DutyForms
             {
                 GeneratePrivateCode();
             }
-        }
-
-        private void txtPrivateCode_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
-        }
-
-        private void txtPrivateCode_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDutyName_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtDutyName.StatusBarDescription;
-        }
-
-        private void txtDutyName_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtDescription.StatusBarDescription;
         }
     }
 }

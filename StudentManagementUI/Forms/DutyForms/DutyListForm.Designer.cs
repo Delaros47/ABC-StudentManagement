@@ -56,7 +56,7 @@
             // longNavigator1
             // 
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
+            this.longNavigator1.Location = new System.Drawing.Point(0, 338);
             this.longNavigator1.Name = "longNavigator1";
             this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
             this.longNavigator1.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.gridControlDuties.MainView = this.gridViewDuties;
             this.gridControlDuties.MenuManager = this.ribbonControl;
             this.gridControlDuties.Name = "gridControlDuties";
-            this.gridControlDuties.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlDuties.Size = new System.Drawing.Size(1120, 236);
             this.gridControlDuties.TabIndex = 3;
             this.gridControlDuties.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDuties});
@@ -109,6 +109,7 @@
             this.gridViewDuties.StatusBarShortcut = null;
             this.gridViewDuties.StatusBarShortcutDescription = null;
             this.gridViewDuties.ViewCaption = "Duties";
+            this.gridViewDuties.DoubleClick += new System.EventHandler(this.gridViewDuties_DoubleClick);
             // 
             // colId
             // 
@@ -172,6 +173,7 @@
             this.IconOptions.ShowIcon = false;
             this.Name = "DutyListForm";
             this.Text = "Duty List";
+            this.Load += new System.EventHandler(this.DutyListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator1, 0);
             this.Controls.SetChildIndex(this.gridControlDuties, 0);

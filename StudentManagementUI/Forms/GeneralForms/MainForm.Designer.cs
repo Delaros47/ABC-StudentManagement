@@ -43,18 +43,23 @@
             this.btnOccupations = new DevExpress.XtraBars.BarButtonItem();
             this.btnFamilyIntimacies = new DevExpress.XtraBars.BarButtonItem();
             this.btnWorkplace = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDuties = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDiscountType = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupGeneral = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageParent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupParent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageService = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupDiscount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnDuties = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnDocuments = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -77,13 +82,16 @@
             this.btnOccupations,
             this.btnFamilyIntimacies,
             this.btnWorkplace,
-            this.btnDuties});
+            this.btnDuties,
+            this.btnDiscountType,
+            this.btnDocuments});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 14;
+            this.ribbonControl.MaxItemId = 16;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
-            this.ribbonPageParent});
+            this.ribbonPageParent,
+            this.ribbonPageService});
             this.ribbonControl.Size = new System.Drawing.Size(1162, 146);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
@@ -159,6 +167,18 @@
             this.btnWorkplace.Id = 12;
             this.btnWorkplace.Name = "btnWorkplace";
             // 
+            // btnDuties
+            // 
+            this.btnDuties.Caption = "Duties";
+            this.btnDuties.Id = 13;
+            this.btnDuties.Name = "btnDuties";
+            // 
+            // btnDiscountType
+            // 
+            this.btnDiscountType.Caption = "Discount Type";
+            this.btnDiscountType.Id = 14;
+            this.btnDiscountType.Name = "btnDiscountType";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -190,6 +210,7 @@
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnQuotas);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnGuidanceCounselors);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnSchools);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnDocuments);
             this.ribbonPageGroupGeneral.Name = "ribbonPageGroupGeneral";
             this.ribbonPageGroupGeneral.Text = "General";
             // 
@@ -210,12 +231,26 @@
             this.ribbonPageGroupParent.Name = "ribbonPageGroupParent";
             this.ribbonPageGroupParent.Text = "Parent";
             // 
+            // ribbonPageService
+            // 
+            this.ribbonPageService.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupDiscount});
+            this.ribbonPageService.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageService.ImageOptions.Image")));
+            this.ribbonPageService.Name = "ribbonPageService";
+            this.ribbonPageService.Text = "Service";
+            // 
+            // ribbonPageGroupDiscount
+            // 
+            this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnDiscountType);
+            this.ribbonPageGroupDiscount.Name = "ribbonPageGroupDiscount";
+            this.ribbonPageGroupDiscount.Text = "Discount";
+            // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 504);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 502);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1162, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1162, 33);
             // 
             // defaultLookAndFeel
             // 
@@ -235,11 +270,16 @@
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "ribbonPage3";
             // 
-            // btnDuties
+            // ribbonPage4
             // 
-            this.btnDuties.Caption = "Duties";
-            this.btnDuties.Id = 13;
-            this.btnDuties.Name = "btnDuties";
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "ribbonPage4";
+            // 
+            // btnDocuments
+            // 
+            this.btnDocuments.Caption = "Documents";
+            this.btnDocuments.Id = 15;
+            this.btnDocuments.Name = "btnDocuments";
             // 
             // MainForm
             // 
@@ -288,5 +328,10 @@
         private DevExpress.XtraBars.BarButtonItem btnFamilyIntimacies;
         private DevExpress.XtraBars.BarButtonItem btnWorkplace;
         private DevExpress.XtraBars.BarButtonItem btnDuties;
+        private DevExpress.XtraBars.BarButtonItem btnDiscountType;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageService;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupDiscount;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.BarButtonItem btnDocuments;
     }
 }

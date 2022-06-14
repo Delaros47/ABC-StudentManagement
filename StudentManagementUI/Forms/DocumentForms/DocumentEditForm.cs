@@ -2,10 +2,9 @@
 using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
-using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
-using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,17 +14,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudentManagementUI.Commons.Messages;
 
-namespace StudentManagementUI.Forms.DutyForms
+namespace StudentManagementUI.Forms.DocumentForms
 {
-    public partial class DutyEditForm : BaseEditForm
+    public partial class DocumentEditForm : BaseEditForm
     {
-        public static int DutyId = -1;
-        private readonly IDutyService _dutyService;
-        public DutyEditForm()
+        public static int DocumentId = -1;
+        private readonly IDocumentService _documentService;
+        public DocumentEditForm()
         {
             InitializeComponent();
-            _dutyService = InstanceFactory.GetInstance<IDutyService>();
+            _documentService = InstanceFactory.GetInstance<IDocumentService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -46,8 +46,9 @@ namespace StudentManagementUI.Forms.DutyForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _dutyService.GetLastDutyPrivateCode().Data.PrivateCode;
+            string privateCode = _documentService.GetLastDocumentPrivateCode().Data.PrivateCode;
             txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
+
         }
 
         private void CleanAllComponants()
@@ -57,10 +58,10 @@ namespace StudentManagementUI.Forms.DutyForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _dutyService.Add(new Duty
+            var result = _documentService.Add(new Document
             {
                 PrivateCode = txtPrivateCode.Text,
-                DutyName = txtDutyName.Text,
+                DocumentName = txtDocumentName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -73,11 +74,11 @@ namespace StudentManagementUI.Forms.DutyForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _dutyService.Update(new Duty
+            var result = _documentService.Update(new Document
             {
-                Id = DutyId,
+                Id = DocumentId,
                 PrivateCode = txtPrivateCode.Text,
-                DutyName = txtDutyName.Text,
+                DocumentName = txtDocumentName.Text,
                 State = tglState.IsOn,
                 Description = txtDescription.Text
             });
@@ -88,15 +89,15 @@ namespace StudentManagementUI.Forms.DutyForms
             }
         }
 
-        private void DutyEditForm_Load(object sender, EventArgs e)
+        private void DocumentEditForm_Load(object sender, EventArgs e)
         {
-            if (DutyId != -1)
+            if (DocumentId != -1)
             {
-                var result = _dutyService.Get(DutyId);
+                var result = _documentService.Get(DocumentId);
                 if (result.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtDutyName.Text = result.Data.DutyName;
+                    txtDocumentName.Text = result.Data.DocumentName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
                 }
@@ -105,36 +106,6 @@ namespace StudentManagementUI.Forms.DutyForms
             {
                 GeneratePrivateCode();
             }
-        }
-
-        private void txtPrivateCode_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
-        }
-
-        private void txtPrivateCode_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDutyName_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtDutyName.StatusBarDescription;
-        }
-
-        private void txtDutyName_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Leave(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = "";
-        }
-
-        private void txtDescription_Enter(object sender, EventArgs e)
-        {
-            statusBarDescription.Caption = txtDescription.StatusBarDescription;
         }
     }
 }

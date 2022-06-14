@@ -1,4 +1,10 @@
-﻿using DevExpress.XtraEditors;
+﻿using Business.Abstract;
+using Business.DependencyResolvers.AutoFac;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
+using Entities.Concrete;
+using StudentManagementUI.Commons.Functions;
+using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
 using System;
 using System.Collections.Generic;
@@ -14,34 +20,34 @@ namespace StudentManagementUI.Forms.DutyForms
 {
     public partial class DutyListForm : BaseListForm
     {
-        private readonly IWorkplaceService _workplaceService;
+        private readonly IDutyService _dutyService;
         public DutyListForm()
         {
             InitializeComponent();
-            _workplaceService = InstanceFactory.GetInstance<IWorkplaceService>();
+            _dutyService = InstanceFactory.GetInstance<IDutyService>();
         }
 
 
         protected override void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DialogResult dialogresult = MyMessagesBox.DeletedMessage("Family Intimacy");
+            DialogResult dialogresult = MyMessagesBox.DeletedMessage("Duty");
             if (dialogresult == DialogResult.Yes)
             {
-                var result = _workplaceService.Delete(new Workplace
+                var result = _dutyService.Delete(new Duty
                 {
-                    Id = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString())
+                    Id = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString())
                 });
                 if (result.Success)
                 {
                     MyMessagesBox.DeleteMessage(result.Message);
-                    GetAllWorkplaceActive();
+                    GetAllDutyActive();
                 }
             }
         }
 
-        private void GetAllWorkplaceActive()
+        private void GetAllDutyActive()
         {
-            gridControlWorkplaces.DataSource = _workplaceService.GetWorkplaceActive().Data;
+            gridControlDuties.DataSource = _dutyService.GetDutyActive().Data;
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -51,47 +57,47 @@ namespace StudentManagementUI.Forms.DutyForms
 
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            WorkplaceEditForm.WorkplaceId = -1;
-            CreateForms<WorkplaceEditForm>.ShowDialogEditForm();
-            GetAllWorkplaceActive();
+            DutyEditForm.DutyId = -1;
+            CreateForms<DutyEditForm>.ShowDialogEditForm();
+            GetAllDutyActive();
         }
 
         protected override void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            WorkplaceEditForm.WorkplaceId = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<WorkplaceEditForm>.ShowDialogEditForm();
-            GetAllWorkplaceActive();
+            DutyEditForm.DutyId = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString());
+            CreateForms<DutyEditForm>.ShowDialogEditForm();
+            GetAllDutyActive();
         }
 
         protected override void btnRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            GetAllWorkplaceActive();
+            GetAllDutyActive();
         }
 
         protected override void btnActivePassiveList_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (e.Item.Caption == "Passive List")
             {
-                gridControlWorkplaces.DataSource = _workplaceService.GetWorkplaceActive().Data;
+                gridControlDuties.DataSource = _dutyService.GetDutyActive().Data;
                 e.Item.Caption = "Active List";
             }
             else
             {
-                gridControlWorkplaces.DataSource = _workplaceService.GetWorkplacePassive().Data;
+                gridControlDuties.DataSource = _dutyService.GetDutyPassive().Data;
                 e.Item.Caption = "Passive List";
             }
         }
 
-        private void WorkplaceListForm_Load(object sender, EventArgs e)
+        private void DutyListForm_Load(object sender, EventArgs e)
         {
-            GetAllWorkplaceActive();
+            GetAllDutyActive();
         }
 
-        private void gridViewWorkplaces_DoubleClick(object sender, EventArgs e)
+        private void gridViewDuties_DoubleClick(object sender, EventArgs e)
         {
-            WorkplaceEditForm.WorkplaceId = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<WorkplaceEditForm>.ShowDialogEditForm();
-            GetAllWorkplaceActive();
+            DutyEditForm.DutyId = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString());
+            CreateForms<DutyEditForm>.ShowDialogEditForm();
+            GetAllDutyActive();
         }
     }
 }

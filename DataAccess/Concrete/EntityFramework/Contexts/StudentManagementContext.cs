@@ -30,6 +30,8 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<FamilyIntimacy> FamilyIntimacies { get; set; }
         public DbSet<Workplace> Workplaces { get; set; }
         public DbSet<Duty> Duties { get; set; }
+        public DbSet<DiscountType> DiscountTypes { get; set; }
+        public DbSet<Document> Documents { get; set; }
 
 
 
