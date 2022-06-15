@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.ClassForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,9 +96,19 @@ namespace StudentManagementUI.Forms.ClassGroupForms
 
         private void gridViewClassGroups_DoubleClick(object sender, EventArgs e)
         {
-            ClassGroupEditForm.ClassGroupId = Convert.ToInt32(gridViewClassGroups.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<ClassGroupEditForm>.ShowDialogEditForm();
-            GetAllClassGroupActive();
+            if (ClassEditForm.ControlForm)
+            {
+                ClassEditForm.ClassGroupId = Convert.ToInt32(gridViewClassGroups.GetFocusedRowCellValue("Id").ToString());
+                ClassEditForm.ControlForm = false;
+                this.Close();
+            }
+            else
+            {
+                ClassGroupEditForm.ClassGroupId = Convert.ToInt32(gridViewClassGroups.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<ClassGroupEditForm>.ShowDialogEditForm();
+                GetAllClassGroupActive();
+            }
+
         }
     }
 }

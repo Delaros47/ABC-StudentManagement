@@ -63,6 +63,16 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<DocumentManager>().As<IDocumentService>().SingleInstance();
             builder.RegisterType<EfDocumentDal>().As<IDocumentDal>().SingleInstance();
 
+            builder.RegisterType<PromotionManager>().As<IPromotionService>().SingleInstance();
+            builder.RegisterType<EfPromotionDal>().As<IPromotionDal>().SingleInstance();
+
+            builder.RegisterType<SchoolServiceManager>().As<ISchoolServiceService>().SingleInstance();
+            builder.RegisterType<EfSchoolServiceDal>().As<ISchoolServiceDal>().SingleInstance();
+
+            builder.RegisterType<ClassManager>().As<IClassService>().SingleInstance();
+            builder.RegisterType<EfClassDal>().As<IClassDal>().SingleInstance();
+
+
 
         }
     }

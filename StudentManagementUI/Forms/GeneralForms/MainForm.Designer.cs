@@ -45,6 +45,10 @@
             this.btnWorkplace = new DevExpress.XtraBars.BarButtonItem();
             this.btnDuties = new DevExpress.XtraBars.BarButtonItem();
             this.btnDiscountType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDocuments = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPromotions = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSchoolServices = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClasses = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -59,7 +63,7 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnDocuments = new DevExpress.XtraBars.BarButtonItem();
+            this.btnServiceTypes = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -84,9 +88,13 @@
             this.btnWorkplace,
             this.btnDuties,
             this.btnDiscountType,
-            this.btnDocuments});
+            this.btnDocuments,
+            this.btnPromotions,
+            this.btnSchoolServices,
+            this.btnClasses,
+            this.btnServiceTypes});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 16;
+            this.ribbonControl.MaxItemId = 20;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
@@ -99,54 +107,63 @@
             // 
             this.btnSchools.Caption = "Schools";
             this.btnSchools.Id = 1;
+            this.btnSchools.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSchools.ImageOptions.LargeImage")));
             this.btnSchools.Name = "btnSchools";
             // 
             // btnCities
             // 
             this.btnCities.Caption = "Cities";
             this.btnCities.Id = 2;
+            this.btnCities.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCities.ImageOptions.LargeImage")));
             this.btnCities.Name = "btnCities";
             // 
             // btnFamilyInformations
             // 
             this.btnFamilyInformations.Caption = "Family Informations";
             this.btnFamilyInformations.Id = 3;
+            this.btnFamilyInformations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFamilyInformations.ImageOptions.LargeImage")));
             this.btnFamilyInformations.Name = "btnFamilyInformations";
             // 
             // btnCancelReasons
             // 
             this.btnCancelReasons.Caption = "Cancel Reasons";
             this.btnCancelReasons.Id = 4;
+            this.btnCancelReasons.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCancelReasons.ImageOptions.LargeImage")));
             this.btnCancelReasons.Name = "btnCancelReasons";
             // 
             // btnForeignLanguages
             // 
             this.btnForeignLanguages.Caption = "Foreign Languages";
             this.btnForeignLanguages.Id = 5;
+            this.btnForeignLanguages.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnForeignLanguages.ImageOptions.LargeImage")));
             this.btnForeignLanguages.Name = "btnForeignLanguages";
             // 
             // btnIncentives
             // 
             this.btnIncentives.Caption = "Incentives";
             this.btnIncentives.Id = 6;
+            this.btnIncentives.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnIncentives.ImageOptions.LargeImage")));
             this.btnIncentives.Name = "btnIncentives";
             // 
             // btnQuotas
             // 
             this.btnQuotas.Caption = "Quotas";
             this.btnQuotas.Id = 7;
+            this.btnQuotas.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQuotas.ImageOptions.LargeImage")));
             this.btnQuotas.Name = "btnQuotas";
             // 
             // btnGuidanceCounselors
             // 
             this.btnGuidanceCounselors.Caption = "Guidance Counselors";
             this.btnGuidanceCounselors.Id = 8;
+            this.btnGuidanceCounselors.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGuidanceCounselors.ImageOptions.LargeImage")));
             this.btnGuidanceCounselors.Name = "btnGuidanceCounselors";
             // 
             // btnClassGroups
             // 
             this.btnClassGroups.Caption = "Class Groups";
             this.btnClassGroups.Id = 9;
+            this.btnClassGroups.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClassGroups.ImageOptions.SvgImage")));
             this.btnClassGroups.Name = "btnClassGroups";
             // 
             // btnOccupations
@@ -179,6 +196,34 @@
             this.btnDiscountType.Id = 14;
             this.btnDiscountType.Name = "btnDiscountType";
             // 
+            // btnDocuments
+            // 
+            this.btnDocuments.Caption = "Documents";
+            this.btnDocuments.Id = 15;
+            this.btnDocuments.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDocuments.ImageOptions.LargeImage")));
+            this.btnDocuments.Name = "btnDocuments";
+            // 
+            // btnPromotions
+            // 
+            this.btnPromotions.Caption = "Promotions";
+            this.btnPromotions.Id = 16;
+            this.btnPromotions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPromotions.ImageOptions.LargeImage")));
+            this.btnPromotions.Name = "btnPromotions";
+            // 
+            // btnSchoolServices
+            // 
+            this.btnSchoolServices.Caption = "School Services";
+            this.btnSchoolServices.Id = 17;
+            this.btnSchoolServices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSchoolServices.ImageOptions.LargeImage")));
+            this.btnSchoolServices.Name = "btnSchoolServices";
+            // 
+            // btnClasses
+            // 
+            this.btnClasses.Caption = "Classes";
+            this.btnClasses.Id = 18;
+            this.btnClasses.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClasses.ImageOptions.LargeImage")));
+            this.btnClasses.Name = "btnClasses";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -196,6 +241,7 @@
             // 
             // ribbonPageGroupClass
             // 
+            this.ribbonPageGroupClass.ItemLinks.Add(this.btnClasses);
             this.ribbonPageGroupClass.ItemLinks.Add(this.btnClassGroups);
             this.ribbonPageGroupClass.Name = "ribbonPageGroupClass";
             this.ribbonPageGroupClass.Text = "Class";
@@ -204,13 +250,15 @@
             // 
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnFamilyInformations);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnCities);
-            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnCancelReasons);
-            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnForeignLanguages);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnIncentives);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnQuotas);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnGuidanceCounselors);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnSchools);
             this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnDocuments);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnPromotions);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnSchoolServices);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnCancelReasons);
+            this.ribbonPageGroupGeneral.ItemLinks.Add(this.btnForeignLanguages);
             this.ribbonPageGroupGeneral.Name = "ribbonPageGroupGeneral";
             this.ribbonPageGroupGeneral.Text = "General";
             // 
@@ -242,6 +290,7 @@
             // ribbonPageGroupDiscount
             // 
             this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnDiscountType);
+            this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnServiceTypes);
             this.ribbonPageGroupDiscount.Name = "ribbonPageGroupDiscount";
             this.ribbonPageGroupDiscount.Text = "Discount";
             // 
@@ -275,11 +324,11 @@
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
             // 
-            // btnDocuments
+            // btnServiceTypes
             // 
-            this.btnDocuments.Caption = "Documents";
-            this.btnDocuments.Id = 15;
-            this.btnDocuments.Name = "btnDocuments";
+            this.btnServiceTypes.Caption = "Service Types";
+            this.btnServiceTypes.Id = 19;
+            this.btnServiceTypes.Name = "btnServiceTypes";
             // 
             // MainForm
             // 
@@ -333,5 +382,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupDiscount;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.BarButtonItem btnDocuments;
+        private DevExpress.XtraBars.BarButtonItem btnPromotions;
+        private DevExpress.XtraBars.BarButtonItem btnSchoolServices;
+        private DevExpress.XtraBars.BarButtonItem btnClasses;
+        private DevExpress.XtraBars.BarButtonItem btnServiceTypes;
     }
 }

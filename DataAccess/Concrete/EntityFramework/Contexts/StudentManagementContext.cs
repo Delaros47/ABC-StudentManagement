@@ -32,6 +32,9 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<Duty> Duties { get; set; }
         public DbSet<DiscountType> DiscountTypes { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
+        public DbSet<SchoolService> SchoolServices { get; set; }
+        public DbSet<Class> Classes { get; set; }
 
 
 

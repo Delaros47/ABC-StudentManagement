@@ -2,6 +2,8 @@
 using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGauges.Win.Wizard;
+using DevExpress.XtraGrid.Views.Grid;
 using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
@@ -20,6 +22,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
 {
     public partial class ForeignLanguageListForm : BaseListForm
     {
+
         private readonly IForeignLanguageService _foreignLanguageService;
         public ForeignLanguageListForm()
         {

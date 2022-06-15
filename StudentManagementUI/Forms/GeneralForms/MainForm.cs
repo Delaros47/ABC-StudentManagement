@@ -2,6 +2,7 @@
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CityForms;
+using StudentManagementUI.Forms.ClassForms;
 using StudentManagementUI.Forms.ClassGroupForms;
 using StudentManagementUI.Forms.DiscountTypeForms;
 using StudentManagementUI.Forms.DocumentForms;
@@ -12,8 +13,10 @@ using StudentManagementUI.Forms.ForeignLanguageForms;
 using StudentManagementUI.Forms.GuidanceCounselorForms;
 using StudentManagementUI.Forms.IncentiveForms;
 using StudentManagementUI.Forms.OccupationForms;
+using StudentManagementUI.Forms.PromotionForms;
 using StudentManagementUI.Forms.QuotaForms;
 using StudentManagementUI.Forms.SchoolForms;
+using StudentManagementUI.Forms.SchoolServiceForms;
 using StudentManagementUI.Forms.WorkplaceForms;
 using System;
 using System.Collections.Generic;
@@ -112,6 +115,18 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnDocuments)
             {
                 CreateForms<DocumentListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnPromotions)
+            {
+                CreateForms<PromotionListForm>.ShowDialogListForm();
+            }
+            else if (e.Item == btnSchoolServices)
+            {
+                CreateForms<SchoolServiceListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnClasses)
+            {
+                CreateForms<ClassListForm>.ShowDialogListForm();
             }
         }
     }
