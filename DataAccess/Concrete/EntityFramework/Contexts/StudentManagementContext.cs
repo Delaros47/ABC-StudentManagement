@@ -35,6 +35,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<SchoolService> SchoolServices { get; set; }
         public DbSet<Class> Classes { get; set; }
+        public DbSet<ServiceType> ServiceTypes { get; set; }
 
 
 
