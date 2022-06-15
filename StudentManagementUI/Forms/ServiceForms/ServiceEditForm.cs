@@ -3,10 +3,10 @@ using Business.DependencyResolvers.AutoFac;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using Entities.Concrete;
-using Entities.Enums;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.ServiceTypeForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +17,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentManagementUI.Forms.ServiceTypeForms
+namespace StudentManagementUI.Forms.ServiceForms
 {
-    public partial class ServiceTypeEditForm : BaseEditForm
+    public partial class ServiceEditForm : BaseEditForm
     {
+        public static int ServiceId = -1;
         public static int ServiceTypeId = -1;
+        public static bool FormControl = false;
+        private readonly IServiceService _serviceService;
         private readonly IServiceTypeService _serviceTypeService;
-        public ServiceTypeEditForm()
+        public ServiceEditForm()
         {
             InitializeComponent();
+            _serviceService = InstanceFactory.GetInstance<IServiceService>();
             _serviceTypeService = InstanceFactory.GetInstance<IServiceTypeService>();
         }
 
@@ -47,7 +51,7 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _serviceTypeService.GetLastServiceTypePrivateCode().Data.PrivateCode;
+            string privateCode = _serviceService.GetLastServicePrivateCode().Data.PrivateCode;
             txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
 
         }
@@ -59,14 +63,17 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _serviceTypeService.Add(new ServiceType
+            var result = _serviceService.Add(new Service
             {
                 PrivateCode = txtPrivateCode.Text,
-                ServiceTypee = cbxServiceType.SelectedItem.ToString(),
-                ServiceTypeName = txtServiceTypeName.Text,
+                Price = Convert.ToDecimal(txtPrice.Text),
+                ServiceName = txtServiceName.Text,
+                StartDate = Convert.ToDateTime(txtStartDate.Text),
+                EndDate = Convert.ToDateTime(txtEndDate.Text),
                 State = tglState.IsOn,
-                Description = txtDescription.Text
-            }) ;
+                Description = txtDescription.Text,
+                ServiceTypeId = ServiceTypeId
+            });
             if (result.Success)
             {
                 MyMessagesBox.AddedMessage(result.Message);
@@ -76,15 +83,18 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _serviceTypeService.Update(new ServiceType
+            var result = _serviceService.Update(new Service
             {
-                Id = ServiceTypeId,
+                Id = ServiceId,
                 PrivateCode = txtPrivateCode.Text,
-                ServiceTypee = cbxServiceType.SelectedItem.ToString(),
-                ServiceTypeName = txtServiceTypeName.Text,
+                Price = Convert.ToDecimal(txtPrice.Text),
                 State = tglState.IsOn,
-                Description = txtDescription.Text
-            }) ;
+                Description = txtDescription.Text,
+                ServiceName = txtServiceName.Text,
+                StartDate = Convert.ToDateTime(txtStartDate.Text),
+                EndDate = Convert.ToDateTime(txtEndDate.Text),
+                ServiceTypeId = ServiceTypeId
+            });
             if (result.Success)
             {
                 MyMessagesBox.UpdatedMessage(result.Message);
@@ -92,20 +102,21 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
             }
         }
 
-        private void ServiceTypeEditForm_Load(object sender, EventArgs e)
+        private void ServiceEditForm_Load(object sender, EventArgs e)
         {
-            foreach (var item in Enum.GetNames(typeof(ServiceTypeEnum)))
+            if (ServiceId != -1)
             {
-                cbxServiceType.Properties.Items.Add(item);
-            }
-            if (ServiceTypeId != -1)
-            {
-                var result = _serviceTypeService.Get(ServiceTypeId);
-                if (result.Success)
+                var result = _serviceService.Get(ServiceId);
+                var serviceType = _serviceTypeService.Get(ServiceTypeId);
+                ServiceTypeId = serviceType.Data.Id;
+                if (result.Success && serviceType.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtServiceTypeName.Text = result.Data.ServiceTypeName;
-                    cbxServiceType.SelectedItem = result.Data.ServiceTypee;
+                    txtEndDate.Text = result.Data.EndDate.ToString();
+                    txtStartDate.Text = result.Data.StartDate.ToString();
+                    txtPrice.Text = result.Data.Price.ToString();
+                    txtServiceName.Text = result.Data.ServiceName;
+                    btnServiceType.Text = serviceType.Data.ServiceTypeName;
                     txtDescription.Text = result.Data.Description;
                     tglState.IsOn = result.Data.State;
                 }
@@ -114,6 +125,13 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
             {
                 GeneratePrivateCode();
             }
+        }
+
+        private void btnServiceType_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            FormControl = true;
+            CreateForms<ServiceTypeListForm>.ShowDialogListFormWithoutParent();
+            btnServiceType.Text = _serviceTypeService.Get(ServiceTypeId).Data.ServiceTypeName;
         }
     }
 }

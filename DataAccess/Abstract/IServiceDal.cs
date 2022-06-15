@@ -9,8 +9,8 @@ using Universal.DataAccess;
 
 namespace DataAccess.Abstract
 {
-    public interface IServiceTypeDal:IEntityRepository<ServiceType>
+    public interface IServiceDal:IEntityRepository<Service>
     {
-        
+        List<ServiceDetailDto> GetServiceDetailDto();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    public enum ServiceTypeEnum : byte
+    public enum ServiceTypeEnum
     {
         Education = 1,
         Food = 2,

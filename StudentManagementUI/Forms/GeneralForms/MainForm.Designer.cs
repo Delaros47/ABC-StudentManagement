@@ -49,6 +49,7 @@
             this.btnPromotions = new DevExpress.XtraBars.BarButtonItem();
             this.btnSchoolServices = new DevExpress.XtraBars.BarButtonItem();
             this.btnClasses = new DevExpress.XtraBars.BarButtonItem();
+            this.btnServiceTypes = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -63,7 +64,9 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnServiceTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupService = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnServices = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -92,9 +95,10 @@
             this.btnPromotions,
             this.btnSchoolServices,
             this.btnClasses,
-            this.btnServiceTypes});
+            this.btnServiceTypes,
+            this.btnServices});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 20;
+            this.ribbonControl.MaxItemId = 21;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
@@ -224,6 +228,12 @@
             this.btnClasses.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClasses.ImageOptions.LargeImage")));
             this.btnClasses.Name = "btnClasses";
             // 
+            // btnServiceTypes
+            // 
+            this.btnServiceTypes.Caption = "Service Types";
+            this.btnServiceTypes.Id = 19;
+            this.btnServiceTypes.Name = "btnServiceTypes";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -282,6 +292,7 @@
             // ribbonPageService
             // 
             this.ribbonPageService.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupService,
             this.ribbonPageGroupDiscount});
             this.ribbonPageService.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageService.ImageOptions.Image")));
             this.ribbonPageService.Name = "ribbonPageService";
@@ -290,7 +301,6 @@
             // ribbonPageGroupDiscount
             // 
             this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnDiscountType);
-            this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnServiceTypes);
             this.ribbonPageGroupDiscount.Name = "ribbonPageGroupDiscount";
             this.ribbonPageGroupDiscount.Text = "Discount";
             // 
@@ -324,11 +334,23 @@
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
             // 
-            // btnServiceTypes
+            // ribbonPage5
             // 
-            this.btnServiceTypes.Caption = "Service Types";
-            this.btnServiceTypes.Id = 19;
-            this.btnServiceTypes.Name = "btnServiceTypes";
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "ribbonPage5";
+            // 
+            // ribbonPageGroupService
+            // 
+            this.ribbonPageGroupService.ItemLinks.Add(this.btnServices);
+            this.ribbonPageGroupService.ItemLinks.Add(this.btnServiceTypes);
+            this.ribbonPageGroupService.Name = "ribbonPageGroupService";
+            this.ribbonPageGroupService.Text = "Service";
+            // 
+            // btnServices
+            // 
+            this.btnServices.Caption = "Services";
+            this.btnServices.Id = 20;
+            this.btnServices.Name = "btnServices";
             // 
             // MainForm
             // 
@@ -386,5 +408,8 @@
         private DevExpress.XtraBars.BarButtonItem btnSchoolServices;
         private DevExpress.XtraBars.BarButtonItem btnClasses;
         private DevExpress.XtraBars.BarButtonItem btnServiceTypes;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupService;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.BarButtonItem btnServices;
     }
 }

@@ -17,6 +17,8 @@ using StudentManagementUI.Forms.PromotionForms;
 using StudentManagementUI.Forms.QuotaForms;
 using StudentManagementUI.Forms.SchoolForms;
 using StudentManagementUI.Forms.SchoolServiceForms;
+using StudentManagementUI.Forms.ServiceForms;
+using StudentManagementUI.Forms.ServiceTypeForms;
 using StudentManagementUI.Forms.WorkplaceForms;
 using System;
 using System.Collections.Generic;
@@ -127,6 +129,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnClasses)
             {
                 CreateForms<ClassListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnServiceTypes)
+            {
+                CreateForms<ServiceTypeListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnServices)
+            {
+                CreateForms<ServiceListForm>.ShowDialogListForm();
             }
         }
     }

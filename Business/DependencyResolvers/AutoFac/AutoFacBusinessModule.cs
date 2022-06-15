@@ -75,6 +75,9 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<ServiceTypeManager>().As<IServiceTypeService>().SingleInstance();
             builder.RegisterType<EfServiceTypeDal>().As<IServiceTypeDal>().SingleInstance();
 
+            builder.RegisterType<ServiceManager>().As<IServiceService>().SingleInstance();
+            builder.RegisterType<EfServiceDal>().As<IServiceDal>().SingleInstance();
+
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework.Contexts;
 using Entities.Concrete;
+using Entities.DTOs;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ using Universal.DataAccess.EntityFramework;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfServiceTypeDal:EfEntityRepositoryBase<ServiceType,StudentManagementContext>, IServiceTypeDal
+    public class EfServiceTypeDal : EfEntityRepositoryBase<ServiceType, StudentManagementContext>, IServiceTypeDal
     {
 
     }
