@@ -107,13 +107,13 @@ namespace StudentManagementUI.Forms.ServiceForms
             if (ServiceId != -1)
             {
                 var result = _serviceService.Get(ServiceId);
-                var serviceType = _serviceTypeService.Get(ServiceTypeId);
+                var serviceType = _serviceTypeService.Get(result.Data.ServiceTypeId);
                 ServiceTypeId = serviceType.Data.Id;
                 if (result.Success && serviceType.Success)
                 {
                     txtPrivateCode.Text = result.Data.PrivateCode;
-                    txtEndDate.Text = result.Data.EndDate.ToString();
-                    txtStartDate.Text = result.Data.StartDate.ToString();
+                    txtEndDate.Text = result.Data.EndDate.ToShortDateString();
+                    txtStartDate.Text = result.Data.StartDate.ToShortDateString();
                     txtPrice.Text = result.Data.Price.ToString();
                     txtServiceName.Text = result.Data.ServiceName;
                     btnServiceType.Text = serviceType.Data.ServiceTypeName;
@@ -132,6 +132,30 @@ namespace StudentManagementUI.Forms.ServiceForms
             FormControl = true;
             CreateForms<ServiceTypeListForm>.ShowDialogListFormWithoutParent();
             btnServiceType.Text = _serviceTypeService.Get(ServiceTypeId).Data.ServiceTypeName;
+        }
+
+        private void txtServiceName_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtServiceName.StatusBarDescription;
+        }
+
+        private void txtServiceName_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void btnServiceType_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = btnServiceType.StatusBarDescription;
+            statusBarShortcut.Caption = btnServiceType.StatusBarShortcut;
+            statusBarShortcutDescription.Caption = btnServiceType.StatusBarShortcutDescription;
+        }
+
+        private void btnServiceType_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+            statusBarShortcut.Caption = "";
+            statusBarShortcutDescription.Caption = "";
         }
     }
 }

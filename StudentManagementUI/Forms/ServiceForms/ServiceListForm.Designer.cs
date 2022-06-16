@@ -39,9 +39,14 @@
             this.colEndDate = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colPrice = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colDescription = new StudentManagementUI.UserControls.Grids.MyGridColumn();
+            this.repositoryItemCalcEditDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.repositoryItemDateEditDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEditDecimal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -61,7 +66,7 @@
             // longNavigator1
             // 
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
+            this.longNavigator1.Location = new System.Drawing.Point(0, 338);
             this.longNavigator1.Name = "longNavigator1";
             this.longNavigator1.Size = new System.Drawing.Size(1253, 24);
             this.longNavigator1.TabIndex = 2;
@@ -73,7 +78,10 @@
             this.gridControlServices.MainView = this.gridViewServices;
             this.gridControlServices.MenuManager = this.ribbonControl;
             this.gridControlServices.Name = "gridControlServices";
-            this.gridControlServices.Size = new System.Drawing.Size(1253, 238);
+            this.gridControlServices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCalcEditDecimal,
+            this.repositoryItemDateEditDate});
+            this.gridControlServices.Size = new System.Drawing.Size(1253, 236);
             this.gridControlServices.TabIndex = 3;
             this.gridControlServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewServices});
@@ -174,7 +182,10 @@
             // 
             // colStartDate
             // 
+            this.colStartDate.AppearanceCell.Options.UseTextOptions = true;
+            this.colStartDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colStartDate.Caption = "Start Date";
+            this.colStartDate.ColumnEdit = this.repositoryItemDateEditDate;
             this.colStartDate.FieldName = "StartDate";
             this.colStartDate.Name = "colStartDate";
             this.colStartDate.OptionsColumn.AllowEdit = false;
@@ -187,7 +198,10 @@
             // 
             // colEndDate
             // 
+            this.colEndDate.AppearanceCell.Options.UseTextOptions = true;
+            this.colEndDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEndDate.Caption = "End Date";
+            this.colEndDate.ColumnEdit = this.repositoryItemDateEditDate;
             this.colEndDate.FieldName = "EndDate";
             this.colEndDate.Name = "colEndDate";
             this.colEndDate.OptionsColumn.AllowEdit = false;
@@ -201,6 +215,7 @@
             // colPrice
             // 
             this.colPrice.Caption = "Price";
+            this.colPrice.ColumnEdit = this.repositoryItemCalcEditDecimal;
             this.colPrice.FieldName = "Price";
             this.colPrice.Name = "colPrice";
             this.colPrice.OptionsColumn.AllowEdit = false;
@@ -224,6 +239,26 @@
             this.colDescription.VisibleIndex = 6;
             this.colDescription.Width = 350;
             // 
+            // repositoryItemCalcEditDecimal
+            // 
+            this.repositoryItemCalcEditDecimal.AutoHeight = false;
+            this.repositoryItemCalcEditDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCalcEditDecimal.DisplayFormat.FormatString = "n2";
+            this.repositoryItemCalcEditDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemCalcEditDecimal.MaskSettings.Set("mask", "n2");
+            this.repositoryItemCalcEditDecimal.Name = "repositoryItemCalcEditDecimal";
+            // 
+            // repositoryItemDateEditDate
+            // 
+            this.repositoryItemDateEditDate.AutoHeight = false;
+            this.repositoryItemDateEditDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDate.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDate.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryItemDateEditDate.Name = "repositoryItemDateEditDate";
+            // 
             // ServiceListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +276,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEditDecimal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +297,7 @@
         private UserControls.Grids.MyGridColumn colEndDate;
         private UserControls.Grids.MyGridColumn colPrice;
         private UserControls.Grids.MyGridColumn colDescription;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditDate;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEditDecimal;
     }
 }

@@ -110,7 +110,7 @@
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
             this.myDataLayoutControl1.Size = new System.Drawing.Size(415, 291);
-            this.myDataLayoutControl1.TabIndex = 2;
+            this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
             // tglState
@@ -129,7 +129,7 @@
             this.tglState.Size = new System.Drawing.Size(109, 20);
             this.tglState.StatusBarDescription = "Choose the state of the form.";
             this.tglState.StyleController = this.myDataLayoutControl1;
-            this.tglState.TabIndex = 11;
+            this.tglState.TabIndex = 6;
             // 
             // txtDescription
             // 
@@ -143,7 +143,7 @@
             this.txtDescription.Size = new System.Drawing.Size(288, 123);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
-            this.txtDescription.TabIndex = 10;
+            this.txtDescription.TabIndex = 5;
             // 
             // txtPrice
             // 
@@ -164,7 +164,7 @@
             this.txtPrice.StatusBarShortcut = "F4 :";
             this.txtPrice.StatusBarShortcutDescription = "Calculator";
             this.txtPrice.StyleController = this.myDataLayoutControl1;
-            this.txtPrice.TabIndex = 9;
+            this.txtPrice.TabIndex = 4;
             // 
             // txtEndDate
             // 
@@ -187,7 +187,7 @@
             this.txtEndDate.StatusBarShortcut = "F4 :";
             this.txtEndDate.StatusBarShortcutDescription = "Choose the date";
             this.txtEndDate.StyleController = this.myDataLayoutControl1;
-            this.txtEndDate.TabIndex = 8;
+            this.txtEndDate.TabIndex = 3;
             // 
             // txtStartDate
             // 
@@ -210,7 +210,7 @@
             this.txtStartDate.StatusBarShortcut = "F4 :";
             this.txtStartDate.StatusBarShortcutDescription = "Choose the date";
             this.txtStartDate.StyleController = this.myDataLayoutControl1;
-            this.txtStartDate.TabIndex = 7;
+            this.txtStartDate.TabIndex = 2;
             // 
             // btnServiceType
             // 
@@ -225,12 +225,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnServiceType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnServiceType.Size = new System.Drawing.Size(123, 20);
-            this.btnServiceType.StatusBarDescription = null;
+            this.btnServiceType.StatusBarDescription = "Enter the Service type.";
             this.btnServiceType.StatusBarShortcut = "F4 :";
-            this.btnServiceType.StatusBarShortcutDescription = null;
+            this.btnServiceType.StatusBarShortcutDescription = "Choose the Service type";
             this.btnServiceType.StyleController = this.myDataLayoutControl1;
-            this.btnServiceType.TabIndex = 6;
+            this.btnServiceType.TabIndex = 1;
             this.btnServiceType.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnServiceType_ButtonClick);
+            this.btnServiceType.Enter += new System.EventHandler(this.btnServiceType_Enter);
+            this.btnServiceType.Leave += new System.EventHandler(this.btnServiceType_Leave);
             // 
             // txtServiceName
             // 
@@ -242,9 +244,11 @@
             this.txtServiceName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtServiceName.Properties.MaxLength = 50;
             this.txtServiceName.Size = new System.Drawing.Size(288, 20);
-            this.txtServiceName.StatusBarDescription = null;
+            this.txtServiceName.StatusBarDescription = "Enter the Service name.";
             this.txtServiceName.StyleController = this.myDataLayoutControl1;
-            this.txtServiceName.TabIndex = 5;
+            this.txtServiceName.TabIndex = 0;
+            this.txtServiceName.Enter += new System.EventHandler(this.txtServiceName_Enter);
+            this.txtServiceName.Leave += new System.EventHandler(this.txtServiceName_Leave);
             // 
             // txtPrivateCode
             // 
@@ -262,7 +266,7 @@
             this.txtPrivateCode.Size = new System.Drawing.Size(123, 20);
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
-            this.txtPrivateCode.TabIndex = 4;
+            this.txtPrivateCode.TabIndex = 7;
             // 
             // Root
             // 

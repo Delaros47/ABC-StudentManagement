@@ -78,6 +78,14 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<ServiceManager>().As<IServiceService>().SingleInstance();
             builder.RegisterType<EfServiceDal>().As<IServiceDal>().SingleInstance();
 
+            builder.RegisterType<SpecialCodeManager>().As<ISpecialCodeService>().SingleInstance();
+            builder.RegisterType<EfSpecialCodeDal>().As<ISpecialCodeDal>().SingleInstance();
+
+            builder.RegisterType<CashManager>().As<ICashService>().SingleInstance();
+            builder.RegisterType<EfCashDal>().As<ICashDal>().SingleInstance();
+
+
+
         }
     }
 }

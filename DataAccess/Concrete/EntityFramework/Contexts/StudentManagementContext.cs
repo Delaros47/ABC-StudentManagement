@@ -37,6 +37,8 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<Class> Classes { get; set; }
         public DbSet<ServiceType> ServiceTypes { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<SpecialCode> SpecialCodes { get; set; }
+        public DbSet<Cash> Cashes { get; set; }
 
 
 
