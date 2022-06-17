@@ -621,7 +621,6 @@
         private DevExpress.XtraBars.BarStaticItem barSendDescription;
         private DevExpress.XtraBars.BarStaticItem barExit;
         private DevExpress.XtraBars.BarStaticItem barExitDescription;
-        private DevExpress.XtraBars.BarButtonItem btnActivePassiveList;
         private DevExpress.XtraBars.BarSubItem btnExcelFiles;
         private DevExpress.XtraBars.BarButtonItem btnExcelFileStandard;
         private DevExpress.XtraBars.BarButtonItem btnExcelFileFormatted;
@@ -630,5 +629,6 @@
         private DevExpress.XtraBars.BarButtonItem btnPdfFile;
         private DevExpress.XtraBars.BarButtonItem btnTxtFile;
         protected DevExpress.XtraBars.BarButtonItem btnConnectedCards;
+        protected DevExpress.XtraBars.BarButtonItem btnActivePassiveList;
     }
 }

@@ -50,6 +50,8 @@
             this.btnSchoolServices = new DevExpress.XtraBars.BarButtonItem();
             this.btnClasses = new DevExpress.XtraBars.BarButtonItem();
             this.btnServiceTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnServices = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCashes = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,7 +59,10 @@
             this.ribbonPageParent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupParent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageService = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupService = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupDiscount = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageFinance = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupFinance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -65,8 +70,8 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroupService = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnServices = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnBanks = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -96,14 +101,17 @@
             this.btnSchoolServices,
             this.btnClasses,
             this.btnServiceTypes,
-            this.btnServices});
+            this.btnServices,
+            this.btnCashes,
+            this.btnBanks});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 21;
+            this.ribbonControl.MaxItemId = 23;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
             this.ribbonPageParent,
-            this.ribbonPageService});
+            this.ribbonPageService,
+            this.ribbonPageFinance});
             this.ribbonControl.Size = new System.Drawing.Size(1162, 146);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
@@ -234,6 +242,18 @@
             this.btnServiceTypes.Id = 19;
             this.btnServiceTypes.Name = "btnServiceTypes";
             // 
+            // btnServices
+            // 
+            this.btnServices.Caption = "Services";
+            this.btnServices.Id = 20;
+            this.btnServices.Name = "btnServices";
+            // 
+            // btnCashes
+            // 
+            this.btnCashes.Caption = "Cashes";
+            this.btnCashes.Id = 21;
+            this.btnCashes.Name = "btnCashes";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -298,11 +318,33 @@
             this.ribbonPageService.Name = "ribbonPageService";
             this.ribbonPageService.Text = "Service";
             // 
+            // ribbonPageGroupService
+            // 
+            this.ribbonPageGroupService.ItemLinks.Add(this.btnServices);
+            this.ribbonPageGroupService.ItemLinks.Add(this.btnServiceTypes);
+            this.ribbonPageGroupService.Name = "ribbonPageGroupService";
+            this.ribbonPageGroupService.Text = "Service";
+            // 
             // ribbonPageGroupDiscount
             // 
             this.ribbonPageGroupDiscount.ItemLinks.Add(this.btnDiscountType);
             this.ribbonPageGroupDiscount.Name = "ribbonPageGroupDiscount";
             this.ribbonPageGroupDiscount.Text = "Discount";
+            // 
+            // ribbonPageFinance
+            // 
+            this.ribbonPageFinance.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupFinance});
+            this.ribbonPageFinance.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageFinance.ImageOptions.Image")));
+            this.ribbonPageFinance.Name = "ribbonPageFinance";
+            this.ribbonPageFinance.Text = "Finance";
+            // 
+            // ribbonPageGroupFinance
+            // 
+            this.ribbonPageGroupFinance.ItemLinks.Add(this.btnCashes);
+            this.ribbonPageGroupFinance.ItemLinks.Add(this.btnBanks);
+            this.ribbonPageGroupFinance.Name = "ribbonPageGroupFinance";
+            this.ribbonPageGroupFinance.Text = "Finance";
             // 
             // ribbonStatusBar
             // 
@@ -339,18 +381,16 @@
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "ribbonPage5";
             // 
-            // ribbonPageGroupService
+            // ribbonPage6
             // 
-            this.ribbonPageGroupService.ItemLinks.Add(this.btnServices);
-            this.ribbonPageGroupService.ItemLinks.Add(this.btnServiceTypes);
-            this.ribbonPageGroupService.Name = "ribbonPageGroupService";
-            this.ribbonPageGroupService.Text = "Service";
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "ribbonPage6";
             // 
-            // btnServices
+            // btnBanks
             // 
-            this.btnServices.Caption = "Services";
-            this.btnServices.Id = 20;
-            this.btnServices.Name = "btnServices";
+            this.btnBanks.Caption = "Banks";
+            this.btnBanks.Id = 22;
+            this.btnBanks.Name = "btnBanks";
             // 
             // MainForm
             // 
@@ -411,5 +451,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupService;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.BarButtonItem btnServices;
+        private DevExpress.XtraBars.BarButtonItem btnCashes;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageFinance;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupFinance;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.BarButtonItem btnBanks;
     }
 }

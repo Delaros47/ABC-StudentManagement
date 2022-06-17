@@ -2,6 +2,7 @@
 using Business.Contants;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,11 @@ namespace Business.Concrete
         public IDataResult<List<Cash>> GetCashActive()
         {
             return new SuccessDataResult<List<Cash>>(_cashDal.GetAll(c=>c.State==true));
+        }
+
+        public IDataResult<List<CashDetailDto>> GetCashDetailDto()
+        {
+            return new SuccessDataResult<List<CashDetailDto>>(_cashDal.GetCashDetailDto());
         }
 
         public IDataResult<List<Cash>> GetCashPassive()

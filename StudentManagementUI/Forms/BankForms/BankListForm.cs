@@ -16,38 +16,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentManagementUI.Forms.CashForms
+namespace StudentManagementUI.Forms.BankForms
 {
-    public partial class CashListForm : BaseListForm
+    public partial class BankListForm : BaseListForm
     {
-        private readonly ICashService _cashService;
-        public CashListForm()
+        private readonly IBankService _bankService;
+        public BankListForm()
         {
             InitializeComponent();
-            _cashService = InstanceFactory.GetInstance<ICashService>();
+            _bankService = InstanceFactory.GetInstance<IBankService>();
         }
 
 
         protected override void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DialogResult dialogresult = MyMessagesBox.DeletedMessage("Cash");
+            DialogResult dialogresult = MyMessagesBox.DeletedMessage("Bank");
             if (dialogresult == DialogResult.Yes)
             {
-                var result = _cashService.Delete(new Cash
+                var result = _bankService.Delete(new Bank
                 {
-                    Id = Convert.ToInt32(bandedGridViewlCashes.GetFocusedRowCellValue("Id").ToString())
+                    Id = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString())
                 });
                 if (result.Success)
                 {
                     MyMessagesBox.DeleteMessage(result.Message);
-                    GetAllCashActive();
+                    GetAllBankActiveDetailDto();
                 }
             }
         }
 
-        private void GetAllCashActive()
+        private void GetAllBankActiveDetailDto()
         {
-            bandedGridControlCashes.DataSource = _cashService.GetCashDetailDto().Data;
+            bandedGridControlBanks.DataSource = _bankService.GetBankDetailActiveDto().Data;
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -57,48 +57,47 @@ namespace StudentManagementUI.Forms.CashForms
 
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            CashEditForm.CashId = -1;
-            CreateForms<CashEditForm>.ShowDialogEditForm();
-            GetAllCashActive();
+            BankEditForm.BankId = -1;
+            CreateForms<BankEditForm>.ShowDialogEditForm();
+            GetAllBankActiveDetailDto();
         }
 
         protected override void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            CashEditForm.CashId = Convert.ToInt32(bandedGridViewlCashes.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<CashEditForm>.ShowDialogEditForm();
-            GetAllCashActive();
+            BankEditForm.BankId = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString());
+            CreateForms<BankEditForm>.ShowDialogEditForm();
+            GetAllBankActiveDetailDto();
         }
 
         protected override void btnRefresh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            GetAllCashActive();
+            GetAllBankActiveDetailDto();
         }
 
         protected override void btnActivePassiveList_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (e.Item.Caption == "Passive List")
             {
-                bandedGridControlCashes.DataSource = _cashService.GetCashDetailDto().Data;
+                bandedGridControlBanks.DataSource = _bankService.GetBankDetailActiveDto().Data;
                 e.Item.Caption = "Active List";
             }
             else
             {
-                bandedGridControlCashes.DataSource = _cashService.GetCashDetailDto().Data;
+                bandedGridControlBanks.DataSource = _bankService.GetBankDetailPassiveDto().Data;
                 e.Item.Caption = "Passive List";
             }
         }
 
-        private void bandedGridViewlCashes_DoubleClick(object sender, EventArgs e)
+        private void BankListForm_Load(object sender, EventArgs e)
         {
-            CashEditForm.CashId = Convert.ToInt32(bandedGridViewlCashes.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<CashEditForm>.ShowDialogEditForm();
-            GetAllCashActive();
+            GetAllBankActiveDetailDto();
         }
 
-        private void CashListForm_Load(object sender, EventArgs e)
+        private void bandedGridViewBanks_DoubleClick(object sender, EventArgs e)
         {
-           
-            GetAllCashActive();
+            BankEditForm.BankId = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString());
+            CreateForms<BankEditForm>.ShowDialogEditForm();
+            GetAllBankActiveDetailDto();
         }
     }
 }

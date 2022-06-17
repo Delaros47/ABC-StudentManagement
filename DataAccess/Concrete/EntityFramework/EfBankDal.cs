@@ -11,27 +11,27 @@ using Universal.DataAccess.EntityFramework;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCashDal : EfEntityRepositoryBase<Cash, StudentManagementContext>, ICashDal
+    public class EfBankDal : EfEntityRepositoryBase<Bank, StudentManagementContext>, IBankDal
     {
-        public List<CashDetailDto> GetCashDetailDto()
+        public List<BankDetailDto> GetBankDetailDto()
         {
             using (var context = new StudentManagementContext())
             {
-                var result = from c in context.Cashes
+                var result = from b in context.Banks
                              join s in context.SpecialCodes
-                             on c.SpecialCode1 equals  s.Id
+                             on b.SpecialCode1 equals s.Id
                              join sk in context.SpecialCodes
-                             on c.SpecialCode2 equals sk.Id
-                             
-                             select new CashDetailDto
+                             on b.SpecialCode2 equals sk.Id
+
+                             select new BankDetailDto
                              {
-                                 Id = c.Id,
-                                 CashName = c.CashName,
-                                 PrivateCode = c.PrivateCode,
-                                 Description = c.Description,
-                                 State = c.State,
+                                 Id = b.Id,
+                                 BankName = b.BankName,
+                                 PrivateCode = b.PrivateCode,
+                                 Description = b.Description,
+                                 State = b.State,
                                  SpecialCode1 = s.SpecialCodeName,
-                                 SpecialCode2 =sk.SpecialCodeName
+                                 SpecialCode2 = sk.SpecialCodeName
                              };
                 return result.ToList();
             }

@@ -1,6 +1,8 @@
 ﻿using DevExpress.XtraBars;
 using StudentManagementUI.Commons.Functions;
+using StudentManagementUI.Forms.BankForms;
 using StudentManagementUI.Forms.CancelReasonForms;
+using StudentManagementUI.Forms.CashForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.ClassForms;
 using StudentManagementUI.Forms.ClassGroupForms;
@@ -34,6 +36,11 @@ namespace StudentManagementUI.Forms.GeneralForms
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static int SpecialCode1 = -1;
+        public static int SpecialCode2 = -1;
+        public static int SpecialCode3 = -1;
+        public static int SpecialCode4 = -1;
+        public static int SpecialCode5 = -1;
         public MainForm()
         {
             InitializeComponent();
@@ -137,6 +144,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnServices)
             {
                 CreateForms<ServiceListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnCashes)
+            {
+                CreateForms<CashListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnBanks)
+            {
+                CreateForms<BankListForm>.ShowDialogListForm();
             }
         }
     }

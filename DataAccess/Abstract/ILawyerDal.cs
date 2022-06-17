@@ -9,8 +9,8 @@ using Universal.DataAccess;
 
 namespace DataAccess.Abstract
 {
-    public interface ICashDal : IEntityRepository<Cash>
+    public interface ILawyerDal:IEntityRepository<Lawyer>
     {
-        List<CashDetailDto> GetCashDetailDto();
+        List<LawyerDetailDto> GetLawyerDetailDto();
     }
 }

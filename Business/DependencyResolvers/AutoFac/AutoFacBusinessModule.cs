@@ -84,6 +84,8 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<CashManager>().As<ICashService>().SingleInstance();
             builder.RegisterType<EfCashDal>().As<ICashDal>().SingleInstance();
 
+            builder.RegisterType<BankManager>().As<IBankService>().SingleInstance();
+            builder.RegisterType<EfBankDal>().As<IBankDal>().SingleInstance();
 
 
         }

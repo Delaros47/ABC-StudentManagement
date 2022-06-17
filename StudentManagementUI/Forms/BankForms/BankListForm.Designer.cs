@@ -1,6 +1,6 @@
-﻿namespace StudentManagementUI.Forms.CashForms
+﻿namespace StudentManagementUI.Forms.BankForms
 {
-    partial class CashListForm
+    partial class BankListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
-            this.bandedGridControlCashes = new StudentManagementUI.UserControls.Grids.MyBandedGridControl();
-            this.bandedGridViewlCashes = new StudentManagementUI.UserControls.Grids.MyBandedGridView();
+            this.bandedGridControlBanks = new StudentManagementUI.UserControls.Grids.MyBandedGridControl();
+            this.bandedGridViewBanks = new StudentManagementUI.UserControls.Grids.MyBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colPrivateCode = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colCashName = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colBankName = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSpecialCode1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colSpecialCode2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
@@ -41,8 +41,8 @@
             this.colDescription = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlCashes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridViewlCashes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlBanks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridViewBanks)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -56,7 +56,7 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(1269, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(1251, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // longNavigator1
@@ -64,77 +64,77 @@
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.longNavigator1.Location = new System.Drawing.Point(0, 340);
             this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1269, 24);
+            this.longNavigator1.Size = new System.Drawing.Size(1251, 24);
             this.longNavigator1.TabIndex = 2;
             // 
-            // bandedGridControlCashes
+            // bandedGridControlBanks
             // 
-            this.bandedGridControlCashes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bandedGridControlCashes.Location = new System.Drawing.Point(0, 102);
-            this.bandedGridControlCashes.MainView = this.bandedGridViewlCashes;
-            this.bandedGridControlCashes.MenuManager = this.ribbonControl;
-            this.bandedGridControlCashes.Name = "bandedGridControlCashes";
-            this.bandedGridControlCashes.Size = new System.Drawing.Size(1269, 238);
-            this.bandedGridControlCashes.TabIndex = 3;
-            this.bandedGridControlCashes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.bandedGridViewlCashes});
+            this.bandedGridControlBanks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bandedGridControlBanks.Location = new System.Drawing.Point(0, 102);
+            this.bandedGridControlBanks.MainView = this.bandedGridViewBanks;
+            this.bandedGridControlBanks.MenuManager = this.ribbonControl;
+            this.bandedGridControlBanks.Name = "bandedGridControlBanks";
+            this.bandedGridControlBanks.Size = new System.Drawing.Size(1251, 238);
+            this.bandedGridControlBanks.TabIndex = 3;
+            this.bandedGridControlBanks.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.bandedGridViewBanks});
             // 
-            // bandedGridViewlCashes
+            // bandedGridViewBanks
             // 
-            this.bandedGridViewlCashes.Appearance.BandPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bandedGridViewlCashes.Appearance.BandPanel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.bandedGridViewlCashes.Appearance.BandPanel.Options.UseFont = true;
-            this.bandedGridViewlCashes.Appearance.BandPanel.Options.UseForeColor = true;
-            this.bandedGridViewlCashes.Appearance.BandPanel.Options.UseTextOptions = true;
-            this.bandedGridViewlCashes.Appearance.BandPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.bandedGridViewlCashes.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bandedGridViewlCashes.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.bandedGridViewlCashes.Appearance.FooterPanel.Options.UseFont = true;
-            this.bandedGridViewlCashes.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.bandedGridViewlCashes.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.bandedGridViewlCashes.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.bandedGridViewlCashes.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.bandedGridViewlCashes.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.bandedGridViewlCashes.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.bandedGridViewlCashes.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.bandedGridViewlCashes.BandPanelRowHeight = 40;
-            this.bandedGridViewlCashes.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.bandedGridViewBanks.Appearance.BandPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bandedGridViewBanks.Appearance.BandPanel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.bandedGridViewBanks.Appearance.BandPanel.Options.UseFont = true;
+            this.bandedGridViewBanks.Appearance.BandPanel.Options.UseForeColor = true;
+            this.bandedGridViewBanks.Appearance.BandPanel.Options.UseTextOptions = true;
+            this.bandedGridViewBanks.Appearance.BandPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridViewBanks.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bandedGridViewBanks.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.bandedGridViewBanks.Appearance.FooterPanel.Options.UseFont = true;
+            this.bandedGridViewBanks.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.bandedGridViewBanks.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.bandedGridViewBanks.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.bandedGridViewBanks.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.bandedGridViewBanks.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.bandedGridViewBanks.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.bandedGridViewBanks.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.bandedGridViewBanks.BandPanelRowHeight = 40;
+            this.bandedGridViewBanks.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1,
             this.gridBand2,
             this.gridBand3});
-            this.bandedGridViewlCashes.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.bandedGridViewBanks.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colId,
             this.colPrivateCode,
-            this.colCashName,
+            this.colBankName,
             this.colSpecialCode1,
             this.colSpecialCode2,
             this.colDescription});
-            this.bandedGridViewlCashes.GridControl = this.bandedGridControlCashes;
-            this.bandedGridViewlCashes.Name = "bandedGridViewlCashes";
-            this.bandedGridViewlCashes.OptionsMenu.EnableColumnMenu = false;
-            this.bandedGridViewlCashes.OptionsMenu.EnableFooterMenu = false;
-            this.bandedGridViewlCashes.OptionsMenu.EnableGroupPanelMenu = false;
-            this.bandedGridViewlCashes.OptionsNavigation.EnterMoveNextColumn = true;
-            this.bandedGridViewlCashes.OptionsPrint.AutoWidth = false;
-            this.bandedGridViewlCashes.OptionsPrint.PrintFooter = false;
-            this.bandedGridViewlCashes.OptionsPrint.PrintGroupFooter = false;
-            this.bandedGridViewlCashes.OptionsView.ColumnAutoWidth = false;
-            this.bandedGridViewlCashes.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
-            this.bandedGridViewlCashes.OptionsView.RowAutoHeight = true;
-            this.bandedGridViewlCashes.OptionsView.ShowAutoFilterRow = true;
-            this.bandedGridViewlCashes.OptionsView.ShowGroupPanel = false;
-            this.bandedGridViewlCashes.OptionsView.ShowViewCaption = true;
-            this.bandedGridViewlCashes.StatusBarDescription = null;
-            this.bandedGridViewlCashes.StatusBarShortcut = null;
-            this.bandedGridViewlCashes.StatusBarShortcutDescription = null;
-            this.bandedGridViewlCashes.ViewCaption = "Cashes";
-            this.bandedGridViewlCashes.DoubleClick += new System.EventHandler(this.bandedGridViewlCashes_DoubleClick);
+            this.bandedGridViewBanks.GridControl = this.bandedGridControlBanks;
+            this.bandedGridViewBanks.Name = "bandedGridViewBanks";
+            this.bandedGridViewBanks.OptionsMenu.EnableColumnMenu = false;
+            this.bandedGridViewBanks.OptionsMenu.EnableFooterMenu = false;
+            this.bandedGridViewBanks.OptionsMenu.EnableGroupPanelMenu = false;
+            this.bandedGridViewBanks.OptionsNavigation.EnterMoveNextColumn = true;
+            this.bandedGridViewBanks.OptionsPrint.AutoWidth = false;
+            this.bandedGridViewBanks.OptionsPrint.PrintFooter = false;
+            this.bandedGridViewBanks.OptionsPrint.PrintGroupFooter = false;
+            this.bandedGridViewBanks.OptionsView.ColumnAutoWidth = false;
+            this.bandedGridViewBanks.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
+            this.bandedGridViewBanks.OptionsView.RowAutoHeight = true;
+            this.bandedGridViewBanks.OptionsView.ShowAutoFilterRow = true;
+            this.bandedGridViewBanks.OptionsView.ShowGroupPanel = false;
+            this.bandedGridViewBanks.OptionsView.ShowViewCaption = true;
+            this.bandedGridViewBanks.StatusBarDescription = null;
+            this.bandedGridViewBanks.StatusBarShortcut = null;
+            this.bandedGridViewBanks.StatusBarShortcutDescription = null;
+            this.bandedGridViewBanks.ViewCaption = "Banks";
+            this.bandedGridViewBanks.DoubleClick += new System.EventHandler(this.bandedGridViewBanks_DoubleClick);
             // 
             // gridBand1
             // 
-            this.gridBand1.Caption = "Cash Informations";
+            this.gridBand1.Caption = "Bank Informations";
             this.gridBand1.Columns.Add(this.colPrivateCode);
-            this.gridBand1.Columns.Add(this.colCashName);
+            this.gridBand1.Columns.Add(this.colBankName);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 400;
@@ -150,17 +150,17 @@
             this.colPrivateCode.Visible = true;
             this.colPrivateCode.Width = 150;
             // 
-            // colCashName
+            // colBankName
             // 
-            this.colCashName.Caption = "Cash Name";
-            this.colCashName.FieldName = "CashName";
-            this.colCashName.Name = "colCashName";
-            this.colCashName.OptionsColumn.AllowEdit = false;
-            this.colCashName.StatusBarDescription = null;
-            this.colCashName.StatusBarShortcut = null;
-            this.colCashName.StatusBarShortcutDescription = null;
-            this.colCashName.Visible = true;
-            this.colCashName.Width = 250;
+            this.colBankName.Caption = "Bank Name";
+            this.colBankName.FieldName = "BankName";
+            this.colBankName.Name = "colBankName";
+            this.colBankName.OptionsColumn.AllowEdit = false;
+            this.colBankName.StatusBarDescription = null;
+            this.colBankName.StatusBarShortcut = null;
+            this.colBankName.StatusBarShortcutDescription = null;
+            this.colBankName.Visible = true;
+            this.colBankName.Width = 250;
             // 
             // gridBand2
             // 
@@ -223,23 +223,23 @@
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
-            // CashListForm
+            // BankListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 395);
-            this.Controls.Add(this.bandedGridControlCashes);
+            this.ClientSize = new System.Drawing.Size(1251, 395);
+            this.Controls.Add(this.bandedGridControlBanks);
             this.Controls.Add(this.longNavigator1);
             this.IconOptions.ShowIcon = false;
-            this.Name = "CashListForm";
-            this.Text = "Cash List";
-            this.Load += new System.EventHandler(this.CashListForm_Load);
+            this.Name = "BankListForm";
+            this.Text = "Bank List";
+            this.Load += new System.EventHandler(this.BankListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator1, 0);
-            this.Controls.SetChildIndex(this.bandedGridControlCashes, 0);
+            this.Controls.SetChildIndex(this.bandedGridControlBanks, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlCashes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bandedGridViewlCashes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlBanks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bandedGridViewBanks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,16 +248,16 @@
         #endregion
 
         private UserControls.Navigators.LongNavigator longNavigator1;
-        private UserControls.Grids.MyBandedGridControl bandedGridControlCashes;
-        private UserControls.Grids.MyBandedGridView bandedGridViewlCashes;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
+        private UserControls.Grids.MyBandedGridControl bandedGridControlBanks;
+        private UserControls.Grids.MyBandedGridView bandedGridViewBanks;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPrivateCode;
-        private UserControls.Grids.MyBandedGridColumn colCashName;
+        private UserControls.Grids.MyBandedGridColumn colBankName;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private UserControls.Grids.MyBandedGridColumn colSpecialCode1;
         private UserControls.Grids.MyBandedGridColumn colSpecialCode2;
-        private UserControls.Grids.MyBandedGridColumn colDescription;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private UserControls.Grids.MyBandedGridColumn colDescription;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
     }
 }
