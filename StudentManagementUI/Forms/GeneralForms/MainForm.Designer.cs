@@ -54,6 +54,7 @@
             this.btnCashes = new DevExpress.XtraBars.BarButtonItem();
             this.btnBanks = new DevExpress.XtraBars.BarButtonItem();
             this.btnLawyers = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCustomers = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -73,7 +74,7 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnCustomers = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPaymentTypes = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -107,9 +108,10 @@
             this.btnCashes,
             this.btnBanks,
             this.btnLawyers,
-            this.btnCustomers});
+            this.btnCustomers,
+            this.btnPaymentTypes});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 25;
+            this.ribbonControl.MaxItemId = 26;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
@@ -270,6 +272,12 @@
             this.btnLawyers.Id = 23;
             this.btnLawyers.Name = "btnLawyers";
             // 
+            // btnCustomers
+            // 
+            this.btnCustomers.Caption = "Customers";
+            this.btnCustomers.Id = 24;
+            this.btnCustomers.Name = "btnCustomers";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -361,6 +369,7 @@
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnBanks);
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnLawyers);
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnCustomers);
+            this.ribbonPageGroupFinance.ItemLinks.Add(this.btnPaymentTypes);
             this.ribbonPageGroupFinance.Name = "ribbonPageGroupFinance";
             this.ribbonPageGroupFinance.Text = "Finance";
             // 
@@ -404,11 +413,11 @@
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "ribbonPage6";
             // 
-            // btnCustomers
+            // btnPaymentTypes
             // 
-            this.btnCustomers.Caption = "Customers";
-            this.btnCustomers.Id = 24;
-            this.btnCustomers.Name = "btnCustomers";
+            this.btnPaymentTypes.Caption = "Payment Types";
+            this.btnPaymentTypes.Id = 25;
+            this.btnPaymentTypes.Name = "btnPaymentTypes";
             // 
             // MainForm
             // 
@@ -476,5 +485,6 @@
         private DevExpress.XtraBars.BarButtonItem btnBanks;
         private DevExpress.XtraBars.BarButtonItem btnLawyers;
         private DevExpress.XtraBars.BarButtonItem btnCustomers;
+        private DevExpress.XtraBars.BarButtonItem btnPaymentTypes;
     }
 }

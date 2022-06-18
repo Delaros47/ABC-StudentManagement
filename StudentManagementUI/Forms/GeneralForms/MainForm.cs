@@ -17,6 +17,7 @@ using StudentManagementUI.Forms.GuidanceCounselorForms;
 using StudentManagementUI.Forms.IncentiveForms;
 using StudentManagementUI.Forms.LawyerForms;
 using StudentManagementUI.Forms.OccupationForms;
+using StudentManagementUI.Forms.PaymentTypeForms;
 using StudentManagementUI.Forms.PromotionForms;
 using StudentManagementUI.Forms.QuotaForms;
 using StudentManagementUI.Forms.SchoolForms;
@@ -162,6 +163,10 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item == btnCustomers)
             {
                 CreateForms<CustomerListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnPaymentTypes)
+            {
+                CreateForms<PaymentTypeListForm>.ShowDialogListForm();
             }
         }
     }

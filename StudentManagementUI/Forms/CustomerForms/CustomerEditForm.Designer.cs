@@ -47,7 +47,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition14 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl1 = new StudentManagementUI.UserControls.Controls.MyDataLayoutControl();
             this.txtPrivateCode = new StudentManagementUI.UserControls.Controls.MyPrivateCodeTextEdit();
-            this.myToggleSwitch1 = new StudentManagementUI.UserControls.Controls.MyToggleSwitch();
+            this.tglState = new StudentManagementUI.UserControls.Controls.MyToggleSwitch();
             this.txtDescription = new StudentManagementUI.UserControls.Controls.MyMemoEdit();
             this.btnSpecialCode2 = new StudentManagementUI.UserControls.Controls.MyButtonEdit();
             this.btnSpecialCode1 = new StudentManagementUI.UserControls.Controls.MyButtonEdit();
@@ -85,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             this.myDataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myToggleSwitch1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSpecialCode2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSpecialCode1.Properties)).BeginInit();
@@ -132,13 +132,13 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(501, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(500, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl1
             // 
             this.myDataLayoutControl1.Controls.Add(this.txtPrivateCode);
-            this.myDataLayoutControl1.Controls.Add(this.myToggleSwitch1);
+            this.myDataLayoutControl1.Controls.Add(this.tglState);
             this.myDataLayoutControl1.Controls.Add(this.txtDescription);
             this.myDataLayoutControl1.Controls.Add(this.btnSpecialCode2);
             this.myDataLayoutControl1.Controls.Add(this.btnSpecialCode1);
@@ -159,7 +159,7 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(501, 405);
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(500, 406);
             this.myDataLayoutControl1.TabIndex = 2;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
@@ -181,23 +181,23 @@
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 21;
             // 
-            // myToggleSwitch1
+            // tglState
             // 
-            this.myToggleSwitch1.EnterMoveNextControl = true;
-            this.myToggleSwitch1.Location = new System.Drawing.Point(381, 12);
-            this.myToggleSwitch1.MenuManager = this.ribbonControl;
-            this.myToggleSwitch1.Name = "myToggleSwitch1";
-            this.myToggleSwitch1.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.myToggleSwitch1.Properties.Appearance.Options.UseForeColor = true;
-            this.myToggleSwitch1.Properties.AutoHeight = false;
-            this.myToggleSwitch1.Properties.AutoWidth = true;
-            this.myToggleSwitch1.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.myToggleSwitch1.Properties.OffText = "Passive";
-            this.myToggleSwitch1.Properties.OnText = "Active";
-            this.myToggleSwitch1.Size = new System.Drawing.Size(109, 20);
-            this.myToggleSwitch1.StatusBarDescription = "Choose the state of the form.";
-            this.myToggleSwitch1.StyleController = this.myDataLayoutControl1;
-            this.myToggleSwitch1.TabIndex = 20;
+            this.tglState.EnterMoveNextControl = true;
+            this.tglState.Location = new System.Drawing.Point(380, 12);
+            this.tglState.MenuManager = this.ribbonControl;
+            this.tglState.Name = "tglState";
+            this.tglState.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.tglState.Properties.Appearance.Options.UseForeColor = true;
+            this.tglState.Properties.AutoHeight = false;
+            this.tglState.Properties.AutoWidth = true;
+            this.tglState.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.tglState.Properties.OffText = "Passive";
+            this.tglState.Properties.OnText = "Active";
+            this.tglState.Size = new System.Drawing.Size(109, 20);
+            this.tglState.StatusBarDescription = "Choose the state of the form.";
+            this.tglState.StyleController = this.myDataLayoutControl1;
+            this.tglState.TabIndex = 20;
             // 
             // txtDescription
             // 
@@ -208,7 +208,7 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(368, 69);
+            this.txtDescription.Size = new System.Drawing.Size(367, 70);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 19;
@@ -231,6 +231,7 @@
             this.btnSpecialCode2.StatusBarShortcutDescription = null;
             this.btnSpecialCode2.StyleController = this.myDataLayoutControl1;
             this.btnSpecialCode2.TabIndex = 18;
+            this.btnSpecialCode2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode2_ButtonClick);
             // 
             // btnSpecialCode1
             // 
@@ -250,6 +251,7 @@
             this.btnSpecialCode1.StatusBarShortcutDescription = null;
             this.btnSpecialCode1.StyleController = this.myDataLayoutControl1;
             this.btnSpecialCode1.TabIndex = 17;
+            this.btnSpecialCode1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode1_ButtonClick);
             // 
             // txtAddress
             // 
@@ -260,7 +262,7 @@
             this.txtAddress.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAddress.Properties.MaxLength = 500;
-            this.txtAddress.Size = new System.Drawing.Size(368, 44);
+            this.txtAddress.Size = new System.Drawing.Size(367, 44);
             this.txtAddress.StatusBarDescription = "Enter the description.";
             this.txtAddress.StyleController = this.myDataLayoutControl1;
             this.txtAddress.TabIndex = 16;
@@ -268,7 +270,7 @@
             // txtTaxNumber
             // 
             this.txtTaxNumber.EnterMoveNextControl = true;
-            this.txtTaxNumber.Location = new System.Drawing.Point(372, 204);
+            this.txtTaxNumber.Location = new System.Drawing.Point(371, 204);
             this.txtTaxNumber.MenuManager = this.ribbonControl;
             this.txtTaxNumber.Name = "txtTaxNumber";
             this.txtTaxNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -312,7 +314,7 @@
             this.txtEmailAddress.Properties.MaskSettings.Set("isAutoComplete", true);
             this.txtEmailAddress.Properties.MaskSettings.Set("isOptimistic", false);
             this.txtEmailAddress.Properties.MaxLength = 50;
-            this.txtEmailAddress.Size = new System.Drawing.Size(368, 20);
+            this.txtEmailAddress.Size = new System.Drawing.Size(367, 20);
             this.txtEmailAddress.StatusBarDescription = "Enter the Email Address.";
             this.txtEmailAddress.StyleController = this.myDataLayoutControl1;
             this.txtEmailAddress.TabIndex = 13;
@@ -326,7 +328,7 @@
             this.txtWebAddress.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtWebAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWebAddress.Properties.MaxLength = 50;
-            this.txtWebAddress.Size = new System.Drawing.Size(368, 20);
+            this.txtWebAddress.Size = new System.Drawing.Size(367, 20);
             this.txtWebAddress.StatusBarDescription = null;
             this.txtWebAddress.StyleController = this.myDataLayoutControl1;
             this.txtWebAddress.TabIndex = 12;
@@ -357,7 +359,7 @@
             // txtPhone4
             // 
             this.txtPhone4.EnterMoveNextControl = true;
-            this.txtPhone4.Location = new System.Drawing.Point(372, 108);
+            this.txtPhone4.Location = new System.Drawing.Point(371, 108);
             this.txtPhone4.MenuManager = this.ribbonControl;
             this.txtPhone4.Name = "txtPhone4";
             this.txtPhone4.Properties.Appearance.Options.UseTextOptions = true;
@@ -403,7 +405,7 @@
             // txtPhone3
             // 
             this.txtPhone3.EnterMoveNextControl = true;
-            this.txtPhone3.Location = new System.Drawing.Point(372, 84);
+            this.txtPhone3.Location = new System.Drawing.Point(371, 84);
             this.txtPhone3.MenuManager = this.ribbonControl;
             this.txtPhone3.Name = "txtPhone3";
             this.txtPhone3.Properties.Appearance.Options.UseTextOptions = true;
@@ -478,7 +480,7 @@
             this.txtCustomerNameSurname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtCustomerNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCustomerNameSurname.Properties.MaxLength = 50;
-            this.txtCustomerNameSurname.Size = new System.Drawing.Size(368, 20);
+            this.txtCustomerNameSurname.Size = new System.Drawing.Size(367, 20);
             this.txtCustomerNameSurname.StatusBarDescription = null;
             this.txtCustomerNameSurname.StyleController = this.myDataLayoutControl1;
             this.txtCustomerNameSurname.TabIndex = 5;
@@ -560,7 +562,7 @@
             rowDefinition12,
             rowDefinition13,
             rowDefinition14});
-            this.Root.Size = new System.Drawing.Size(501, 405);
+            this.Root.Size = new System.Drawing.Size(500, 406);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -572,7 +574,7 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem2.Size = new System.Drawing.Size(481, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(480, 24);
             this.layoutControlItem2.Text = "Name Surname";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(99, 13);
@@ -611,7 +613,7 @@
             this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem5.Control = this.txtPhone3;
-            this.layoutControlItem5.Location = new System.Drawing.Point(261, 72);
+            this.layoutControlItem5.Location = new System.Drawing.Point(260, 72);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 3;
@@ -640,7 +642,7 @@
             this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem7.Control = this.txtPhone4;
-            this.layoutControlItem7.Location = new System.Drawing.Point(261, 96);
+            this.layoutControlItem7.Location = new System.Drawing.Point(260, 96);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 4;
@@ -673,7 +675,7 @@
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem9.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem9.Size = new System.Drawing.Size(481, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(480, 24);
             this.layoutControlItem9.Text = "Web Address";
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(99, 13);
@@ -688,7 +690,7 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 7;
-            this.layoutControlItem10.Size = new System.Drawing.Size(481, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(480, 24);
             this.layoutControlItem10.Text = "Email Address";
             this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(99, 13);
@@ -713,7 +715,7 @@
             this.layoutControlItem12.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem12.Control = this.txtTaxNumber;
-            this.layoutControlItem12.Location = new System.Drawing.Point(261, 192);
+            this.layoutControlItem12.Location = new System.Drawing.Point(260, 192);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem12.OptionsTableLayoutItem.RowIndex = 8;
@@ -733,7 +735,7 @@
             this.layoutControlItem13.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 9;
             this.layoutControlItem13.OptionsTableLayoutItem.RowSpan = 2;
-            this.layoutControlItem13.Size = new System.Drawing.Size(481, 48);
+            this.layoutControlItem13.Size = new System.Drawing.Size(480, 48);
             this.layoutControlItem13.Text = "Address";
             this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(99, 13);
@@ -776,7 +778,7 @@
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 13;
-            this.layoutControlItem16.Size = new System.Drawing.Size(481, 73);
+            this.layoutControlItem16.Size = new System.Drawing.Size(480, 74);
             this.layoutControlItem16.Text = "Description";
             this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(99, 13);
@@ -786,8 +788,8 @@
             // 
             this.layoutControlItem17.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem17.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem17.Control = this.myToggleSwitch1;
-            this.layoutControlItem17.Location = new System.Drawing.Point(261, 0);
+            this.layoutControlItem17.Control = this.tglState;
+            this.layoutControlItem17.Location = new System.Drawing.Point(260, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem17.Padding = new DevExpress.XtraLayout.Utils.Padding(110, 2, 2, 2);
@@ -812,19 +814,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 540);
+            this.ClientSize = new System.Drawing.Size(500, 539);
             this.Controls.Add(this.myDataLayoutControl1);
             this.IconOptions.ShowIcon = false;
+            this.MinimumSize = new System.Drawing.Size(510, 540);
             this.Name = "CustomerEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customer Edit";
+            this.Load += new System.EventHandler(this.CustomerEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             this.myDataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPrivateCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myToggleSwitch1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSpecialCode2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSpecialCode1.Properties)).EndInit();
@@ -867,7 +871,7 @@
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private UserControls.Controls.MyToggleSwitch myToggleSwitch1;
+        private UserControls.Controls.MyToggleSwitch tglState;
         private UserControls.Controls.MyMemoEdit txtDescription;
         private UserControls.Controls.MyButtonEdit btnSpecialCode2;
         private UserControls.Controls.MyButtonEdit btnSpecialCode1;

@@ -37,14 +37,14 @@
             this.colCustomerName = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colTaxNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colAddress = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.colPhone4 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.colPhone3 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWeb = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colFax = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colEmail = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colTaxOffice = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colPhone1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colPhone2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colPhone3 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colPhone4 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSpecialCode1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colSpecialCode2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
@@ -150,6 +150,7 @@
             this.bandedGridViewCustomers.StatusBarShortcut = null;
             this.bandedGridViewCustomers.StatusBarShortcutDescription = null;
             this.bandedGridViewCustomers.ViewCaption = "Customers";
+            this.bandedGridViewCustomers.DoubleClick += new System.EventHandler(this.bandedGridViewCustomers_DoubleClick);
             // 
             // gridBand1
             // 
@@ -159,14 +160,14 @@
             this.gridBand1.Columns.Add(this.colCustomerName);
             this.gridBand1.Columns.Add(this.colTaxNumber);
             this.gridBand1.Columns.Add(this.colAddress);
-            this.gridBand1.Columns.Add(this.colPhone4);
-            this.gridBand1.Columns.Add(this.colPhone3);
             this.gridBand1.Columns.Add(this.colWeb);
             this.gridBand1.Columns.Add(this.colFax);
             this.gridBand1.Columns.Add(this.colEmail);
             this.gridBand1.Columns.Add(this.colTaxOffice);
             this.gridBand1.Columns.Add(this.colPhone1);
             this.gridBand1.Columns.Add(this.colPhone2);
+            this.gridBand1.Columns.Add(this.colPhone3);
+            this.gridBand1.Columns.Add(this.colPhone4);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 1950;
@@ -184,6 +185,8 @@
             // 
             // colIdentityNumber
             // 
+            this.colIdentityNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colIdentityNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colIdentityNumber.Caption = "Identity Number";
             this.colIdentityNumber.FieldName = "IdentityNumber";
             this.colIdentityNumber.Name = "colIdentityNumber";
@@ -208,6 +211,8 @@
             // 
             // colTaxNumber
             // 
+            this.colTaxNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colTaxNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTaxNumber.Caption = "Tax Number";
             this.colTaxNumber.FieldName = "TaxNumber";
             this.colTaxNumber.Name = "colTaxNumber";
@@ -229,30 +234,6 @@
             this.colAddress.StatusBarShortcutDescription = null;
             this.colAddress.Visible = true;
             this.colAddress.Width = 200;
-            // 
-            // colPhone4
-            // 
-            this.colPhone4.Caption = "Phone-4";
-            this.colPhone4.FieldName = "Phone4";
-            this.colPhone4.Name = "colPhone4";
-            this.colPhone4.OptionsColumn.AllowEdit = false;
-            this.colPhone4.StatusBarDescription = null;
-            this.colPhone4.StatusBarShortcut = null;
-            this.colPhone4.StatusBarShortcutDescription = null;
-            this.colPhone4.Visible = true;
-            this.colPhone4.Width = 150;
-            // 
-            // colPhone3
-            // 
-            this.colPhone3.Caption = "Phone-3";
-            this.colPhone3.FieldName = "Phone3";
-            this.colPhone3.Name = "colPhone3";
-            this.colPhone3.OptionsColumn.AllowEdit = false;
-            this.colPhone3.StatusBarDescription = null;
-            this.colPhone3.StatusBarShortcut = null;
-            this.colPhone3.StatusBarShortcutDescription = null;
-            this.colPhone3.Visible = true;
-            this.colPhone3.Width = 150;
             // 
             // colWeb
             // 
@@ -304,6 +285,8 @@
             // 
             // colPhone1
             // 
+            this.colPhone1.AppearanceCell.Options.UseTextOptions = true;
+            this.colPhone1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPhone1.Caption = "Phone-1";
             this.colPhone1.FieldName = "Phone1";
             this.colPhone1.Name = "colPhone1";
@@ -316,6 +299,8 @@
             // 
             // colPhone2
             // 
+            this.colPhone2.AppearanceCell.Options.UseTextOptions = true;
+            this.colPhone2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPhone2.Caption = "Phone-2";
             this.colPhone2.FieldName = "Phone2";
             this.colPhone2.Name = "colPhone2";
@@ -325,6 +310,34 @@
             this.colPhone2.StatusBarShortcutDescription = null;
             this.colPhone2.Visible = true;
             this.colPhone2.Width = 150;
+            // 
+            // colPhone3
+            // 
+            this.colPhone3.AppearanceCell.Options.UseTextOptions = true;
+            this.colPhone3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPhone3.Caption = "Phone-3";
+            this.colPhone3.FieldName = "Phone3";
+            this.colPhone3.Name = "colPhone3";
+            this.colPhone3.OptionsColumn.AllowEdit = false;
+            this.colPhone3.StatusBarDescription = null;
+            this.colPhone3.StatusBarShortcut = null;
+            this.colPhone3.StatusBarShortcutDescription = null;
+            this.colPhone3.Visible = true;
+            this.colPhone3.Width = 150;
+            // 
+            // colPhone4
+            // 
+            this.colPhone4.AppearanceCell.Options.UseTextOptions = true;
+            this.colPhone4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPhone4.Caption = "Phone-4";
+            this.colPhone4.FieldName = "Phone4";
+            this.colPhone4.Name = "colPhone4";
+            this.colPhone4.OptionsColumn.AllowEdit = false;
+            this.colPhone4.StatusBarDescription = null;
+            this.colPhone4.StatusBarShortcut = null;
+            this.colPhone4.StatusBarShortcutDescription = null;
+            this.colPhone4.Visible = true;
+            this.colPhone4.Width = 150;
             // 
             // gridBand2
             // 
@@ -397,6 +410,7 @@
             this.IconOptions.ShowIcon = false;
             this.Name = "CustomerListForm";
             this.Text = "Customer List";
+            this.Load += new System.EventHandler(this.CustomerListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator1, 0);
             this.Controls.SetChildIndex(this.bandedGridControlCustomers, 0);

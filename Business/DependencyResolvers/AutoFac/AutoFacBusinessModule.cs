@@ -93,6 +93,10 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
             builder.RegisterType<EfCustomerDal>().As<ICustomerDal>().SingleInstance();
 
+            builder.RegisterType<PaymentTypeManager>().As<IPaymentTypeService>().SingleInstance();
+            builder.RegisterType<EfPaymentTypeDal>().As<IPaymentTypeDal>().SingleInstance();
+
+
         }
     }
 }
