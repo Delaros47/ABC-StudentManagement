@@ -13,8 +13,8 @@ namespace Entities.Concrete
         public string PrivateCode { get; set; }
         public string NameSurname { get; set; }
         public string ContractNumber { get; set; }
-        public DateOnly ContractStartDate { get; set; }
-        public DateOnly ContractEndDate { get; set; }
+        public DateTime ContractStartDate { get; set; }
+        public DateTime ContractEndDate { get; set; }
         public int SpecialCode1 { get; set; }
         public int SpecialCode2 { get; set; }
         public bool State { get; set; }

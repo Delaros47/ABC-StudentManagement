@@ -6,6 +6,7 @@ using StudentManagementUI.Forms.CashForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.ClassForms;
 using StudentManagementUI.Forms.ClassGroupForms;
+using StudentManagementUI.Forms.CustomerForms;
 using StudentManagementUI.Forms.DiscountTypeForms;
 using StudentManagementUI.Forms.DocumentForms;
 using StudentManagementUI.Forms.DutyForms;
@@ -14,6 +15,7 @@ using StudentManagementUI.Forms.FamilyIntimacyForms;
 using StudentManagementUI.Forms.ForeignLanguageForms;
 using StudentManagementUI.Forms.GuidanceCounselorForms;
 using StudentManagementUI.Forms.IncentiveForms;
+using StudentManagementUI.Forms.LawyerForms;
 using StudentManagementUI.Forms.OccupationForms;
 using StudentManagementUI.Forms.PromotionForms;
 using StudentManagementUI.Forms.QuotaForms;
@@ -152,6 +154,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnBanks)
             {
                 CreateForms<BankListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnLawyers)
+            {
+                CreateForms<LawyerListForm>.ShowDialogListForm();
+            }
+            else if (e.Item == btnCustomers)
+            {
+                CreateForms<CustomerListForm>.ShowDialogListForm();
             }
         }
     }

@@ -87,6 +87,11 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<BankManager>().As<IBankService>().SingleInstance();
             builder.RegisterType<EfBankDal>().As<IBankDal>().SingleInstance();
 
+            builder.RegisterType<LawyerManager>().As<ILawyerService>().SingleInstance();
+            builder.RegisterType<EfLawyerDal>().As<ILawyerDal>().SingleInstance();
+
+            builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
+            builder.RegisterType<EfCustomerDal>().As<ICustomerDal>().SingleInstance();
 
         }
     }

@@ -41,7 +41,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
         public DbSet<Cash> Cashes { get; set; }
         public DbSet<Bank> Banks { get; set; }
         public DbSet<Lawyer> Lawyers { get; set; }
-
+        public DbSet<Customer> Customers { get; set; }
 
 
     }
