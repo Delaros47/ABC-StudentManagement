@@ -55,6 +55,8 @@
             this.btnBanks = new DevExpress.XtraBars.BarButtonItem();
             this.btnLawyers = new DevExpress.XtraBars.BarButtonItem();
             this.btnCustomers = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPaymentTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankAccounts = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -74,7 +76,7 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnPaymentTypes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnContacts = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -109,9 +111,11 @@
             this.btnBanks,
             this.btnLawyers,
             this.btnCustomers,
-            this.btnPaymentTypes});
+            this.btnPaymentTypes,
+            this.btnBankAccounts,
+            this.btnContacts});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 26;
+            this.ribbonControl.MaxItemId = 28;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
@@ -278,6 +282,18 @@
             this.btnCustomers.Id = 24;
             this.btnCustomers.Name = "btnCustomers";
             // 
+            // btnPaymentTypes
+            // 
+            this.btnPaymentTypes.Caption = "Payment Types";
+            this.btnPaymentTypes.Id = 25;
+            this.btnPaymentTypes.Name = "btnPaymentTypes";
+            // 
+            // btnBankAccounts
+            // 
+            this.btnBankAccounts.Caption = "Bank Accounts";
+            this.btnBankAccounts.Id = 26;
+            this.btnBankAccounts.Name = "btnBankAccounts";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -330,6 +346,7 @@
             this.ribbonPageGroupParent.ItemLinks.Add(this.btnFamilyIntimacies);
             this.ribbonPageGroupParent.ItemLinks.Add(this.btnWorkplace);
             this.ribbonPageGroupParent.ItemLinks.Add(this.btnDuties);
+            this.ribbonPageGroupParent.ItemLinks.Add(this.btnContacts);
             this.ribbonPageGroupParent.Name = "ribbonPageGroupParent";
             this.ribbonPageGroupParent.Text = "Parent";
             // 
@@ -370,6 +387,7 @@
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnLawyers);
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnCustomers);
             this.ribbonPageGroupFinance.ItemLinks.Add(this.btnPaymentTypes);
+            this.ribbonPageGroupFinance.ItemLinks.Add(this.btnBankAccounts);
             this.ribbonPageGroupFinance.Name = "ribbonPageGroupFinance";
             this.ribbonPageGroupFinance.Text = "Finance";
             // 
@@ -413,11 +431,11 @@
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "ribbonPage6";
             // 
-            // btnPaymentTypes
+            // btnContacts
             // 
-            this.btnPaymentTypes.Caption = "Payment Types";
-            this.btnPaymentTypes.Id = 25;
-            this.btnPaymentTypes.Name = "btnPaymentTypes";
+            this.btnContacts.Caption = "Contacts";
+            this.btnContacts.Id = 27;
+            this.btnContacts.Name = "btnContacts";
             // 
             // MainForm
             // 
@@ -486,5 +504,7 @@
         private DevExpress.XtraBars.BarButtonItem btnLawyers;
         private DevExpress.XtraBars.BarButtonItem btnCustomers;
         private DevExpress.XtraBars.BarButtonItem btnPaymentTypes;
+        private DevExpress.XtraBars.BarButtonItem btnBankAccounts;
+        private DevExpress.XtraBars.BarButtonItem btnContacts;
     }
 }

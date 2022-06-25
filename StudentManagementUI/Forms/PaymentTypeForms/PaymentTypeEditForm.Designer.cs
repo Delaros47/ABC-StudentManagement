@@ -89,7 +89,7 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 164);
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(390, 166);
             this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
@@ -120,7 +120,7 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(263, 68);
+            this.txtDescription.Size = new System.Drawing.Size(263, 70);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 2;
@@ -210,7 +210,7 @@
             rowDefinition2,
             rowDefinition3,
             rowDefinition4});
-            this.Root.Size = new System.Drawing.Size(390, 164);
+            this.Root.Size = new System.Drawing.Size(390, 166);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -264,7 +264,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem4.Size = new System.Drawing.Size(370, 72);
+            this.layoutControlItem4.Size = new System.Drawing.Size(370, 74);
             this.layoutControlItem4.Text = "Description";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 13);

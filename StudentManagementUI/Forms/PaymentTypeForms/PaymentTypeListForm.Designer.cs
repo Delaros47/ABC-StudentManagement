@@ -57,7 +57,7 @@
             // longNavigator1
             // 
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
             this.longNavigator1.Name = "longNavigator1";
             this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
             this.longNavigator1.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.gridControlPayments.MainView = this.gridViewPaymentTypes;
             this.gridControlPayments.MenuManager = this.ribbonControl;
             this.gridControlPayments.Name = "gridControlPayments";
-            this.gridControlPayments.Size = new System.Drawing.Size(1120, 236);
+            this.gridControlPayments.Size = new System.Drawing.Size(1120, 238);
             this.gridControlPayments.TabIndex = 3;
             this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPaymentTypes});

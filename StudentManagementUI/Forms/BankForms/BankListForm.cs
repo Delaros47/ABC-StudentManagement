@@ -5,7 +5,9 @@ using DevExpress.XtraEditors;
 using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
+using StudentManagementUI.Forms.BankAccountForms;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.GeneralForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,9 +97,19 @@ namespace StudentManagementUI.Forms.BankForms
 
         private void bandedGridViewBanks_DoubleClick(object sender, EventArgs e)
         {
-            BankEditForm.BankId = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<BankEditForm>.ShowDialogEditForm();
-            GetAllBankActiveDetailDto();
+            if (MainForm.FormConrol)
+            {
+                MainForm.FormConrol = false;
+                BankAccountEditForm.BankId = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString());
+                this.Close();
+            }
+            else
+            {
+                BankEditForm.BankId = Convert.ToInt32(bandedGridViewBanks.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<BankEditForm>.ShowDialogEditForm();
+                GetAllBankActiveDetailDto();
+            }
+            
         }
     }
 }

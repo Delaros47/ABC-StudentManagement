@@ -170,5 +170,183 @@ namespace StudentManagementUI.Forms.CustomerForms
             CreateForms<SpecialCodeListForm>.ShowDialogListFormWithoutParent();
             btnSpecialCode2.Text = _specialCodeService.Get(MainForm.SpecialCode2).Data.SpecialCodeName;
         }
+
+        private void txtPrivateCode_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPrivateCode.StatusBarDescription;
+        }
+
+        private void txtPrivateCode_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void tglState_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void tglState_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "Choose the State of Customer";
+        }
+
+        private void txtCustomerNameSurname_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtCustomerNameSurname.StatusBarDescription;
+        }
+
+        private void txtCustomerNameSurname_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtIdentityNumber_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtIdentityNumber.StatusBarDescription;
+        }
+
+        private void txtIdentityNumber_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtPhone1_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtPhone1_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPhone1.StatusBarDescription;
+        }
+
+        private void txtPhone2_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPhone2.StatusBarDescription;
+        }
+
+        private void txtPhone2_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtPhone3_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPhone3.StatusBarDescription;
+        }
+
+        private void txtPhone3_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtPhone4_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtPhone4.StatusBarDescription;
+        }
+
+        private void txtPhone4_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtFaxNumber_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtFaxNumber_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtFaxNumber.StatusBarDescription;
+        }
+
+        private void txtWebAddress_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtWebAddress_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtWebAddress.StatusBarDescription;
+        }
+
+        private void txtEmailAddress_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtWebAddress.StatusBarDescription;
+        }
+
+        private void txtEmailAddress_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtTaxOffice_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtTaxOffice.StatusBarDescription;
+        }
+
+        private void txtTaxOffice_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtTaxNumber_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtTaxNumber.StatusBarDescription;
+        }
+
+        private void txtTaxNumber_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void txtAddress_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtAddress.StatusBarDescription;
+        }
+
+        private void txtAddress_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
+
+        private void btnSpecialCode1_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+            statusBarShortcut.Caption = "";
+            statusBarShortcutDescription.Caption = "";
+        }
+
+        private void btnSpecialCode1_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = btnSpecialCode1.StatusBarDescription;
+            statusBarShortcut.Caption = btnSpecialCode1.StatusBarShortcut;
+            statusBarShortcutDescription.Caption = btnSpecialCode1.StatusBarShortcutDescription;
+        }
+
+        private void btnSpecialCode2_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = btnSpecialCode2.StatusBarDescription;
+            statusBarShortcut.Caption = btnSpecialCode2.StatusBarShortcut;
+            statusBarShortcutDescription.Caption = btnSpecialCode2.StatusBarShortcutDescription;
+        }
+
+        private void btnSpecialCode2_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+            statusBarShortcut.Caption = "";
+            statusBarShortcutDescription.Caption = "";
+        }
+
+        private void txtDescription_Enter(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = txtDescription.StatusBarDescription;
+        }
+
+        private void txtDescription_Leave(object sender, EventArgs e)
+        {
+            statusBarDescription.Caption = "";
+        }
     }
 }

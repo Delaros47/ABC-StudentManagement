@@ -1,11 +1,13 @@
 ﻿using DevExpress.XtraBars;
 using StudentManagementUI.Commons.Functions;
+using StudentManagementUI.Forms.BankAccountForms;
 using StudentManagementUI.Forms.BankForms;
 using StudentManagementUI.Forms.CancelReasonForms;
 using StudentManagementUI.Forms.CashForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.ClassForms;
 using StudentManagementUI.Forms.ClassGroupForms;
+using StudentManagementUI.Forms.ContactForms;
 using StudentManagementUI.Forms.CustomerForms;
 using StudentManagementUI.Forms.DiscountTypeForms;
 using StudentManagementUI.Forms.DocumentForms;
@@ -39,11 +41,16 @@ namespace StudentManagementUI.Forms.GeneralForms
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static bool FormConrol = false;
         public static int SpecialCode1 = -1;
         public static int SpecialCode2 = -1;
         public static int SpecialCode3 = -1;
         public static int SpecialCode4 = -1;
         public static int SpecialCode5 = -1;
+        public static int CityId = -1;
+        public static int DistrictId = -1;
+        public static int DutyId = -1;
+        public static int OccupationId -1;
         public MainForm()
         {
             InitializeComponent();
@@ -167,6 +174,14 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnPaymentTypes)
             {
                 CreateForms<PaymentTypeListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnBankAccounts)
+            {
+                CreateForms<BankAccountListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnContacts)
+            {
+                CreateForms<ContactListForm>.ShowDialogListForm();
             }
         }
     }

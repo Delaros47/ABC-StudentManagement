@@ -159,7 +159,7 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(500, 406);
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(500, 404);
             this.myDataLayoutControl1.TabIndex = 2;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
@@ -180,6 +180,8 @@
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
             this.txtPrivateCode.TabIndex = 21;
+            this.txtPrivateCode.Enter += new System.EventHandler(this.txtPrivateCode_Enter);
+            this.txtPrivateCode.Leave += new System.EventHandler(this.txtPrivateCode_Leave);
             // 
             // tglState
             // 
@@ -198,6 +200,8 @@
             this.tglState.StatusBarDescription = "Choose the state of the form.";
             this.tglState.StyleController = this.myDataLayoutControl1;
             this.tglState.TabIndex = 20;
+            this.tglState.Enter += new System.EventHandler(this.tglState_Enter);
+            this.tglState.Leave += new System.EventHandler(this.tglState_Leave);
             // 
             // txtDescription
             // 
@@ -208,10 +212,12 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(367, 70);
+            this.txtDescription.Size = new System.Drawing.Size(367, 68);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
             this.txtDescription.TabIndex = 19;
+            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
+            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // btnSpecialCode2
             // 
@@ -226,12 +232,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnSpecialCode2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnSpecialCode2.Size = new System.Drawing.Size(137, 20);
-            this.btnSpecialCode2.StatusBarDescription = null;
+            this.btnSpecialCode2.StatusBarDescription = "Enter the Special Code-2";
             this.btnSpecialCode2.StatusBarShortcut = "F4 :";
-            this.btnSpecialCode2.StatusBarShortcutDescription = null;
+            this.btnSpecialCode2.StatusBarShortcutDescription = "Choose the Special Code-2";
             this.btnSpecialCode2.StyleController = this.myDataLayoutControl1;
             this.btnSpecialCode2.TabIndex = 18;
             this.btnSpecialCode2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode2_ButtonClick);
+            this.btnSpecialCode2.Enter += new System.EventHandler(this.btnSpecialCode2_Enter);
+            this.btnSpecialCode2.Leave += new System.EventHandler(this.btnSpecialCode2_Leave);
             // 
             // btnSpecialCode1
             // 
@@ -246,12 +254,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnSpecialCode1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnSpecialCode1.Size = new System.Drawing.Size(137, 20);
-            this.btnSpecialCode1.StatusBarDescription = null;
+            this.btnSpecialCode1.StatusBarDescription = "Enter the Special Code-1";
             this.btnSpecialCode1.StatusBarShortcut = "F4 :";
-            this.btnSpecialCode1.StatusBarShortcutDescription = null;
+            this.btnSpecialCode1.StatusBarShortcutDescription = "Choose the Special Code-1";
             this.btnSpecialCode1.StyleController = this.myDataLayoutControl1;
             this.btnSpecialCode1.TabIndex = 17;
             this.btnSpecialCode1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode1_ButtonClick);
+            this.btnSpecialCode1.Enter += new System.EventHandler(this.btnSpecialCode1_Enter);
+            this.btnSpecialCode1.Leave += new System.EventHandler(this.btnSpecialCode1_Leave);
             // 
             // txtAddress
             // 
@@ -263,9 +273,11 @@
             this.txtAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAddress.Properties.MaxLength = 500;
             this.txtAddress.Size = new System.Drawing.Size(367, 44);
-            this.txtAddress.StatusBarDescription = "Enter the description.";
+            this.txtAddress.StatusBarDescription = "Enter the address.";
             this.txtAddress.StyleController = this.myDataLayoutControl1;
             this.txtAddress.TabIndex = 16;
+            this.txtAddress.Enter += new System.EventHandler(this.txtAddress_Enter);
+            this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
             // txtTaxNumber
             // 
@@ -277,9 +289,11 @@
             this.txtTaxNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTaxNumber.Properties.MaxLength = 50;
             this.txtTaxNumber.Size = new System.Drawing.Size(117, 20);
-            this.txtTaxNumber.StatusBarDescription = null;
+            this.txtTaxNumber.StatusBarDescription = "Enter the Tax Number";
             this.txtTaxNumber.StyleController = this.myDataLayoutControl1;
             this.txtTaxNumber.TabIndex = 15;
+            this.txtTaxNumber.Enter += new System.EventHandler(this.txtTaxNumber_Enter);
+            this.txtTaxNumber.Leave += new System.EventHandler(this.txtTaxNumber_Leave);
             // 
             // txtTaxOffice
             // 
@@ -291,9 +305,11 @@
             this.txtTaxOffice.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTaxOffice.Properties.MaxLength = 50;
             this.txtTaxOffice.Size = new System.Drawing.Size(137, 20);
-            this.txtTaxOffice.StatusBarDescription = null;
+            this.txtTaxOffice.StatusBarDescription = "Enter the Tax Office";
             this.txtTaxOffice.StyleController = this.myDataLayoutControl1;
             this.txtTaxOffice.TabIndex = 14;
+            this.txtTaxOffice.Enter += new System.EventHandler(this.txtTaxOffice_Enter);
+            this.txtTaxOffice.Leave += new System.EventHandler(this.txtTaxOffice_Leave);
             // 
             // txtEmailAddress
             // 
@@ -303,10 +319,6 @@
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtEmailAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtEmailAddress.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
-            this.txtEmailAddress.Properties.Mask.EditMask = "((([0-9a-zA-Z_%-])+[.])+|([0-9a-zA-Z_%-])+)+@((([0-9a-zA-Z_-])+[.])+|([0-9a-zA-Z_" +
-    "-])+)+";
-            this.txtEmailAddress.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmailAddress.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.txtEmailAddress.Properties.MaskSettings.Set("allowBlankInput", true);
             this.txtEmailAddress.Properties.MaskSettings.Set("mask", "((([0-9a-zA-Z_%-])+[.])+|([0-9a-zA-Z_%-])+)+@((([0-9a-zA-Z_-])+[.])+|([0-9a-zA-Z_" +
@@ -318,6 +330,8 @@
             this.txtEmailAddress.StatusBarDescription = "Enter the Email Address.";
             this.txtEmailAddress.StyleController = this.myDataLayoutControl1;
             this.txtEmailAddress.TabIndex = 13;
+            this.txtEmailAddress.Enter += new System.EventHandler(this.txtEmailAddress_Enter);
+            this.txtEmailAddress.Leave += new System.EventHandler(this.txtEmailAddress_Leave);
             // 
             // txtWebAddress
             // 
@@ -329,9 +343,11 @@
             this.txtWebAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWebAddress.Properties.MaxLength = 50;
             this.txtWebAddress.Size = new System.Drawing.Size(367, 20);
-            this.txtWebAddress.StatusBarDescription = null;
+            this.txtWebAddress.StatusBarDescription = "Enter the Web Address";
             this.txtWebAddress.StyleController = this.myDataLayoutControl1;
             this.txtWebAddress.TabIndex = 12;
+            this.txtWebAddress.Enter += new System.EventHandler(this.txtWebAddress_Enter);
+            this.txtWebAddress.Leave += new System.EventHandler(this.txtWebAddress_Leave);
             // 
             // txtFaxNumber
             // 
@@ -343,18 +359,17 @@
             this.txtFaxNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtFaxNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtFaxNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFaxNumber.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtFaxNumber.Properties.Mask.EditMask = "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtFaxNumber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtFaxNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtFaxNumber.Properties.MaskSettings.Set("mask", "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtFaxNumber.Properties.MaskSettings.Set("isAutoComplete", false);
             this.txtFaxNumber.Properties.MaskSettings.Set("isOptimistic", false);
             this.txtFaxNumber.Properties.MaxLength = 50;
             this.txtFaxNumber.Size = new System.Drawing.Size(137, 20);
-            this.txtFaxNumber.StatusBarDescription = "Enter the Phone Number.";
+            this.txtFaxNumber.StatusBarDescription = "Enter the Fax Number.";
             this.txtFaxNumber.StyleController = this.myDataLayoutControl1;
             this.txtFaxNumber.TabIndex = 11;
+            this.txtFaxNumber.Enter += new System.EventHandler(this.txtFaxNumber_Enter);
+            this.txtFaxNumber.Leave += new System.EventHandler(this.txtFaxNumber_Leave);
             // 
             // txtPhone4
             // 
@@ -366,9 +381,6 @@
             this.txtPhone4.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPhone4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPhone4.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPhone4.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtPhone4.Properties.Mask.EditMask = "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtPhone4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone4.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtPhone4.Properties.MaskSettings.Set("mask", "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtPhone4.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -378,6 +390,8 @@
             this.txtPhone4.StatusBarDescription = "Enter the Phone Number.";
             this.txtPhone4.StyleController = this.myDataLayoutControl1;
             this.txtPhone4.TabIndex = 10;
+            this.txtPhone4.Enter += new System.EventHandler(this.txtPhone4_Enter);
+            this.txtPhone4.Leave += new System.EventHandler(this.txtPhone4_Leave);
             // 
             // txtPhone2
             // 
@@ -389,9 +403,6 @@
             this.txtPhone2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPhone2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPhone2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPhone2.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtPhone2.Properties.Mask.EditMask = "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtPhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtPhone2.Properties.MaskSettings.Set("mask", "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtPhone2.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -401,6 +412,8 @@
             this.txtPhone2.StatusBarDescription = "Enter the Phone Number.";
             this.txtPhone2.StyleController = this.myDataLayoutControl1;
             this.txtPhone2.TabIndex = 9;
+            this.txtPhone2.Enter += new System.EventHandler(this.txtPhone2_Enter);
+            this.txtPhone2.Leave += new System.EventHandler(this.txtPhone2_Leave);
             // 
             // txtPhone3
             // 
@@ -412,9 +425,6 @@
             this.txtPhone3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPhone3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPhone3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPhone3.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtPhone3.Properties.Mask.EditMask = "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtPhone3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone3.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtPhone3.Properties.MaskSettings.Set("mask", "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtPhone3.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -424,6 +434,8 @@
             this.txtPhone3.StatusBarDescription = "Enter the Phone Number.";
             this.txtPhone3.StyleController = this.myDataLayoutControl1;
             this.txtPhone3.TabIndex = 8;
+            this.txtPhone3.Enter += new System.EventHandler(this.txtPhone3_Enter);
+            this.txtPhone3.Leave += new System.EventHandler(this.txtPhone3_Leave);
             // 
             // txtPhone1
             // 
@@ -435,9 +447,6 @@
             this.txtPhone1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPhone1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtPhone1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtPhone1.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtPhone1.Properties.Mask.EditMask = "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtPhone1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtPhone1.Properties.MaskSettings.Set("mask", "(0\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtPhone1.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -447,6 +456,8 @@
             this.txtPhone1.StatusBarDescription = "Enter the Phone Number.";
             this.txtPhone1.StyleController = this.myDataLayoutControl1;
             this.txtPhone1.TabIndex = 7;
+            this.txtPhone1.Enter += new System.EventHandler(this.txtPhone1_Enter);
+            this.txtPhone1.Leave += new System.EventHandler(this.txtPhone1_Leave);
             // 
             // txtIdentityNumber
             // 
@@ -458,9 +469,6 @@
             this.txtIdentityNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtIdentityNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtIdentityNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIdentityNumber.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtIdentityNumber.Properties.Mask.EditMask = "\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?";
-            this.txtIdentityNumber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtIdentityNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtIdentityNumber.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?");
             this.txtIdentityNumber.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -470,6 +478,8 @@
             this.txtIdentityNumber.StatusBarDescription = "Enter Identity Number.";
             this.txtIdentityNumber.StyleController = this.myDataLayoutControl1;
             this.txtIdentityNumber.TabIndex = 6;
+            this.txtIdentityNumber.Enter += new System.EventHandler(this.txtIdentityNumber_Enter);
+            this.txtIdentityNumber.Leave += new System.EventHandler(this.txtIdentityNumber_Leave);
             // 
             // txtCustomerNameSurname
             // 
@@ -481,9 +491,11 @@
             this.txtCustomerNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCustomerNameSurname.Properties.MaxLength = 50;
             this.txtCustomerNameSurname.Size = new System.Drawing.Size(367, 20);
-            this.txtCustomerNameSurname.StatusBarDescription = null;
+            this.txtCustomerNameSurname.StatusBarDescription = "Enter the Name and Surname.";
             this.txtCustomerNameSurname.StyleController = this.myDataLayoutControl1;
             this.txtCustomerNameSurname.TabIndex = 5;
+            this.txtCustomerNameSurname.Enter += new System.EventHandler(this.txtCustomerNameSurname_Enter);
+            this.txtCustomerNameSurname.Leave += new System.EventHandler(this.txtCustomerNameSurname_Leave);
             // 
             // Root
             // 
@@ -562,7 +574,7 @@
             rowDefinition12,
             rowDefinition13,
             rowDefinition14});
-            this.Root.Size = new System.Drawing.Size(500, 406);
+            this.Root.Size = new System.Drawing.Size(500, 404);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -778,7 +790,7 @@
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 13;
-            this.layoutControlItem16.Size = new System.Drawing.Size(480, 74);
+            this.layoutControlItem16.Size = new System.Drawing.Size(480, 72);
             this.layoutControlItem16.Text = "Description";
             this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(99, 13);
