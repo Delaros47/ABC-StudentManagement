@@ -50,7 +50,7 @@ namespace StudentManagementUI.Forms.GeneralForms
         public static int CityId = -1;
         public static int DistrictId = -1;
         public static int DutyId = -1;
-        public static int OccupationId -1;
+        public static int OccupationId = -1;
         public MainForm()
         {
             InitializeComponent();

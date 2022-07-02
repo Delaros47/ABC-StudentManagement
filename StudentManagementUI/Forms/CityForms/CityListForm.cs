@@ -7,6 +7,7 @@ using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
 using StudentManagementUI.Forms.DistrictForms;
+using StudentManagementUI.Forms.GeneralForms;
 using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
@@ -94,6 +95,12 @@ namespace StudentManagementUI.Forms.CityForms
                 {
                     SchoolEditForm.CityId = CityId;
                     SchoolEditForm.ControlForm = false;
+                    this.Close();
+                }
+                else if (MainForm.FormConrol)
+                {
+                    MainForm.FormConrol = false;
+                    MainForm.CityId = CityId;
                     this.Close();
                 }
                 else

@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.GeneralForms;
 using StudentManagementUI.Forms.SchoolForms;
 using System;
 using System.Collections.Generic;
@@ -77,6 +78,12 @@ namespace StudentManagementUI.Forms.DistrictForms
             {
                 SchoolEditForm.DistrictId = Convert.ToInt32(gridViewDistricts.GetFocusedRowCellValue("Id").ToString());
                 SchoolEditForm.ControlForm = false;
+                this.Close();
+            }
+            else if (MainForm.FormConrol)
+            {
+                MainForm.FormConrol = false;
+                MainForm.DistrictId = Convert.ToInt32(gridViewDistricts.GetFocusedRowCellValue("Id").ToString());
                 this.Close();
             }
             else

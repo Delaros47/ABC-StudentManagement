@@ -721,6 +721,7 @@
             this.btnOccupation.StatusBarShortcutDescription = null;
             this.btnOccupation.StyleController = this.myDataLayoutControl1;
             this.btnOccupation.TabIndex = 25;
+            this.btnOccupation.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnOccupation_ButtonClick);
             // 
             // btnWorkAddressDistrict
             // 
@@ -740,6 +741,7 @@
             this.btnWorkAddressDistrict.StatusBarShortcutDescription = null;
             this.btnWorkAddressDistrict.StyleController = this.myDataLayoutControl1;
             this.btnWorkAddressDistrict.TabIndex = 24;
+            this.btnWorkAddressDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnWorkAddressDistrict_ButtonClick);
             // 
             // btnWorkAddressCity
             // 
@@ -759,6 +761,7 @@
             this.btnWorkAddressCity.StatusBarShortcutDescription = null;
             this.btnWorkAddressCity.StyleController = this.myDataLayoutControl1;
             this.btnWorkAddressCity.TabIndex = 23;
+            this.btnWorkAddressCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnWorkAddressCity_ButtonClick);
             // 
             // txtWorkAddress
             // 
@@ -792,6 +795,7 @@
             this.btnHomeAddressDistrict.StatusBarShortcutDescription = null;
             this.btnHomeAddressDistrict.StyleController = this.myDataLayoutControl1;
             this.btnHomeAddressDistrict.TabIndex = 21;
+            this.btnHomeAddressDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnHomeAddressDistrict_ButtonClick);
             // 
             // btnHomeAddressCity
             // 
@@ -811,6 +815,7 @@
             this.btnHomeAddressCity.StatusBarShortcutDescription = null;
             this.btnHomeAddressCity.StyleController = this.myDataLayoutControl1;
             this.btnHomeAddressCity.TabIndex = 20;
+            this.btnHomeAddressCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnHomeAddressCity_ButtonClick);
             // 
             // txtHomeAddress
             // 

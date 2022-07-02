@@ -6,6 +6,8 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.CityForms;
+using StudentManagementUI.Forms.DistrictForms;
 using StudentManagementUI.Forms.GeneralForms;
 using StudentManagementUI.Forms.SpecialCodeForms;
 using System;
@@ -25,13 +27,24 @@ namespace StudentManagementUI.Forms.ContactForms
         public static int ContactId = -1;
         public static int SpecialCode1 = -1;
         public static int SpecialCode2 = -1;
+        public static int HomeAddressCityId = -1;
+        public static int HomeAddressDistrictId = -1;
+        public static int WorkAddressCityId = -1;
+        public static int WorkAddressDistrictId = -1;
+        public static int CityId = -1;
+        public static int DistrictId = -1;
+
         private readonly IContactService _contactService;
         private readonly ISpecialCodeService _specialCodeService;
+        private readonly ICityService _cityService;
+        private readonly IDistrictService _districtService;
         public ContactEditForm()
         {
             InitializeComponent();
             _contactService = InstanceFactory.GetInstance<IContactService>();
             _specialCodeService = InstanceFactory.GetInstance<ISpecialCodeService>();
+            _cityService = InstanceFactory.GetInstance<ICityService>();
+            _districtService = InstanceFactory.GetInstance<IDistrictService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -79,13 +92,13 @@ namespace StudentManagementUI.Forms.ContactForms
                 Email = txtEmail.Text,
                 HomePhone = txtHomePhone.Text,
                 DateOfBirth = Convert.ToDateTime(deBirthDate.Text),
-                CityId = MainForm.CityId,
-                DistrictId = MainForm.DistrictId,
+                CityId = CityId,
+                DistrictId = DistrictId,
                 FatherName = txtFatherName.Text,
                 IBanNumber = txtIBANNo.Text,
                 FamilySequenceNumber = txtFamilySequenceNumber.Text,
-                HomeAddressCityId = MainForm.CityId,
-                HomeAddressDistrictId = MainForm.DistrictId,
+                HomeAddressCityId = HomeAddressCityId,
+                HomeAddressDistrictId = HomeAddressDistrictId,
                 IdentityIssuedDate = Convert.ToDateTime(deIssuedDate.Text),
                 MotherName = txtMotherName.Text,
                 Name = txtName.Text,
@@ -100,8 +113,8 @@ namespace StudentManagementUI.Forms.ContactForms
                 VolumeNumber = txtVolumeNumber.Text,
                 IdentityIssuedReason = txtIssuedReason.Text,
                 IdentityRegisterNumber = txtIdentityRegisterNumber.Text,
-                WorkAddressCityId = MainForm.CityId,
-                WorkAddressDistrictId = MainForm.DistrictId,
+                WorkAddressCityId = WorkAddressCityId,
+                WorkAddressDistrictId = WorkAddressDistrictId,
                 PlaceIssued = txtIssuedPlace.Text,
                 DutyId = MainForm.DutyId,
                 OccupationId = MainForm.OccupationId,
@@ -137,13 +150,13 @@ namespace StudentManagementUI.Forms.ContactForms
                 Email = txtEmail.Text,
                 HomePhone = txtHomePhone.Text,
                 DateOfBirth = Convert.ToDateTime(deBirthDate.Text),
-                CityId = MainForm.CityId,
-                DistrictId = MainForm.DistrictId,
+                CityId = CityId,
+                DistrictId = DistrictId,
                 FatherName = txtFatherName.Text,
                 IBanNumber = txtIBANNo.Text,
                 FamilySequenceNumber = txtFamilySequenceNumber.Text,
-                HomeAddressCityId = MainForm.CityId,
-                HomeAddressDistrictId = MainForm.DistrictId,
+                HomeAddressCityId = HomeAddressCityId,
+                HomeAddressDistrictId = HomeAddressDistrictId,
                 IdentityIssuedDate = Convert.ToDateTime(deIssuedDate.Text),
                 MotherName = txtMotherName.Text,
                 Name = txtName.Text,
@@ -158,8 +171,8 @@ namespace StudentManagementUI.Forms.ContactForms
                 VolumeNumber = txtVolumeNumber.Text,
                 IdentityIssuedReason = txtIssuedReason.Text,
                 IdentityRegisterNumber = txtIdentityRegisterNumber.Text,
-                WorkAddressCityId = MainForm.CityId,
-                WorkAddressDistrictId = MainForm.DistrictId,
+                WorkAddressCityId = WorkAddressCityId,
+                WorkAddressDistrictId = WorkAddressDistrictId,
                 PlaceIssued = txtIssuedPlace.Text,
                 DutyId = MainForm.DutyId,
                 OccupationId = MainForm.OccupationId,
@@ -213,6 +226,45 @@ namespace StudentManagementUI.Forms.ContactForms
             SpecialCodeListForm.SpecialCode2 = true;
             CreateForms<SpecialCodeListForm>.ShowDialogListFormWithoutParent();
             btnSpecialCode2.Text = _specialCodeService.Get(MainForm.SpecialCode2).Data.SpecialCodeName;
+        }
+
+        private void btnHomeAddressCity_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            CreateForms<CityListForm>.ShowDialogListFormWithoutParent();
+            HomeAddressCityId = MainForm.CityId;
+            btnHomeAddressCity.Text = _cityService.Get(HomeAddressCityId).Data.CityName;
+        }
+
+        private void btnHomeAddressDistrict_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            DistrictListForm.CityId = HomeAddressCityId;
+            CreateForms<DistrictListForm>.ShowDialogListFormWithoutParent();
+            HomeAddressDistrictId = MainForm.DistrictId;
+            btnHomeAddressDistrict.Text = _districtService.Get(HomeAddressDistrictId).Data.DistrictName;
+        }
+
+        private void btnWorkAddressCity_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            CreateForms<CityListForm>.ShowDialogListFormWithoutParent();
+            WorkAddressCityId = MainForm.CityId;
+            btnWorkAddressCity.Text = _cityService.Get(WorkAddressCityId).Data.CityName;
+        }
+
+        private void btnWorkAddressDistrict_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            DistrictListForm.CityId = WorkAddressCityId;
+            CreateForms<DistrictListForm>.ShowDialogListFormWithoutParent();
+            WorkAddressDistrictId = MainForm.DistrictId;
+            btnWorkAddressDistrict.Text = _districtService.Get(WorkAddressDistrictId).Data.DistrictName;
+        }
+
+        private void btnOccupation_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
         }
     }
 }
