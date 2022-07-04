@@ -11,13 +11,13 @@ using Universal.DataAccess.EntityFramework;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfContactDal : EfEntityRepositoryBase<Contact, StudentManagementContext>, IContactDal
+    public class EfContactParentDal : EfEntityRepositoryBase<ContactParent, StudentManagementContext>, IContactParentDal
     {
-        public List<ContactDetailDto> GetContactDetailDto()
+        public List<ContactParentDetailDto> GetContactDetailDto()
         {
             using (var context = new StudentManagementContext())
             {
-                var result = from c in context.Contacts
+                var result = from c in context.ContactParents
                              join ct in context.Cities
                              on c.CityId equals ct.Id
                              join d in context.Districts
@@ -34,14 +34,16 @@ namespace DataAccess.Concrete.EntityFramework
                              on c.OccupationId equals o.Id
                              join du in context.Duties
                              on c.DutyId equals du.Id
+                             join wp in context.Workplaces
+                             on c.WorkplaceId equals wp.Id
                              join s in context.SpecialCodes
                              on c.SpecialCode1 equals s.Id
                              join sk in context.SpecialCodes
                              on c.SpecialCode2 equals sk.Id
 
-                             select new ContactDetailDto
+                             select new ContactParentDetailDto
                              {
-                                 Id = c.Id,
+                                 ContactParentId = c.ContactParentId,
                                  Address = c.Address,
                                  BirthPlace = c.BirthPlace,
                                  BloodType = c.BloodType,
@@ -86,6 +88,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  HomeAddressDistrict = hd.DistrictName,
                                  WorkAddressCity= wc.CityName,
                                  WorkAddressDistrict = wd.DistrictName,
+                                 WorkplaceName = wp.WorkplaceName,
                              };
                 return result.ToList();
             }

@@ -49,6 +49,7 @@ namespace StudentManagementUI.Forms.GeneralForms
         public static int SpecialCode5 = -1;
         public static int CityId = -1;
         public static int DistrictId = -1;
+        public static int WorkPlaceId = -1;
         public static int DutyId = -1;
         public static int OccupationId = -1;
         public MainForm()
@@ -181,7 +182,7 @@ namespace StudentManagementUI.Forms.GeneralForms
             }
             else if (e.Item==btnContacts)
             {
-                CreateForms<ContactListForm>.ShowDialogListForm();
+                CreateForms<ContactParentListForm>.ShowDialogListForm();
             }
         }
     }

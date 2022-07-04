@@ -8,8 +8,11 @@ using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
 using StudentManagementUI.Forms.CityForms;
 using StudentManagementUI.Forms.DistrictForms;
+using StudentManagementUI.Forms.DutyForms;
 using StudentManagementUI.Forms.GeneralForms;
+using StudentManagementUI.Forms.OccupationForms;
 using StudentManagementUI.Forms.SpecialCodeForms;
+using StudentManagementUI.Forms.WorkplaceForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,9 +25,9 @@ using System.Windows.Forms;
 
 namespace StudentManagementUI.Forms.ContactForms
 {
-    public partial class ContactEditForm : BaseEditForm
+    public partial class ContactParentEditForm : BaseEditForm
     {
-        public static int ContactId = -1;
+        public static int ContactParentId = -1;
         public static int SpecialCode1 = -1;
         public static int SpecialCode2 = -1;
         public static int HomeAddressCityId = -1;
@@ -33,18 +36,27 @@ namespace StudentManagementUI.Forms.ContactForms
         public static int WorkAddressDistrictId = -1;
         public static int CityId = -1;
         public static int DistrictId = -1;
+        public static int WorkPlaceId = -1;
+        public static int DutyId = -1;
+        public static int OccupationId = -1;
 
-        private readonly IContactService _contactService;
+        private readonly IContactParentService _contactParentService;
         private readonly ISpecialCodeService _specialCodeService;
         private readonly ICityService _cityService;
         private readonly IDistrictService _districtService;
-        public ContactEditForm()
+        private readonly IWorkplaceService _workplaceService;
+        private readonly IDutyService _dutyService;
+        private readonly IOccupationService _occupationService;
+        public ContactParentEditForm()
         {
             InitializeComponent();
-            _contactService = InstanceFactory.GetInstance<IContactService>();
+            _contactParentService = InstanceFactory.GetInstance<IContactParentService>();
             _specialCodeService = InstanceFactory.GetInstance<ISpecialCodeService>();
             _cityService = InstanceFactory.GetInstance<ICityService>();
             _districtService = InstanceFactory.GetInstance<IDistrictService>();
+            _workplaceService = InstanceFactory.GetInstance<IWorkplaceService>();
+            _dutyService = InstanceFactory.GetInstance<IDutyService>();
+            _occupationService = InstanceFactory.GetInstance<IOccupationService>();
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -65,7 +77,7 @@ namespace StudentManagementUI.Forms.ContactForms
         private void GeneratePrivateCode()
         {
             CleanAllComponants();
-            string privateCode = _contactService.GetLastContactPrivateCode().Data.PrivateCode;
+            string privateCode = _contactParentService.GetLastContactParentPrivateCode().Data.PrivateCode;
             txtPrivateCode.Text = GeneratePrivateCodes.GeneratePrivate(privateCode);
 
         }
@@ -77,7 +89,7 @@ namespace StudentManagementUI.Forms.ContactForms
 
         protected override void btnSave_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _contactService.Add(new Contact
+            var result = _contactParentService.Add(new ContactParent
             {
                 PrivateCode = txtPrivateCode.Text,
                 Address = txtHomeAddress.Text,
@@ -123,7 +135,8 @@ namespace StudentManagementUI.Forms.ContactForms
                 State = tglState.IsOn,
                 Description = txtDescription.Text,
                 Web = txtWeb.Text,
-                
+                WorkplaceId = WorkPlaceId
+
             });
             if (result.Success)
             {
@@ -134,9 +147,9 @@ namespace StudentManagementUI.Forms.ContactForms
 
         protected override void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var result = _contactService.Update(new Contact
+            var result = _contactParentService.Update(new ContactParent
             {
-                Id = ContactId,
+                ContactParentId = ContactParentId,
                 PrivateCode = txtPrivateCode.Text,
                 Address = txtHomeAddress.Text,
                 BirthPlace = txtBirthPlace.Text,
@@ -174,13 +187,14 @@ namespace StudentManagementUI.Forms.ContactForms
                 WorkAddressCityId = WorkAddressCityId,
                 WorkAddressDistrictId = WorkAddressDistrictId,
                 PlaceIssued = txtIssuedPlace.Text,
-                DutyId = MainForm.DutyId,
-                OccupationId = MainForm.OccupationId,
+                DutyId = DutyId,
+                OccupationId = OccupationId,
                 SpecialCode1 = MainForm.SpecialCode1,
                 SpecialCode2 = MainForm.SpecialCode2,
                 State = tglState.IsOn,
                 Description = txtDescription.Text,
                 Web = txtWeb.Text,
+                WorkplaceId = WorkPlaceId
             });
             if (result.Success)
             {
@@ -191,27 +205,7 @@ namespace StudentManagementUI.Forms.ContactForms
 
         private void ContactEditForm_Load(object sender, EventArgs e)
         {
-            if (ContactId != -1)
-            {
-                var result = _contactService.Get(ContactId);
-                var special1 = _specialCodeService.Get(result.Data.SpecialCode1);
-                var special2 = _specialCodeService.Get(result.Data.SpecialCode2);
-                SpecialCode1 = special1.Data.Id;
-                SpecialCode2 = special2.Data.Id;
-                if (result.Success)
-                {
-                    txtPrivateCode.Text = result.Data.PrivateCode;
 
-                    btnSpecialCode1.Text = special1.Data.SpecialCodeName;
-                    btnSpecialCode2.Text = special2.Data.SpecialCodeName;
-                    txtDescription.Text = result.Data.Description;
-                    tglState.IsOn = result.Data.State;
-                }
-            }
-            else
-            {
-                GeneratePrivateCode();
-            }
         }
 
         private void btnSpecialCode1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -262,9 +256,128 @@ namespace StudentManagementUI.Forms.ContactForms
             btnWorkAddressDistrict.Text = _districtService.Get(WorkAddressDistrictId).Data.DistrictName;
         }
 
+        private void btnCity_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            CreateForms<CityListForm>.ShowDialogListFormWithoutParent();
+            CityId = MainForm.CityId;
+            btnCity.Text = _cityService.Get(CityId).Data.CityName;
+        }
+
+        private void btnDistrict_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            DistrictListForm.CityId = CityId;
+            CreateForms<DistrictListForm>.ShowDialogListFormWithoutParent();
+            DistrictId = MainForm.DistrictId;
+            btnDistrict.Text = _districtService.Get(DistrictId).Data.DistrictName;
+        }
+
+        private void btnWorkPlace_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            CreateForms<WorkplaceListForm>.ShowDialogListFormWithoutParent();
+            WorkPlaceId = MainForm.WorkPlaceId;
+            btnWorkPlace.Text = _workplaceService.Get(WorkPlaceId).Data.WorkplaceName;
+
+        }
+
+        private void btnDuty_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MainForm.FormConrol = true;
+            CreateForms<DutyListForm>.ShowDialogListFormWithoutParent();
+            DutyId = MainForm.DutyId;
+            btnDuty.Text = _dutyService.Get(DutyId).Data.DutyName;
+        }
+
         private void btnOccupation_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            MainForm.FormConrol = true;
+            CreateForms<OccupationListForm>.ShowDialogListFormWithoutParent();
+            OccupationId = MainForm.OccupationId;
+            btnOccupation.Text = _occupationService.Get(OccupationId).Data.OccupationName;
+        }
 
+        private void ContactParentEditForm_Load(object sender, EventArgs e)
+        {
+            if (ContactParentId != -1)
+            {
+                var result = _contactParentService.GetById(ContactParentId);
+                var city = _cityService.Get(result.Data.CityId);
+                var district = _districtService.Get(result.Data.DistrictId);
+                var homecity = _cityService.Get(result.Data.HomeAddressCityId);
+                var homedistrict = _districtService.Get(result.Data.HomeAddressDistrictId);
+                var workcity = _cityService.Get(result.Data.WorkAddressCityId);
+                var workdistrict = _districtService.Get(result.Data.WorkAddressDistrictId);
+                var occupation = _occupationService.Get(result.Data.OccupationId);
+                var duty = _dutyService.Get(result.Data.DutyId);
+                var workplace = _workplaceService.Get(result.Data.WorkplaceId);
+                var special1 = _specialCodeService.Get(result.Data.SpecialCode1);
+                var special2 = _specialCodeService.Get(result.Data.SpecialCode2);
+                SpecialCode1 = special1.Data.Id;
+                SpecialCode2 = special2.Data.Id;
+                OccupationId = result.Data.OccupationId;
+                WorkPlaceId = result.Data.WorkplaceId;
+                DutyId = result.Data.DutyId;
+                HomeAddressCityId = result.Data.HomeAddressCityId;
+                HomeAddressDistrictId =result.Data.HomeAddressDistrictId;
+                WorkAddressCityId = result.Data.WorkAddressCityId;
+                WorkAddressDistrictId = result.Data.WorkAddressDistrictId;
+                CityId = result.Data.CityId;
+                DistrictId = result.Data.DistrictId;
+                if (result.Success)
+                {
+                    txtPrivateCode.Text = result.Data.PrivateCode;
+                    btnSpecialCode1.Text = special1.Data.SpecialCodeName;
+                    btnSpecialCode2.Text = special2.Data.SpecialCodeName;
+                    txtIdentityNumber.Text = result.Data.IdentityNumber;
+                    txtName.Text = result.Data.Name;
+                    txtSurname.Text = result.Data.Surname;
+                    txtFatherName.Text = result.Data.FatherName;
+                    txtMotherName.Text = result.Data.MotherName;
+                    deBirthDate.Text = result.Data.DateOfBirth.ToShortDateString();
+                    cbxBloodType.SelectedItem = result.Data.BloodType;
+                    txtSerialNumber.Text = result.Data.SerialNumber;
+                    txtSequenceNumber.Text = result.Data.SequenceNumber;
+                    txtNeighbourhood.Text = result.Data.Neighbourhood;
+                    btnCity.Text = city.Data.CityName;
+                    btnDistrict.Text = district.Data.DistrictName;
+                    txtVolumeNumber.Text = result.Data.VolumeNumber;
+                    txtFamilySequenceNumber.Text = result.Data.FamilySequenceNumber;
+                    txtPersonSequenceNumber.Text = result.Data.PersonSequenceNumber;
+                    txtIssuedPlace.Text = result.Data.PlaceIssued;
+                    txtIssuedReason.Text = result.Data.IdentityIssuedReason;
+                    txtIdentityRegisterNumber.Text = result.Data.IdentityRegisterNumber;
+                    deIssuedDate.Text = result.Data.IdentityIssuedDate.ToShortDateString();
+                    txtHomePhone.Text = result.Data.HomePhone;
+                    txtWorkPhone1.Text = result.Data.WorkplacePhone1;
+                    txtWorkPhone2.Text = result.Data.WorkplacePhone2;
+                    txtWorkPhone1Internal.Text = result.Data.InternalPhone1;
+                    txtWorkPhone2Internal.Text = result.Data.InternalPhone2;
+                    txtCellPhone1.Text = result.Data.CellPhone1;
+                    txtCellPhone2.Text = result.Data.CellPhone2;
+                    txtWeb.Text = result.Data.Web;
+                    txtEmail.Text = result.Data.Email;
+                    txtHomeAddress.Text = result.Data.Address;
+                    btnHomeAddressCity.Text = homecity.Data.CityName;
+                    btnHomeAddressDistrict.Text = homedistrict.Data.DistrictName;
+                    txtWorkAddress.Text = result.Data.WorkAddress;
+                    btnWorkAddressCity.Text = workcity.Data.CityName;
+                    btnWorkAddressDistrict.Text = workdistrict.Data.DistrictName;
+                    btnOccupation.Text = occupation.Data.OccupationName;
+                    btnDuty.Text = duty.Data.DutyName;
+                    btnWorkPlace.Text = workplace.Data.WorkplaceName;
+                    txtIBANNo.Text = result.Data.IBanNumber;
+                    txtCreditCardNumber.Text = result.Data.CardNumber;
+                    txtBirthPlace.Text = result.Data.BirthPlace;
+                    txtDescription.Text = result.Data.Description;
+                    tglState.IsOn = result.Data.State;
+                }
+            }
+            else
+            {
+                GeneratePrivateCode();
+            }
         }
     }
 }

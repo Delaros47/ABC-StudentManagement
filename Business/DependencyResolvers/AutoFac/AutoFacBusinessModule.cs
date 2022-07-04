@@ -99,8 +99,8 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<BankAccountManager>().As<IBankAccountService>().SingleInstance();
             builder.RegisterType<EfBankAccountDal>().As<IBankAccountDal>().SingleInstance();
 
-            builder.RegisterType<ContactManager>().As<IContactService>().SingleInstance();
-            builder.RegisterType<EfContactDal>().As<IContactDal>().SingleInstance();
+            builder.RegisterType<ContactParentManager>().As<IContactParentService>().SingleInstance();
+            builder.RegisterType<EfContactParentDal>().As<IContactParentDal>().SingleInstance();
 
 
 

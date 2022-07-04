@@ -1,6 +1,6 @@
 ﻿namespace StudentManagementUI.Forms.ContactForms
 {
-    partial class ContactListForm
+    partial class ContactParentListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.bandedGridControlContacts = new StudentManagementUI.UserControls.Grids.MyBandedGridControl();
             this.bandedGridViewContacts = new StudentManagementUI.UserControls.Grids.MyBandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colContactParentId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colPrivateCode = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colIdentityNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colName = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
@@ -44,23 +44,16 @@
             this.colBirthPlace = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colCardNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colIBanNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colCellPhone1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colInternalPhone1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWorkplacePhone1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAddress = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colHomeAddressCity = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colHomeAddressDistrict = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWorkAddress = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWorkAddressCity = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWorkAddressDistrict = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colSpecialCode1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.colSpecialCode2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colDescription = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
-            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colDateOfBirth = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colSerialNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colSequenceNumber = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
@@ -80,6 +73,14 @@
             this.colCellPhone2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colWeb = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
             this.colEmail = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colWorkplaceName = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colSpecialCode1 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.colSpecialCode2 = new StudentManagementUI.UserControls.Grids.MyBandedGridColumn();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlContacts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridViewContacts)).BeginInit();
@@ -144,7 +145,7 @@
             this.gridBand4,
             this.gridBand5});
             this.bandedGridViewContacts.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.colId,
+            this.colContactParentId,
             this.colPrivateCode,
             this.colIdentityNumber,
             this.colName,
@@ -185,9 +186,10 @@
             this.colDuty,
             this.colIBanNumber,
             this.colCardNumber,
+            this.colDescription,
+            this.colWorkplaceName,
             this.colSpecialCode1,
-            this.colSpecialCode2,
-            this.colDescription});
+            this.colSpecialCode2});
             this.bandedGridViewContacts.GridControl = this.bandedGridControlContacts;
             this.bandedGridViewContacts.Name = "bandedGridViewContacts";
             this.bandedGridViewContacts.OptionsMenu.EnableColumnMenu = false;
@@ -207,25 +209,15 @@
             this.bandedGridViewContacts.StatusBarShortcut = null;
             this.bandedGridViewContacts.StatusBarShortcutDescription = null;
             this.bandedGridViewContacts.ViewCaption = "Contacts";
+            this.bandedGridViewContacts.DoubleClick += new System.EventHandler(this.bandedGridViewContacts_DoubleClick);
             // 
-            // gridBand1
+            // colContactParentId
             // 
-            this.gridBand1.Caption = "General Informations";
-            this.gridBand1.Columns.Add(this.colPrivateCode);
-            this.gridBand1.Columns.Add(this.colIdentityNumber);
-            this.gridBand1.Columns.Add(this.colName);
-            this.gridBand1.Columns.Add(this.colSurname);
-            this.gridBand1.Columns.Add(this.colOccupation);
-            this.gridBand1.Columns.Add(this.colDuty);
-            this.gridBand1.Columns.Add(this.colFatherName);
-            this.gridBand1.Columns.Add(this.colMotherName);
-            this.gridBand1.Columns.Add(this.colBloodType);
-            this.gridBand1.Columns.Add(this.colBirthPlace);
-            this.gridBand1.Columns.Add(this.colCardNumber);
-            this.gridBand1.Columns.Add(this.colIBanNumber);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1549;
+            this.colContactParentId.Caption = "Contact Parent Id";
+            this.colContactParentId.FieldName = "ContactParentId";
+            this.colContactParentId.Name = "colContactParentId";
+            this.colContactParentId.OptionsColumn.AllowEdit = false;
+            this.colContactParentId.OptionsColumn.ShowInCustomizationForm = false;
             // 
             // colPrivateCode
             // 
@@ -370,16 +362,6 @@
             this.colIBanNumber.Visible = true;
             this.colIBanNumber.Width = 107;
             // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Phone";
-            this.gridBand2.Columns.Add(this.colCellPhone1);
-            this.gridBand2.Columns.Add(this.colInternalPhone1);
-            this.gridBand2.Columns.Add(this.colWorkplacePhone1);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 406;
-            // 
             // colCellPhone1
             // 
             this.colCellPhone1.Caption = "Cell Phone-1";
@@ -415,19 +397,6 @@
             this.colWorkplacePhone1.StatusBarShortcutDescription = null;
             this.colWorkplacePhone1.Visible = true;
             this.colWorkplacePhone1.Width = 96;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Address";
-            this.gridBand3.Columns.Add(this.colAddress);
-            this.gridBand3.Columns.Add(this.colHomeAddressCity);
-            this.gridBand3.Columns.Add(this.colHomeAddressDistrict);
-            this.gridBand3.Columns.Add(this.colWorkAddress);
-            this.gridBand3.Columns.Add(this.colWorkAddressCity);
-            this.gridBand3.Columns.Add(this.colWorkAddressDistrict);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 880;
             // 
             // colAddress
             // 
@@ -501,47 +470,6 @@
             this.colWorkAddressDistrict.Visible = true;
             this.colWorkAddressDistrict.Width = 122;
             // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Special Codes";
-            this.gridBand4.Columns.Add(this.colSpecialCode1);
-            this.gridBand4.Columns.Add(this.colSpecialCode2);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 262;
-            // 
-            // colSpecialCode1
-            // 
-            this.colSpecialCode1.Caption = "Special Code-1";
-            this.colSpecialCode1.FieldName = "SpecialCode1";
-            this.colSpecialCode1.Name = "colSpecialCode1";
-            this.colSpecialCode1.OptionsColumn.AllowEdit = false;
-            this.colSpecialCode1.StatusBarDescription = null;
-            this.colSpecialCode1.StatusBarShortcut = null;
-            this.colSpecialCode1.StatusBarShortcutDescription = null;
-            this.colSpecialCode1.Visible = true;
-            this.colSpecialCode1.Width = 157;
-            // 
-            // colSpecialCode2
-            // 
-            this.colSpecialCode2.Caption = "Special Code-2";
-            this.colSpecialCode2.FieldName = "SpecialCode2";
-            this.colSpecialCode2.Name = "colSpecialCode2";
-            this.colSpecialCode2.OptionsColumn.AllowEdit = false;
-            this.colSpecialCode2.StatusBarDescription = null;
-            this.colSpecialCode2.StatusBarShortcut = null;
-            this.colSpecialCode2.StatusBarShortcutDescription = null;
-            this.colSpecialCode2.Visible = true;
-            this.colSpecialCode2.Width = 105;
-            // 
-            // gridBand5
-            // 
-            this.gridBand5.Caption = "Others";
-            this.gridBand5.Columns.Add(this.colDescription);
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 4;
-            this.gridBand5.Width = 169;
-            // 
             // colDescription
             // 
             this.colDescription.Caption = "Description";
@@ -553,14 +481,6 @@
             this.colDescription.StatusBarShortcutDescription = null;
             this.colDescription.Visible = true;
             this.colDescription.Width = 169;
-            // 
-            // colId
-            // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
             // colDateOfBirth
             // 
@@ -771,7 +691,102 @@
             this.colEmail.StatusBarShortcutDescription = null;
             this.colEmail.Visible = true;
             // 
-            // ContactListForm
+            // colWorkplaceName
+            // 
+            this.colWorkplaceName.Caption = "Workplace Name";
+            this.colWorkplaceName.FieldName = "WorkplaceName";
+            this.colWorkplaceName.Name = "colWorkplaceName";
+            this.colWorkplaceName.OptionsColumn.AllowEdit = false;
+            this.colWorkplaceName.StatusBarDescription = null;
+            this.colWorkplaceName.StatusBarShortcut = null;
+            this.colWorkplaceName.StatusBarShortcutDescription = null;
+            this.colWorkplaceName.Visible = true;
+            // 
+            // colSpecialCode1
+            // 
+            this.colSpecialCode1.Caption = "Special Code-1";
+            this.colSpecialCode1.FieldName = "SpecialCode1";
+            this.colSpecialCode1.Name = "colSpecialCode1";
+            this.colSpecialCode1.OptionsColumn.AllowEdit = false;
+            this.colSpecialCode1.StatusBarDescription = null;
+            this.colSpecialCode1.StatusBarShortcut = null;
+            this.colSpecialCode1.StatusBarShortcutDescription = null;
+            this.colSpecialCode1.Visible = true;
+            this.colSpecialCode1.Width = 192;
+            // 
+            // colSpecialCode2
+            // 
+            this.colSpecialCode2.Caption = "Special Code-2";
+            this.colSpecialCode2.FieldName = "SpecialCode2";
+            this.colSpecialCode2.Name = "colSpecialCode2";
+            this.colSpecialCode2.OptionsColumn.AllowEdit = false;
+            this.colSpecialCode2.StatusBarDescription = null;
+            this.colSpecialCode2.StatusBarShortcut = null;
+            this.colSpecialCode2.StatusBarShortcutDescription = null;
+            this.colSpecialCode2.Visible = true;
+            this.colSpecialCode2.Width = 101;
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "General Informations";
+            this.gridBand1.Columns.Add(this.colContactParentId);
+            this.gridBand1.Columns.Add(this.colPrivateCode);
+            this.gridBand1.Columns.Add(this.colIdentityNumber);
+            this.gridBand1.Columns.Add(this.colName);
+            this.gridBand1.Columns.Add(this.colSurname);
+            this.gridBand1.Columns.Add(this.colOccupation);
+            this.gridBand1.Columns.Add(this.colDuty);
+            this.gridBand1.Columns.Add(this.colFatherName);
+            this.gridBand1.Columns.Add(this.colMotherName);
+            this.gridBand1.Columns.Add(this.colBloodType);
+            this.gridBand1.Columns.Add(this.colBirthPlace);
+            this.gridBand1.Columns.Add(this.colCardNumber);
+            this.gridBand1.Columns.Add(this.colIBanNumber);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 1549;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Phone";
+            this.gridBand2.Columns.Add(this.colCellPhone1);
+            this.gridBand2.Columns.Add(this.colInternalPhone1);
+            this.gridBand2.Columns.Add(this.colWorkplacePhone1);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 406;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Address";
+            this.gridBand3.Columns.Add(this.colAddress);
+            this.gridBand3.Columns.Add(this.colHomeAddressCity);
+            this.gridBand3.Columns.Add(this.colHomeAddressDistrict);
+            this.gridBand3.Columns.Add(this.colWorkAddress);
+            this.gridBand3.Columns.Add(this.colWorkAddressCity);
+            this.gridBand3.Columns.Add(this.colWorkAddressDistrict);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 880;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Special Codes";
+            this.gridBand4.Columns.Add(this.colSpecialCode1);
+            this.gridBand4.Columns.Add(this.colSpecialCode2);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 293;
+            // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "Others";
+            this.gridBand5.Columns.Add(this.colDescription);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 4;
+            this.gridBand5.Width = 169;
+            // 
+            // ContactParentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -779,8 +794,9 @@
             this.Controls.Add(this.bandedGridControlContacts);
             this.Controls.Add(this.longNavigator1);
             this.IconOptions.ShowIcon = false;
-            this.Name = "ContactListForm";
+            this.Name = "ContactParentListForm";
             this.Text = "Contact List";
+            this.Load += new System.EventHandler(this.ContactListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator1, 0);
             this.Controls.SetChildIndex(this.bandedGridControlContacts, 0);
@@ -797,7 +813,7 @@
         private UserControls.Navigators.LongNavigator longNavigator1;
         private UserControls.Grids.MyBandedGridControl bandedGridControlContacts;
         private UserControls.Grids.MyBandedGridView bandedGridViewContacts;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colContactParentId;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPrivateCode;
         private UserControls.Grids.MyBandedGridColumn colIdentityNumber;
         private UserControls.Grids.MyBandedGridColumn colName;
@@ -838,13 +854,14 @@
         private UserControls.Grids.MyBandedGridColumn colDuty;
         private UserControls.Grids.MyBandedGridColumn colIBanNumber;
         private UserControls.Grids.MyBandedGridColumn colCardNumber;
-        private UserControls.Grids.MyBandedGridColumn colSpecialCode1;
-        private UserControls.Grids.MyBandedGridColumn colSpecialCode2;
         private UserControls.Grids.MyBandedGridColumn colDescription;
+        private UserControls.Grids.MyBandedGridColumn colWorkplaceName;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
+        private UserControls.Grids.MyBandedGridColumn colSpecialCode1;
+        private UserControls.Grids.MyBandedGridColumn colSpecialCode2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
     }
 }

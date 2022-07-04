@@ -10,9 +10,9 @@ using Universal.DataAccess;
 
 namespace DataAccess.Abstract
 {
-    public interface IContactDal:IEntityRepository<Contact>
+    public interface IContactParentDal:IEntityRepository<ContactParent>
     {
-        List<ContactDetailDto> GetContactDetailDto();
+        List<ContactParentDetailDto> GetContactDetailDto();
 
     }
 }

@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.GeneralForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,9 +96,19 @@ namespace StudentManagementUI.Forms.WorkplaceForms
 
         private void gridViewWorkplaces_DoubleClick(object sender, EventArgs e)
         {
-            WorkplaceEditForm.WorkplaceId = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<WorkplaceEditForm>.ShowDialogEditForm();
-            GetAllWorkplaceActive();
+            if (MainForm.FormConrol)
+            {
+                MainForm.FormConrol = false;
+                MainForm.WorkPlaceId = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString());
+                this.Close();
+            }
+            else
+            {
+                WorkplaceEditForm.WorkplaceId = Convert.ToInt32(gridViewWorkplaces.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<WorkplaceEditForm>.ShowDialogEditForm();
+                GetAllWorkplaceActive();
+            }
+            
         }
     }
 }

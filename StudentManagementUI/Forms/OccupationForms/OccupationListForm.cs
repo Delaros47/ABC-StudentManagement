@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.GeneralForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -90,9 +91,19 @@ namespace StudentManagementUI.Forms.OccupationForms
 
         private void gridControlOccupations_DoubleClick(object sender, EventArgs e)
         {
-            OccupationEditForm.OccupationId = Convert.ToInt32(gridViewOccupations.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<OccupationEditForm>.ShowDialogEditForm();
-            GetAllOccupationActive();
+            if (MainForm.FormConrol)
+            {
+                MainForm.FormConrol = false;
+                MainForm.OccupationId = Convert.ToInt32(gridViewOccupations.GetFocusedRowCellValue("Id").ToString());
+                this.Close();
+            }
+            else
+            {
+                OccupationEditForm.OccupationId = Convert.ToInt32(gridViewOccupations.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<OccupationEditForm>.ShowDialogEditForm();
+                GetAllOccupationActive();
+            }
+            
         }
 
         private void OccupationListForm_Load(object sender, EventArgs e)

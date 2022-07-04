@@ -6,6 +6,7 @@ using Entities.Concrete;
 using StudentManagementUI.Commons.Functions;
 using StudentManagementUI.Commons.Messages;
 using StudentManagementUI.Forms.BaseForms;
+using StudentManagementUI.Forms.GeneralForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,9 +96,19 @@ namespace StudentManagementUI.Forms.DutyForms
 
         private void gridViewDuties_DoubleClick(object sender, EventArgs e)
         {
-            DutyEditForm.DutyId = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<DutyEditForm>.ShowDialogEditForm();
-            GetAllDutyActive();
+            if (MainForm.FormConrol)
+            {
+                MainForm.FormConrol = false;
+                MainForm.DutyId = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString());
+                this.Close();
+            }
+            else
+            {
+                DutyEditForm.DutyId = Convert.ToInt32(gridViewDuties.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<DutyEditForm>.ShowDialogEditForm();
+                GetAllDutyActive();
+            }
+            
         }
     }
 }

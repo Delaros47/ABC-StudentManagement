@@ -1,6 +1,6 @@
 ﻿namespace StudentManagementUI.Forms.ContactForms
 {
-    partial class ContactEditForm
+    partial class ContactParentEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -310,8 +310,8 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(855, 486);
-            this.myDataLayoutControl1.TabIndex = 2;
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(855, 484);
+            this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
             // txtDescription
@@ -323,10 +323,10 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Properties.MaxLength = 500;
-            this.txtDescription.Size = new System.Drawing.Size(704, 54);
+            this.txtDescription.Size = new System.Drawing.Size(704, 52);
             this.txtDescription.StatusBarDescription = "Enter the description.";
             this.txtDescription.StyleController = this.myDataLayoutControl1;
-            this.txtDescription.TabIndex = 48;
+            this.txtDescription.TabIndex = 20;
             // 
             // btnSpecialCode2
             // 
@@ -345,14 +345,14 @@
             this.btnSpecialCode2.StatusBarShortcut = "F4 :";
             this.btnSpecialCode2.StatusBarShortcutDescription = null;
             this.btnSpecialCode2.StyleController = this.myDataLayoutControl1;
-            this.btnSpecialCode2.TabIndex = 47;
+            this.btnSpecialCode2.TabIndex = 42;
             this.btnSpecialCode2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode2_ButtonClick);
             // 
             // btnSpecialCode1
             // 
             this.btnSpecialCode1.EnterMoveNextControl = true;
             this.btnSpecialCode1.Id = null;
-            this.btnSpecialCode1.Location = new System.Drawing.Point(589, 396);
+            this.btnSpecialCode1.Location = new System.Drawing.Point(564, 396);
             this.btnSpecialCode1.MenuManager = this.ribbonControl;
             this.btnSpecialCode1.Name = "btnSpecialCode1";
             this.btnSpecialCode1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -360,19 +360,19 @@
             this.btnSpecialCode1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnSpecialCode1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnSpecialCode1.Size = new System.Drawing.Size(104, 20);
+            this.btnSpecialCode1.Size = new System.Drawing.Size(129, 20);
             this.btnSpecialCode1.StatusBarDescription = null;
             this.btnSpecialCode1.StatusBarShortcut = "F4 :";
             this.btnSpecialCode1.StatusBarShortcutDescription = null;
             this.btnSpecialCode1.StyleController = this.myDataLayoutControl1;
-            this.btnSpecialCode1.TabIndex = 46;
+            this.btnSpecialCode1.TabIndex = 41;
             this.btnSpecialCode1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSpecialCode1_ButtonClick);
             // 
             // deIssuedDate
             // 
             this.deIssuedDate.EditValue = null;
             this.deIssuedDate.EnterMoveNextControl = true;
-            this.deIssuedDate.Location = new System.Drawing.Point(589, 372);
+            this.deIssuedDate.Location = new System.Drawing.Point(564, 372);
             this.deIssuedDate.MenuManager = this.ribbonControl;
             this.deIssuedDate.Name = "deIssuedDate";
             this.deIssuedDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -384,54 +384,54 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deIssuedDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deIssuedDate.Size = new System.Drawing.Size(104, 20);
+            this.deIssuedDate.Size = new System.Drawing.Size(129, 20);
             this.deIssuedDate.StatusBarDescription = null;
             this.deIssuedDate.StatusBarShortcut = "F4 :";
             this.deIssuedDate.StatusBarShortcutDescription = "Choose the date";
             this.deIssuedDate.StyleController = this.myDataLayoutControl1;
-            this.deIssuedDate.TabIndex = 45;
+            this.deIssuedDate.TabIndex = 40;
             // 
             // txtIdentityRegisterNumber
             // 
             this.txtIdentityRegisterNumber.EnterMoveNextControl = true;
-            this.txtIdentityRegisterNumber.Location = new System.Drawing.Point(589, 348);
+            this.txtIdentityRegisterNumber.Location = new System.Drawing.Point(564, 348);
             this.txtIdentityRegisterNumber.MenuManager = this.ribbonControl;
             this.txtIdentityRegisterNumber.Name = "txtIdentityRegisterNumber";
             this.txtIdentityRegisterNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtIdentityRegisterNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIdentityRegisterNumber.Properties.MaxLength = 50;
-            this.txtIdentityRegisterNumber.Size = new System.Drawing.Size(44, 20);
+            this.txtIdentityRegisterNumber.Size = new System.Drawing.Size(69, 20);
             this.txtIdentityRegisterNumber.StatusBarDescription = null;
             this.txtIdentityRegisterNumber.StyleController = this.myDataLayoutControl1;
-            this.txtIdentityRegisterNumber.TabIndex = 44;
+            this.txtIdentityRegisterNumber.TabIndex = 39;
             // 
             // txtIssuedReason
             // 
             this.txtIssuedReason.EnterMoveNextControl = true;
-            this.txtIssuedReason.Location = new System.Drawing.Point(589, 324);
+            this.txtIssuedReason.Location = new System.Drawing.Point(564, 324);
             this.txtIssuedReason.MenuManager = this.ribbonControl;
             this.txtIssuedReason.Name = "txtIssuedReason";
             this.txtIssuedReason.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtIssuedReason.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIssuedReason.Properties.MaxLength = 50;
-            this.txtIssuedReason.Size = new System.Drawing.Size(104, 20);
+            this.txtIssuedReason.Size = new System.Drawing.Size(129, 20);
             this.txtIssuedReason.StatusBarDescription = null;
             this.txtIssuedReason.StyleController = this.myDataLayoutControl1;
-            this.txtIssuedReason.TabIndex = 43;
+            this.txtIssuedReason.TabIndex = 38;
             // 
             // txtIssuedPlace
             // 
             this.txtIssuedPlace.EnterMoveNextControl = true;
-            this.txtIssuedPlace.Location = new System.Drawing.Point(589, 300);
+            this.txtIssuedPlace.Location = new System.Drawing.Point(564, 300);
             this.txtIssuedPlace.MenuManager = this.ribbonControl;
             this.txtIssuedPlace.Name = "txtIssuedPlace";
             this.txtIssuedPlace.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtIssuedPlace.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIssuedPlace.Properties.MaxLength = 50;
-            this.txtIssuedPlace.Size = new System.Drawing.Size(104, 20);
+            this.txtIssuedPlace.Size = new System.Drawing.Size(129, 20);
             this.txtIssuedPlace.StatusBarDescription = null;
             this.txtIssuedPlace.StyleController = this.myDataLayoutControl1;
-            this.txtIssuedPlace.TabIndex = 42;
+            this.txtIssuedPlace.TabIndex = 37;
             // 
             // txtPersonSequenceNumber
             // 
@@ -445,49 +445,49 @@
             this.txtPersonSequenceNumber.Size = new System.Drawing.Size(56, 20);
             this.txtPersonSequenceNumber.StatusBarDescription = null;
             this.txtPersonSequenceNumber.StyleController = this.myDataLayoutControl1;
-            this.txtPersonSequenceNumber.TabIndex = 41;
+            this.txtPersonSequenceNumber.TabIndex = 36;
             // 
             // txtFamilySequenceNumber
             // 
             this.txtFamilySequenceNumber.EnterMoveNextControl = true;
-            this.txtFamilySequenceNumber.Location = new System.Drawing.Point(589, 276);
+            this.txtFamilySequenceNumber.Location = new System.Drawing.Point(564, 276);
             this.txtFamilySequenceNumber.MenuManager = this.ribbonControl;
             this.txtFamilySequenceNumber.Name = "txtFamilySequenceNumber";
             this.txtFamilySequenceNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtFamilySequenceNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFamilySequenceNumber.Properties.MaxLength = 50;
-            this.txtFamilySequenceNumber.Size = new System.Drawing.Size(44, 20);
+            this.txtFamilySequenceNumber.Size = new System.Drawing.Size(69, 20);
             this.txtFamilySequenceNumber.StatusBarDescription = null;
             this.txtFamilySequenceNumber.StyleController = this.myDataLayoutControl1;
-            this.txtFamilySequenceNumber.TabIndex = 40;
+            this.txtFamilySequenceNumber.TabIndex = 35;
             // 
             // txtVolumeNumber
             // 
             this.txtVolumeNumber.EnterMoveNextControl = true;
-            this.txtVolumeNumber.Location = new System.Drawing.Point(589, 252);
+            this.txtVolumeNumber.Location = new System.Drawing.Point(564, 252);
             this.txtVolumeNumber.MenuManager = this.ribbonControl;
             this.txtVolumeNumber.Name = "txtVolumeNumber";
             this.txtVolumeNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtVolumeNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtVolumeNumber.Properties.MaxLength = 50;
-            this.txtVolumeNumber.Size = new System.Drawing.Size(44, 20);
+            this.txtVolumeNumber.Size = new System.Drawing.Size(69, 20);
             this.txtVolumeNumber.StatusBarDescription = null;
             this.txtVolumeNumber.StyleController = this.myDataLayoutControl1;
-            this.txtVolumeNumber.TabIndex = 39;
+            this.txtVolumeNumber.TabIndex = 34;
             // 
             // txtNeighbourhood
             // 
             this.txtNeighbourhood.EnterMoveNextControl = true;
-            this.txtNeighbourhood.Location = new System.Drawing.Point(589, 228);
+            this.txtNeighbourhood.Location = new System.Drawing.Point(564, 228);
             this.txtNeighbourhood.MenuManager = this.ribbonControl;
             this.txtNeighbourhood.Name = "txtNeighbourhood";
             this.txtNeighbourhood.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtNeighbourhood.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNeighbourhood.Properties.MaxLength = 50;
-            this.txtNeighbourhood.Size = new System.Drawing.Size(104, 20);
+            this.txtNeighbourhood.Size = new System.Drawing.Size(129, 20);
             this.txtNeighbourhood.StatusBarDescription = null;
             this.txtNeighbourhood.StyleController = this.myDataLayoutControl1;
-            this.txtNeighbourhood.TabIndex = 38;
+            this.txtNeighbourhood.TabIndex = 33;
             // 
             // btnDistrict
             // 
@@ -506,13 +506,14 @@
             this.btnDistrict.StatusBarShortcut = "F4 :";
             this.btnDistrict.StatusBarShortcutDescription = null;
             this.btnDistrict.StyleController = this.myDataLayoutControl1;
-            this.btnDistrict.TabIndex = 37;
+            this.btnDistrict.TabIndex = 32;
+            this.btnDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDistrict_ButtonClick);
             // 
             // btnCity
             // 
             this.btnCity.EnterMoveNextControl = true;
             this.btnCity.Id = null;
-            this.btnCity.Location = new System.Drawing.Point(589, 204);
+            this.btnCity.Location = new System.Drawing.Point(564, 204);
             this.btnCity.MenuManager = this.ribbonControl;
             this.btnCity.Name = "btnCity";
             this.btnCity.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -520,12 +521,13 @@
             this.btnCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnCity.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnCity.Size = new System.Drawing.Size(104, 20);
+            this.btnCity.Size = new System.Drawing.Size(129, 20);
             this.btnCity.StatusBarDescription = null;
             this.btnCity.StatusBarShortcut = "F4 :";
             this.btnCity.StatusBarShortcutDescription = null;
             this.btnCity.StyleController = this.myDataLayoutControl1;
-            this.btnCity.TabIndex = 36;
+            this.btnCity.TabIndex = 31;
+            this.btnCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCity_ButtonClick);
             // 
             // txtSequenceNumber
             // 
@@ -539,26 +541,26 @@
             this.txtSequenceNumber.Size = new System.Drawing.Size(56, 20);
             this.txtSequenceNumber.StatusBarDescription = null;
             this.txtSequenceNumber.StyleController = this.myDataLayoutControl1;
-            this.txtSequenceNumber.TabIndex = 35;
+            this.txtSequenceNumber.TabIndex = 30;
             // 
             // txtSerialNumber
             // 
             this.txtSerialNumber.EnterMoveNextControl = true;
-            this.txtSerialNumber.Location = new System.Drawing.Point(589, 180);
+            this.txtSerialNumber.Location = new System.Drawing.Point(564, 180);
             this.txtSerialNumber.MenuManager = this.ribbonControl;
             this.txtSerialNumber.Name = "txtSerialNumber";
             this.txtSerialNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtSerialNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSerialNumber.Properties.MaxLength = 50;
-            this.txtSerialNumber.Size = new System.Drawing.Size(44, 20);
+            this.txtSerialNumber.Size = new System.Drawing.Size(69, 20);
             this.txtSerialNumber.StatusBarDescription = null;
             this.txtSerialNumber.StyleController = this.myDataLayoutControl1;
-            this.txtSerialNumber.TabIndex = 34;
+            this.txtSerialNumber.TabIndex = 29;
             // 
             // cbxBloodType
             // 
             this.cbxBloodType.EnterMoveNextControl = true;
-            this.cbxBloodType.Location = new System.Drawing.Point(589, 156);
+            this.cbxBloodType.Location = new System.Drawing.Point(564, 156);
             this.cbxBloodType.MenuManager = this.ribbonControl;
             this.cbxBloodType.Name = "cbxBloodType";
             this.cbxBloodType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -575,12 +577,12 @@
             "AB+",
             "AB-"});
             this.cbxBloodType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxBloodType.Size = new System.Drawing.Size(44, 20);
+            this.cbxBloodType.Size = new System.Drawing.Size(69, 20);
             this.cbxBloodType.StatusBarDescription = null;
             this.cbxBloodType.StatusBarShortcut = "F4 :";
             this.cbxBloodType.StatusBarShortcutDescription = null;
             this.cbxBloodType.StyleController = this.myDataLayoutControl1;
-            this.cbxBloodType.TabIndex = 33;
+            this.cbxBloodType.TabIndex = 28;
             // 
             // deBirthDate
             // 
@@ -603,21 +605,21 @@
             this.deBirthDate.StatusBarShortcut = "F4 :";
             this.deBirthDate.StatusBarShortcutDescription = "Choose the date";
             this.deBirthDate.StyleController = this.myDataLayoutControl1;
-            this.deBirthDate.TabIndex = 32;
+            this.deBirthDate.TabIndex = 27;
             // 
             // txtBirthPlace
             // 
             this.txtBirthPlace.EnterMoveNextControl = true;
-            this.txtBirthPlace.Location = new System.Drawing.Point(589, 132);
+            this.txtBirthPlace.Location = new System.Drawing.Point(564, 132);
             this.txtBirthPlace.MenuManager = this.ribbonControl;
             this.txtBirthPlace.Name = "txtBirthPlace";
             this.txtBirthPlace.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtBirthPlace.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtBirthPlace.Properties.MaxLength = 50;
-            this.txtBirthPlace.Size = new System.Drawing.Size(104, 20);
+            this.txtBirthPlace.Size = new System.Drawing.Size(129, 20);
             this.txtBirthPlace.StatusBarDescription = null;
             this.txtBirthPlace.StyleController = this.myDataLayoutControl1;
-            this.txtBirthPlace.TabIndex = 31;
+            this.txtBirthPlace.TabIndex = 26;
             // 
             // txtMotherName
             // 
@@ -631,27 +633,27 @@
             this.txtMotherName.Size = new System.Drawing.Size(146, 20);
             this.txtMotherName.StatusBarDescription = null;
             this.txtMotherName.StyleController = this.myDataLayoutControl1;
-            this.txtMotherName.TabIndex = 30;
+            this.txtMotherName.TabIndex = 25;
             // 
             // txtFatherName
             // 
             this.txtFatherName.EnterMoveNextControl = true;
-            this.txtFatherName.Location = new System.Drawing.Point(589, 108);
+            this.txtFatherName.Location = new System.Drawing.Point(564, 108);
             this.txtFatherName.MenuManager = this.ribbonControl;
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtFatherName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFatherName.Properties.MaxLength = 50;
-            this.txtFatherName.Size = new System.Drawing.Size(104, 20);
+            this.txtFatherName.Size = new System.Drawing.Size(129, 20);
             this.txtFatherName.StatusBarDescription = null;
             this.txtFatherName.StyleController = this.myDataLayoutControl1;
-            this.txtFatherName.TabIndex = 29;
+            this.txtFatherName.TabIndex = 24;
             // 
             // btnDuty
             // 
             this.btnDuty.EnterMoveNextControl = true;
             this.btnDuty.Id = null;
-            this.btnDuty.Location = new System.Drawing.Point(589, 84);
+            this.btnDuty.Location = new System.Drawing.Point(564, 84);
             this.btnDuty.MenuManager = this.ribbonControl;
             this.btnDuty.Name = "btnDuty";
             this.btnDuty.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -659,18 +661,19 @@
             this.btnDuty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnDuty.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnDuty.Size = new System.Drawing.Size(254, 20);
+            this.btnDuty.Size = new System.Drawing.Size(279, 20);
             this.btnDuty.StatusBarDescription = null;
             this.btnDuty.StatusBarShortcut = "F4 :";
             this.btnDuty.StatusBarShortcutDescription = null;
             this.btnDuty.StyleController = this.myDataLayoutControl1;
-            this.btnDuty.TabIndex = 28;
+            this.btnDuty.TabIndex = 23;
+            this.btnDuty.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDuty_ButtonClick);
             // 
             // btnWorkPlace
             // 
             this.btnWorkPlace.EnterMoveNextControl = true;
             this.btnWorkPlace.Id = null;
-            this.btnWorkPlace.Location = new System.Drawing.Point(589, 60);
+            this.btnWorkPlace.Location = new System.Drawing.Point(564, 60);
             this.btnWorkPlace.MenuManager = this.ribbonControl;
             this.btnWorkPlace.Name = "btnWorkPlace";
             this.btnWorkPlace.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -678,12 +681,13 @@
             this.btnWorkPlace.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnWorkPlace.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnWorkPlace.Size = new System.Drawing.Size(254, 20);
+            this.btnWorkPlace.Size = new System.Drawing.Size(279, 20);
             this.btnWorkPlace.StatusBarDescription = null;
             this.btnWorkPlace.StatusBarShortcut = "F4 :";
             this.btnWorkPlace.StatusBarShortcutDescription = null;
             this.btnWorkPlace.StyleController = this.myDataLayoutControl1;
-            this.btnWorkPlace.TabIndex = 27;
+            this.btnWorkPlace.TabIndex = 22;
+            this.btnWorkPlace.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnWorkPlace_ButtonClick);
             // 
             // tglState
             // 
@@ -701,13 +705,13 @@
             this.tglState.Size = new System.Drawing.Size(109, 20);
             this.tglState.StatusBarDescription = "Choose the state of the form.";
             this.tglState.StyleController = this.myDataLayoutControl1;
-            this.tglState.TabIndex = 26;
+            this.tglState.TabIndex = 43;
             // 
             // btnOccupation
             // 
             this.btnOccupation.EnterMoveNextControl = true;
             this.btnOccupation.Id = null;
-            this.btnOccupation.Location = new System.Drawing.Point(589, 36);
+            this.btnOccupation.Location = new System.Drawing.Point(564, 36);
             this.btnOccupation.MenuManager = this.ribbonControl;
             this.btnOccupation.Name = "btnOccupation";
             this.btnOccupation.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
@@ -715,12 +719,12 @@
             this.btnOccupation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnOccupation.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnOccupation.Size = new System.Drawing.Size(254, 20);
+            this.btnOccupation.Size = new System.Drawing.Size(279, 20);
             this.btnOccupation.StatusBarDescription = null;
             this.btnOccupation.StatusBarShortcut = "F4 :";
             this.btnOccupation.StatusBarShortcutDescription = null;
             this.btnOccupation.StyleController = this.myDataLayoutControl1;
-            this.btnOccupation.TabIndex = 25;
+            this.btnOccupation.TabIndex = 21;
             this.btnOccupation.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnOccupation_ButtonClick);
             // 
             // btnWorkAddressDistrict
@@ -740,7 +744,7 @@
             this.btnWorkAddressDistrict.StatusBarShortcut = "F4 :";
             this.btnWorkAddressDistrict.StatusBarShortcutDescription = null;
             this.btnWorkAddressDistrict.StyleController = this.myDataLayoutControl1;
-            this.btnWorkAddressDistrict.TabIndex = 24;
+            this.btnWorkAddressDistrict.TabIndex = 19;
             this.btnWorkAddressDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnWorkAddressDistrict_ButtonClick);
             // 
             // btnWorkAddressCity
@@ -760,7 +764,7 @@
             this.btnWorkAddressCity.StatusBarShortcut = "F4 :";
             this.btnWorkAddressCity.StatusBarShortcutDescription = null;
             this.btnWorkAddressCity.StyleController = this.myDataLayoutControl1;
-            this.btnWorkAddressCity.TabIndex = 23;
+            this.btnWorkAddressCity.TabIndex = 18;
             this.btnWorkAddressCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnWorkAddressCity_ButtonClick);
             // 
             // txtWorkAddress
@@ -775,7 +779,7 @@
             this.txtWorkAddress.Size = new System.Drawing.Size(259, 44);
             this.txtWorkAddress.StatusBarDescription = "Enter the description.";
             this.txtWorkAddress.StyleController = this.myDataLayoutControl1;
-            this.txtWorkAddress.TabIndex = 22;
+            this.txtWorkAddress.TabIndex = 17;
             // 
             // btnHomeAddressDistrict
             // 
@@ -794,7 +798,7 @@
             this.btnHomeAddressDistrict.StatusBarShortcut = "F4 :";
             this.btnHomeAddressDistrict.StatusBarShortcutDescription = null;
             this.btnHomeAddressDistrict.StyleController = this.myDataLayoutControl1;
-            this.btnHomeAddressDistrict.TabIndex = 21;
+            this.btnHomeAddressDistrict.TabIndex = 16;
             this.btnHomeAddressDistrict.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnHomeAddressDistrict_ButtonClick);
             // 
             // btnHomeAddressCity
@@ -814,7 +818,7 @@
             this.btnHomeAddressCity.StatusBarShortcut = "F4 :";
             this.btnHomeAddressCity.StatusBarShortcutDescription = null;
             this.btnHomeAddressCity.StyleController = this.myDataLayoutControl1;
-            this.btnHomeAddressCity.TabIndex = 20;
+            this.btnHomeAddressCity.TabIndex = 15;
             this.btnHomeAddressCity.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnHomeAddressCity_ButtonClick);
             // 
             // txtHomeAddress
@@ -829,7 +833,7 @@
             this.txtHomeAddress.Size = new System.Drawing.Size(259, 44);
             this.txtHomeAddress.StatusBarDescription = "Enter the description.";
             this.txtHomeAddress.StyleController = this.myDataLayoutControl1;
-            this.txtHomeAddress.TabIndex = 19;
+            this.txtHomeAddress.TabIndex = 14;
             // 
             // txtCreditCardNumber
             // 
@@ -852,7 +856,7 @@
             this.txtCreditCardNumber.Size = new System.Drawing.Size(184, 20);
             this.txtCreditCardNumber.StatusBarDescription = "Enter Credit Card number";
             this.txtCreditCardNumber.StyleController = this.myDataLayoutControl1;
-            this.txtCreditCardNumber.TabIndex = 18;
+            this.txtCreditCardNumber.TabIndex = 13;
             // 
             // txtIBANNo
             // 
@@ -873,7 +877,7 @@
             this.txtIBANNo.Size = new System.Drawing.Size(259, 20);
             this.txtIBANNo.StatusBarDescription = "Enter IBAN number.";
             this.txtIBANNo.StyleController = this.myDataLayoutControl1;
-            this.txtIBANNo.TabIndex = 17;
+            this.txtIBANNo.TabIndex = 12;
             // 
             // txtEmail
             // 
@@ -897,7 +901,7 @@
             this.txtEmail.Size = new System.Drawing.Size(259, 20);
             this.txtEmail.StatusBarDescription = "Enter the Email Address.";
             this.txtEmail.StyleController = this.myDataLayoutControl1;
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 11;
             // 
             // txtWeb
             // 
@@ -911,7 +915,7 @@
             this.txtWeb.Size = new System.Drawing.Size(259, 20);
             this.txtWeb.StatusBarDescription = null;
             this.txtWeb.StyleController = this.myDataLayoutControl1;
-            this.txtWeb.TabIndex = 15;
+            this.txtWeb.TabIndex = 10;
             // 
             // txtCellPhone2
             // 
@@ -934,7 +938,7 @@
             this.txtCellPhone2.Size = new System.Drawing.Size(146, 20);
             this.txtCellPhone2.StatusBarDescription = "Enter the Phone Number.";
             this.txtCellPhone2.StyleController = this.myDataLayoutControl1;
-            this.txtCellPhone2.TabIndex = 14;
+            this.txtCellPhone2.TabIndex = 9;
             // 
             // txtCellPhone1
             // 
@@ -957,7 +961,7 @@
             this.txtCellPhone1.Size = new System.Drawing.Size(109, 20);
             this.txtCellPhone1.StatusBarDescription = "Enter the Phone Number.";
             this.txtCellPhone1.StyleController = this.myDataLayoutControl1;
-            this.txtCellPhone1.TabIndex = 13;
+            this.txtCellPhone1.TabIndex = 8;
             // 
             // txtWorkPhone2Internal
             // 
@@ -971,7 +975,7 @@
             this.txtWorkPhone2Internal.Size = new System.Drawing.Size(71, 20);
             this.txtWorkPhone2Internal.StatusBarDescription = null;
             this.txtWorkPhone2Internal.StyleController = this.myDataLayoutControl1;
-            this.txtWorkPhone2Internal.TabIndex = 12;
+            this.txtWorkPhone2Internal.TabIndex = 7;
             // 
             // txtWorkPhone2
             // 
@@ -994,7 +998,7 @@
             this.txtWorkPhone2.Size = new System.Drawing.Size(109, 20);
             this.txtWorkPhone2.StatusBarDescription = "Enter the Phone Number.";
             this.txtWorkPhone2.StyleController = this.myDataLayoutControl1;
-            this.txtWorkPhone2.TabIndex = 11;
+            this.txtWorkPhone2.TabIndex = 6;
             // 
             // txtWorkPhone1Internal
             // 
@@ -1008,7 +1012,7 @@
             this.txtWorkPhone1Internal.Size = new System.Drawing.Size(71, 20);
             this.txtWorkPhone1Internal.StatusBarDescription = null;
             this.txtWorkPhone1Internal.StyleController = this.myDataLayoutControl1;
-            this.txtWorkPhone1Internal.TabIndex = 10;
+            this.txtWorkPhone1Internal.TabIndex = 5;
             // 
             // txtWorkPhone1
             // 
@@ -1031,7 +1035,7 @@
             this.txtWorkPhone1.Size = new System.Drawing.Size(109, 20);
             this.txtWorkPhone1.StatusBarDescription = "Enter the Phone Number.";
             this.txtWorkPhone1.StyleController = this.myDataLayoutControl1;
-            this.txtWorkPhone1.TabIndex = 9;
+            this.txtWorkPhone1.TabIndex = 4;
             // 
             // txtHomePhone
             // 
@@ -1054,7 +1058,7 @@
             this.txtHomePhone.Size = new System.Drawing.Size(109, 20);
             this.txtHomePhone.StatusBarDescription = "Enter the Phone Number.";
             this.txtHomePhone.StyleController = this.myDataLayoutControl1;
-            this.txtHomePhone.TabIndex = 8;
+            this.txtHomePhone.TabIndex = 3;
             // 
             // txtSurname
             // 
@@ -1068,7 +1072,7 @@
             this.txtSurname.Size = new System.Drawing.Size(146, 20);
             this.txtSurname.StatusBarDescription = null;
             this.txtSurname.StyleController = this.myDataLayoutControl1;
-            this.txtSurname.TabIndex = 7;
+            this.txtSurname.TabIndex = 2;
             // 
             // txtName
             // 
@@ -1082,7 +1086,7 @@
             this.txtName.Size = new System.Drawing.Size(109, 20);
             this.txtName.StatusBarDescription = null;
             this.txtName.StyleController = this.myDataLayoutControl1;
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 1;
             // 
             // txtIdentityNumber
             // 
@@ -1105,7 +1109,7 @@
             this.txtIdentityNumber.Size = new System.Drawing.Size(109, 20);
             this.txtIdentityNumber.StatusBarDescription = "Enter Identity Number.";
             this.txtIdentityNumber.StyleController = this.myDataLayoutControl1;
-            this.txtIdentityNumber.TabIndex = 5;
+            this.txtIdentityNumber.TabIndex = 0;
             // 
             // txtPrivateCode
             // 
@@ -1123,7 +1127,7 @@
             this.txtPrivateCode.Size = new System.Drawing.Size(109, 20);
             this.txtPrivateCode.StatusBarDescription = "Enter the Private Code";
             this.txtPrivateCode.StyleController = this.myDataLayoutControl1;
-            this.txtPrivateCode.TabIndex = 4;
+            this.txtPrivateCode.TabIndex = 44;
             // 
             // Root
             // 
@@ -1186,7 +1190,7 @@
             columnDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition4.Width = 100D;
             columnDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition5.Width = 175D;
+            columnDefinition5.Width = 200D;
             columnDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
             columnDefinition6.Width = 60D;
             columnDefinition7.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -1257,7 +1261,7 @@
             rowDefinition16,
             rowDefinition17,
             rowDefinition18});
-            this.Root.Size = new System.Drawing.Size(855, 486);
+            this.Root.Size = new System.Drawing.Size(855, 484);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1534,12 +1538,12 @@
             this.layoutControlItem22.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem22.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem22.Control = this.btnOccupation;
-            this.layoutControlItem22.Location = new System.Drawing.Point(450, 24);
+            this.layoutControlItem22.Location = new System.Drawing.Point(425, 24);
             this.layoutControlItem22.Name = "layoutControlItem22";
             this.layoutControlItem22.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem22.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem22.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem22.Size = new System.Drawing.Size(385, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(410, 24);
             this.layoutControlItem22.Text = "Occupation";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1560,12 +1564,12 @@
             this.layoutControlItem24.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem24.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem24.Control = this.btnWorkPlace;
-            this.layoutControlItem24.Location = new System.Drawing.Point(450, 48);
+            this.layoutControlItem24.Location = new System.Drawing.Point(425, 48);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem24.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem24.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem24.Size = new System.Drawing.Size(385, 24);
+            this.layoutControlItem24.Size = new System.Drawing.Size(410, 24);
             this.layoutControlItem24.Text = "Work Place";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1574,12 +1578,12 @@
             this.layoutControlItem25.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem25.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem25.Control = this.btnDuty;
-            this.layoutControlItem25.Location = new System.Drawing.Point(450, 72);
+            this.layoutControlItem25.Location = new System.Drawing.Point(425, 72);
             this.layoutControlItem25.Name = "layoutControlItem25";
             this.layoutControlItem25.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem25.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem25.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem25.Size = new System.Drawing.Size(385, 24);
+            this.layoutControlItem25.Size = new System.Drawing.Size(410, 24);
             this.layoutControlItem25.Text = "Duty";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1588,12 +1592,12 @@
             this.layoutControlItem26.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem26.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem26.Control = this.txtFatherName;
-            this.layoutControlItem26.Location = new System.Drawing.Point(450, 96);
+            this.layoutControlItem26.Location = new System.Drawing.Point(425, 96);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem26.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem26.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem26.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem26.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem26.Text = "Father / Mother Name";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1616,12 +1620,12 @@
             this.layoutControlItem28.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem28.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem28.Control = this.txtBirthPlace;
-            this.layoutControlItem28.Location = new System.Drawing.Point(450, 120);
+            this.layoutControlItem28.Location = new System.Drawing.Point(425, 120);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem28.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem28.OptionsTableLayoutItem.RowIndex = 5;
-            this.layoutControlItem28.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem28.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem28.Text = "Birth Place / Date";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1644,11 +1648,11 @@
             this.layoutControlItem30.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem30.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem30.Control = this.cbxBloodType;
-            this.layoutControlItem30.Location = new System.Drawing.Point(450, 144);
+            this.layoutControlItem30.Location = new System.Drawing.Point(425, 144);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem30.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem30.Size = new System.Drawing.Size(175, 24);
+            this.layoutControlItem30.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem30.Text = "Blood Type";
             this.layoutControlItem30.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1657,11 +1661,11 @@
             this.layoutControlItem31.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem31.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem31.Control = this.txtSerialNumber;
-            this.layoutControlItem31.Location = new System.Drawing.Point(450, 168);
+            this.layoutControlItem31.Location = new System.Drawing.Point(425, 168);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem31.OptionsTableLayoutItem.RowIndex = 7;
-            this.layoutControlItem31.Size = new System.Drawing.Size(175, 24);
+            this.layoutControlItem31.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem31.Text = "Serial / Sequence Number";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1683,12 +1687,12 @@
             this.layoutControlItem33.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem33.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem33.Control = this.btnCity;
-            this.layoutControlItem33.Location = new System.Drawing.Point(450, 192);
+            this.layoutControlItem33.Location = new System.Drawing.Point(425, 192);
             this.layoutControlItem33.Name = "layoutControlItem33";
             this.layoutControlItem33.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem33.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem33.OptionsTableLayoutItem.RowIndex = 8;
-            this.layoutControlItem33.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem33.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem33.Text = "City / District";
             this.layoutControlItem33.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1711,12 +1715,12 @@
             this.layoutControlItem35.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem35.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem35.Control = this.txtNeighbourhood;
-            this.layoutControlItem35.Location = new System.Drawing.Point(450, 216);
+            this.layoutControlItem35.Location = new System.Drawing.Point(425, 216);
             this.layoutControlItem35.Name = "layoutControlItem35";
             this.layoutControlItem35.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem35.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem35.OptionsTableLayoutItem.RowIndex = 9;
-            this.layoutControlItem35.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem35.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem35.Text = "Neighbourhood";
             this.layoutControlItem35.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1725,11 +1729,11 @@
             this.layoutControlItem36.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem36.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem36.Control = this.txtVolumeNumber;
-            this.layoutControlItem36.Location = new System.Drawing.Point(450, 240);
+            this.layoutControlItem36.Location = new System.Drawing.Point(425, 240);
             this.layoutControlItem36.Name = "layoutControlItem36";
             this.layoutControlItem36.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem36.OptionsTableLayoutItem.RowIndex = 10;
-            this.layoutControlItem36.Size = new System.Drawing.Size(175, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem36.Text = "Volume Number";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1738,11 +1742,11 @@
             this.layoutControlItem37.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem37.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem37.Control = this.txtFamilySequenceNumber;
-            this.layoutControlItem37.Location = new System.Drawing.Point(450, 264);
+            this.layoutControlItem37.Location = new System.Drawing.Point(425, 264);
             this.layoutControlItem37.Name = "layoutControlItem37";
             this.layoutControlItem37.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem37.OptionsTableLayoutItem.RowIndex = 11;
-            this.layoutControlItem37.Size = new System.Drawing.Size(175, 24);
+            this.layoutControlItem37.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem37.Text = "Family / Person Sequence";
             this.layoutControlItem37.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1764,12 +1768,12 @@
             this.layoutControlItem39.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem39.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem39.Control = this.txtIssuedPlace;
-            this.layoutControlItem39.Location = new System.Drawing.Point(450, 288);
+            this.layoutControlItem39.Location = new System.Drawing.Point(425, 288);
             this.layoutControlItem39.Name = "layoutControlItem39";
             this.layoutControlItem39.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem39.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem39.OptionsTableLayoutItem.RowIndex = 12;
-            this.layoutControlItem39.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem39.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem39.Text = "Issued Place";
             this.layoutControlItem39.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1778,12 +1782,12 @@
             this.layoutControlItem40.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem40.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem40.Control = this.txtIssuedReason;
-            this.layoutControlItem40.Location = new System.Drawing.Point(450, 312);
+            this.layoutControlItem40.Location = new System.Drawing.Point(425, 312);
             this.layoutControlItem40.Name = "layoutControlItem40";
             this.layoutControlItem40.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem40.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem40.OptionsTableLayoutItem.RowIndex = 13;
-            this.layoutControlItem40.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem40.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem40.Text = "Issued Reason";
             this.layoutControlItem40.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1792,11 +1796,11 @@
             this.layoutControlItem41.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem41.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem41.Control = this.txtIdentityRegisterNumber;
-            this.layoutControlItem41.Location = new System.Drawing.Point(450, 336);
+            this.layoutControlItem41.Location = new System.Drawing.Point(425, 336);
             this.layoutControlItem41.Name = "layoutControlItem41";
             this.layoutControlItem41.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem41.OptionsTableLayoutItem.RowIndex = 14;
-            this.layoutControlItem41.Size = new System.Drawing.Size(175, 24);
+            this.layoutControlItem41.Size = new System.Drawing.Size(200, 24);
             this.layoutControlItem41.Text = "Register Number";
             this.layoutControlItem41.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1805,12 +1809,12 @@
             this.layoutControlItem42.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem42.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem42.Control = this.deIssuedDate;
-            this.layoutControlItem42.Location = new System.Drawing.Point(450, 360);
+            this.layoutControlItem42.Location = new System.Drawing.Point(425, 360);
             this.layoutControlItem42.Name = "layoutControlItem42";
             this.layoutControlItem42.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem42.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem42.OptionsTableLayoutItem.RowIndex = 15;
-            this.layoutControlItem42.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem42.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem42.Text = "Issued Date";
             this.layoutControlItem42.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1819,12 +1823,12 @@
             this.layoutControlItem43.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem43.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem43.Control = this.btnSpecialCode1;
-            this.layoutControlItem43.Location = new System.Drawing.Point(450, 384);
+            this.layoutControlItem43.Location = new System.Drawing.Point(425, 384);
             this.layoutControlItem43.Name = "layoutControlItem43";
             this.layoutControlItem43.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem43.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem43.OptionsTableLayoutItem.RowIndex = 16;
-            this.layoutControlItem43.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem43.Size = new System.Drawing.Size(260, 24);
             this.layoutControlItem43.Text = "Special Code 1 / 2";
             this.layoutControlItem43.TextSize = new System.Drawing.Size(123, 13);
             // 
@@ -1851,21 +1855,21 @@
             this.layoutControlItem45.Name = "layoutControlItem45";
             this.layoutControlItem45.OptionsTableLayoutItem.ColumnSpan = 8;
             this.layoutControlItem45.OptionsTableLayoutItem.RowIndex = 17;
-            this.layoutControlItem45.Size = new System.Drawing.Size(835, 58);
+            this.layoutControlItem45.Size = new System.Drawing.Size(835, 56);
             this.layoutControlItem45.Text = "Description";
             this.layoutControlItem45.TextSize = new System.Drawing.Size(123, 13);
             // 
-            // ContactEditForm
+            // ContactParentEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 619);
             this.Controls.Add(this.myDataLayoutControl1);
             this.IconOptions.ShowIcon = false;
-            this.Name = "ContactEditForm";
+            this.Name = "ContactParentEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Contact Edit";
-            this.Load += new System.EventHandler(this.ContactEditForm_Load);
+            this.Load += new System.EventHandler(this.ContactParentEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();

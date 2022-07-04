@@ -18,13 +18,13 @@ using System.Windows.Forms;
 
 namespace StudentManagementUI.Forms.ContactForms
 {
-    public partial class ContactListForm : BaseListForm
+    public partial class ContactParentListForm : BaseListForm
     {
-        private readonly IContactService _contactService;
-        public ContactListForm()
+        private readonly IContactParentService _contactParentService;
+        public ContactParentListForm()
         {
             InitializeComponent();
-            _contactService = InstanceFactory.GetInstance<IContactService>();
+            _contactParentService = InstanceFactory.GetInstance<IContactParentService>();
         }
 
 
@@ -33,9 +33,9 @@ namespace StudentManagementUI.Forms.ContactForms
             DialogResult dialogresult = MyMessagesBox.DeletedMessage("Contacts");
             if (dialogresult == DialogResult.Yes)
             {
-                var result = _contactService.Delete(new Contact
+                var result = _contactParentService.Delete(new ContactParent
                 {
-                    Id = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("Id").ToString())
+                    ContactParentId = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("ContactParentId").ToString())
                 });
                 if (result.Success)
                 {
@@ -47,7 +47,7 @@ namespace StudentManagementUI.Forms.ContactForms
 
         private void GetAllContactActiveDetailDto()
         {
-            bandedGridControlContacts.DataSource = _contactService.GetContactDetailDtoActive().Data;
+            bandedGridControlContacts.DataSource = _contactParentService.GetContactParentDetailDtoActive().Data;
         }
 
         protected override void btnExit_ItemClick(object sender, ItemClickEventArgs e)
@@ -57,15 +57,15 @@ namespace StudentManagementUI.Forms.ContactForms
 
         protected override void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ContactEditForm.ContactId = -1;
-            CreateForms<ContactEditForm>.ShowDialogEditForm();
+            ContactParentEditForm.ContactParentId = -1;
+            CreateForms<ContactParentEditForm>.ShowDialogEditForm();
             GetAllContactActiveDetailDto();
         }
 
         protected override void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ContactEditForm.ContactId = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<ContactEditForm>.ShowDialogEditForm();
+            ContactParentEditForm.ContactParentId = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("ContactParentId").ToString());
+            CreateForms<ContactParentEditForm>.ShowDialogEditForm();
             GetAllContactActiveDetailDto();
         }
 
@@ -78,21 +78,25 @@ namespace StudentManagementUI.Forms.ContactForms
         {
             if (e.Item.Caption == "Passive List")
             {
-                bandedGridControlContacts.DataSource = _contactService.GetContactDetailDtoActive().Data;
+                bandedGridControlContacts.DataSource = _contactParentService.GetContactParentDetailDtoActive().Data;
                 e.Item.Caption = "Active List";
             }
             else
             {
-                bandedGridControlContacts.DataSource = _contactService.GetContactDetailDtoPassive().Data;
+                bandedGridControlContacts.DataSource = _contactParentService.GetContactParentDetailDtoPassive().Data;
                 e.Item.Caption = "Passive List";
             }
         }
 
-
-        private void bandedGridViewCustomers_DoubleClick(object sender, EventArgs e)
+        private void ContactListForm_Load(object sender, EventArgs e)
         {
-            ContactEditForm.ContactId = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<ContactEditForm>.ShowDialogEditForm();
+            GetAllContactActiveDetailDto();
+        }
+
+        private void bandedGridViewContacts_DoubleClick(object sender, EventArgs e)
+        {
+            ContactParentEditForm.ContactParentId = Convert.ToInt32(bandedGridViewContacts.GetFocusedRowCellValue("ContactParentId").ToString());
+            CreateForms<ContactParentEditForm>.ShowDialogEditForm();
             GetAllContactActiveDetailDto();
         }
     }

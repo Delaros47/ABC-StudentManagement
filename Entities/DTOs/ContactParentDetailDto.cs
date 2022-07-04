@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Universal.Entities.Abstract;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-    public class Contact : IEntity
+    public class ContactParentDetailDto:IDto
     {
-        public int Id { get; set; }
+        public int ContactParentId { get; set; }
         public string PrivateCode { get; set; }
         public string IdentityNumber { get; set; }
         public string Name { get; set; }
@@ -21,8 +21,8 @@ namespace Entities.Concrete
         public string BloodType { get; set; }
         public string SerialNumber { get; set; }
         public string SequenceNumber { get; set; }
-        public int CityId { get; set; }
-        public int DistrictId { get; set; }
+        public string City { get; set; }
+        public string District { get; set; }
         public string Neighbourhood { get; set; }
         public string VolumeNumber { get; set; }
         public string FamilySequenceNumber { get; set; }
@@ -41,19 +41,19 @@ namespace Entities.Concrete
         public string Web { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public int HomeAddressCityId { get; set; }
-        public int HomeAddressDistrictId { get; set; }
+        public string HomeAddressCity { get; set; }
+        public string HomeAddressDistrict { get; set; }
         public string WorkAddress { get; set; }
-        public int WorkAddressCityId { get; set; }
-        public int WorkAddressDistrictId { get; set; }
-        public int OccupationId { get; set; }
-        public int DutyId { get; set; }
+        public string WorkAddressCity { get; set; }
+        public string WorkAddressDistrict { get; set; }
+        public string WorkplaceName { get; set; }
+        public string Occupation { get; set; }
+        public string Duty { get; set; }
         public string IBanNumber { get; set; }
         public string CardNumber { get; set; }
-        public int SpecialCode1 { get; set; }
-        public int SpecialCode2 { get; set; }
+        public string SpecialCode1 { get; set; }
+        public string SpecialCode2 { get; set; }
         public bool State { get; set; }
         public string? Description { get; set; }
-
     }
 }
