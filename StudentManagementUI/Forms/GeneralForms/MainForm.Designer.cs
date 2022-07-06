@@ -285,24 +285,28 @@
             // 
             this.btnLawyers.Caption = "Lawyers";
             this.btnLawyers.Id = 23;
+            this.btnLawyers.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLawyers.ImageOptions.LargeImage")));
             this.btnLawyers.Name = "btnLawyers";
             // 
             // btnCustomers
             // 
             this.btnCustomers.Caption = "Customers";
             this.btnCustomers.Id = 24;
+            this.btnCustomers.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustomers.ImageOptions.LargeImage")));
             this.btnCustomers.Name = "btnCustomers";
             // 
             // btnPaymentTypes
             // 
             this.btnPaymentTypes.Caption = "Payment Types";
             this.btnPaymentTypes.Id = 25;
+            this.btnPaymentTypes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPaymentTypes.ImageOptions.LargeImage")));
             this.btnPaymentTypes.Name = "btnPaymentTypes";
             // 
             // btnBankAccounts
             // 
             this.btnBankAccounts.Caption = "Bank Accounts";
             this.btnBankAccounts.Id = 26;
+            this.btnBankAccounts.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBankAccounts.ImageOptions.LargeImage")));
             this.btnBankAccounts.Name = "btnBankAccounts";
             // 
             // btnContacts
@@ -419,10 +423,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 504);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 502);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1162, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1162, 33);
             // 
             // defaultLookAndFeel
             // 
