@@ -21,12 +21,15 @@ namespace Entities.DTOs
         public string PlaceOfBirth { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string IdentitySerialNumber { get; set; }
+        public string IdentityNumber { get; set; }
         public string NumberIndividual { get; set; }
         public string CityName { get; set; }
         public string DistrictName { get; set; }
+        public string PersonNumber { get; set; }
         public string SubDistrictVillage { get; set; }
         public string VolumeNumber { get; set; }
         public string FamilyOrder { get; set; }
+        public string RegisterNumber { get; set; }
         public string PlaceOfIssue { get; set; }
         public string IssuedFor { get; set; }
         public DateTime DateOfIssue { get; set; }
@@ -37,6 +40,5 @@ namespace Entities.DTOs
         public string SpecialCode4 { get; set; }
         public string SpecialCode5 { get; set; }
         public bool State { get; set; }
-        public string Description { get; set; }
     }
 }

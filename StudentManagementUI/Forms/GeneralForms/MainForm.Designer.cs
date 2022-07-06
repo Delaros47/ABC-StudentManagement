@@ -57,6 +57,8 @@
             this.btnCustomers = new DevExpress.XtraBars.BarButtonItem();
             this.btnPaymentTypes = new DevExpress.XtraBars.BarButtonItem();
             this.btnBankAccounts = new DevExpress.XtraBars.BarButtonItem();
+            this.btnContacts = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStudents = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageStudent = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupStudent = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupClass = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +78,6 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnContacts = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -113,9 +114,10 @@
             this.btnCustomers,
             this.btnPaymentTypes,
             this.btnBankAccounts,
-            this.btnContacts});
+            this.btnContacts,
+            this.btnStudents});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 28;
+            this.ribbonControl.MaxItemId = 29;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageStudent,
@@ -192,30 +194,35 @@
             // 
             this.btnOccupations.Caption = "Occupations";
             this.btnOccupations.Id = 10;
+            this.btnOccupations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnOccupations.ImageOptions.LargeImage")));
             this.btnOccupations.Name = "btnOccupations";
             // 
             // btnFamilyIntimacies
             // 
             this.btnFamilyIntimacies.Caption = "Family Intimacies";
             this.btnFamilyIntimacies.Id = 11;
+            this.btnFamilyIntimacies.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFamilyIntimacies.ImageOptions.LargeImage")));
             this.btnFamilyIntimacies.Name = "btnFamilyIntimacies";
             // 
             // btnWorkplace
             // 
             this.btnWorkplace.Caption = "Workplace";
             this.btnWorkplace.Id = 12;
+            this.btnWorkplace.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnWorkplace.ImageOptions.LargeImage")));
             this.btnWorkplace.Name = "btnWorkplace";
             // 
             // btnDuties
             // 
             this.btnDuties.Caption = "Duties";
             this.btnDuties.Id = 13;
+            this.btnDuties.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDuties.ImageOptions.LargeImage")));
             this.btnDuties.Name = "btnDuties";
             // 
             // btnDiscountType
             // 
             this.btnDiscountType.Caption = "Discount Type";
             this.btnDiscountType.Id = 14;
+            this.btnDiscountType.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDiscountType.ImageOptions.LargeImage")));
             this.btnDiscountType.Name = "btnDiscountType";
             // 
             // btnDocuments
@@ -250,24 +257,28 @@
             // 
             this.btnServiceTypes.Caption = "Service Types";
             this.btnServiceTypes.Id = 19;
+            this.btnServiceTypes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnServiceTypes.ImageOptions.LargeImage")));
             this.btnServiceTypes.Name = "btnServiceTypes";
             // 
             // btnServices
             // 
             this.btnServices.Caption = "Services";
             this.btnServices.Id = 20;
+            this.btnServices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnServices.ImageOptions.LargeImage")));
             this.btnServices.Name = "btnServices";
             // 
             // btnCashes
             // 
             this.btnCashes.Caption = "Cashes";
             this.btnCashes.Id = 21;
+            this.btnCashes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCashes.ImageOptions.LargeImage")));
             this.btnCashes.Name = "btnCashes";
             // 
             // btnBanks
             // 
             this.btnBanks.Caption = "Banks";
             this.btnBanks.Id = 22;
+            this.btnBanks.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBanks.ImageOptions.LargeImage")));
             this.btnBanks.Name = "btnBanks";
             // 
             // btnLawyers
@@ -294,6 +305,20 @@
             this.btnBankAccounts.Id = 26;
             this.btnBankAccounts.Name = "btnBankAccounts";
             // 
+            // btnContacts
+            // 
+            this.btnContacts.Caption = "Contacts";
+            this.btnContacts.Id = 27;
+            this.btnContacts.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnContacts.ImageOptions.LargeImage")));
+            this.btnContacts.Name = "btnContacts";
+            // 
+            // btnStudents
+            // 
+            this.btnStudents.Caption = "Students";
+            this.btnStudents.Id = 28;
+            this.btnStudents.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnStudents.ImageOptions.SvgImage")));
+            this.btnStudents.Name = "btnStudents";
+            // 
             // ribbonPageStudent
             // 
             this.ribbonPageStudent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -306,6 +331,7 @@
             // 
             // ribbonPageGroupStudent
             // 
+            this.ribbonPageGroupStudent.ItemLinks.Add(this.btnStudents);
             this.ribbonPageGroupStudent.Name = "ribbonPageGroupStudent";
             this.ribbonPageGroupStudent.Text = "Student";
             // 
@@ -431,12 +457,6 @@
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "ribbonPage6";
             // 
-            // btnContacts
-            // 
-            this.btnContacts.Caption = "Contacts";
-            this.btnContacts.Id = 27;
-            this.btnContacts.Name = "btnContacts";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,5 +526,6 @@
         private DevExpress.XtraBars.BarButtonItem btnPaymentTypes;
         private DevExpress.XtraBars.BarButtonItem btnBankAccounts;
         private DevExpress.XtraBars.BarButtonItem btnContacts;
+        private DevExpress.XtraBars.BarButtonItem btnStudents;
     }
 }

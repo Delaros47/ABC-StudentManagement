@@ -20,7 +20,7 @@ namespace StudentManagementUI.UserControls.Controls
             Properties.NullText = "No Picture";
             Properties.SizeMode = PictureSizeMode.Stretch;
             //We dont want default menu to be shown we will later create own Menu
-            Properties.ShowMenu = false;
+            Properties.ShowMenu = true;
         }
 
         public override bool EnterMoveNextControl { get; set; } = true;

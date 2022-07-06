@@ -102,7 +102,8 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<ContactParentManager>().As<IContactParentService>().SingleInstance();
             builder.RegisterType<EfContactParentDal>().As<IContactParentDal>().SingleInstance();
 
-
+            builder.RegisterType<StudentManager>().As<IStudentService>().SingleInstance();
+            builder.RegisterType<EfStudentDal>().As<IStudentDal>().SingleInstance();
 
 
         }

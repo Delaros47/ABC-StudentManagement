@@ -20,10 +20,13 @@ namespace Entities.Concrete
         public string MotherName { get; set; }
         public string PlaceOfBirth { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public string IdentityNumber { get; set; }
         public string IdentitySerialNumber { get; set; }
         public string NumberIndividual { get; set; }
         public int CityId { get; set; }
         public int DistrictId { get; set; }
+        public string RegisterNumber { get; set; }
+        public string PersonNumber { get; set; }
         public string SubDistrictVillage { get; set; }
         public string VolumeNumber { get; set; }
         public string FamilyOrder { get; set; }
@@ -37,7 +40,6 @@ namespace Entities.Concrete
         public int SpecialCode4 { get; set; }
         public int SpecialCode5 { get; set; }
         public bool State { get; set; }
-        public string Description { get; set; }
 
     }
 }

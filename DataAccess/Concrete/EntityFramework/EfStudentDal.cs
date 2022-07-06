@@ -40,7 +40,6 @@ namespace DataAccess.Concrete.EntityFramework
                                  DateOfIssue = s.DateOfIssue,
                                  FamilyOrder = s.FamilyOrder,
                                  CityName = c.CityName,
-                                 Description = s.Description,
                                  Name = s.Name,
                                  Surname = s.Surname,
                                  FatherName = s.FatherName,
@@ -61,8 +60,10 @@ namespace DataAccess.Concrete.EntityFramework
                                  SpecialCode3 = s3.SpecialCodeName,
                                  SpecialCode4 = s4.SpecialCodeName,
                                  SpecialCode5 = s5.SpecialCodeName,
-                                 PrivateCode =s.PrivateCode
-
+                                 PrivateCode =s.PrivateCode,
+                                 PersonNumber = s.PersonNumber,
+                                 RegisterNumber = s.RegisterNumber,
+                                 IdentityNumber = s.IdentityNumber
                              };
                 return result.ToList();
 

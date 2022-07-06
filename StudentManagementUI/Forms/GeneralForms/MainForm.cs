@@ -26,6 +26,7 @@ using StudentManagementUI.Forms.SchoolForms;
 using StudentManagementUI.Forms.SchoolServiceForms;
 using StudentManagementUI.Forms.ServiceForms;
 using StudentManagementUI.Forms.ServiceTypeForms;
+using StudentManagementUI.Forms.StudentForms;
 using StudentManagementUI.Forms.WorkplaceForms;
 using System;
 using System.Collections.Generic;
@@ -183,6 +184,10 @@ namespace StudentManagementUI.Forms.GeneralForms
             else if (e.Item==btnContacts)
             {
                 CreateForms<ContactParentListForm>.ShowDialogListForm();
+            }
+            else if (e.Item==btnStudents)
+            {
+                CreateForms<StudentListForm>.ShowDialogListForm();
             }
         }
     }
