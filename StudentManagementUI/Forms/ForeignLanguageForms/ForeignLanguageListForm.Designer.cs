@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlForeignLanguage = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewForeignLanguage = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -53,13 +53,13 @@
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1120, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlForeignLanguage
             // 
@@ -68,7 +68,7 @@
             this.gridControlForeignLanguage.MainView = this.gridViewForeignLanguage;
             this.gridControlForeignLanguage.MenuManager = this.ribbonControl;
             this.gridControlForeignLanguage.Name = "gridControlForeignLanguage";
-            this.gridControlForeignLanguage.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlForeignLanguage.Size = new System.Drawing.Size(1120, 236);
             this.gridControlForeignLanguage.TabIndex = 3;
             this.gridControlForeignLanguage.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewForeignLanguage});
@@ -169,13 +169,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 395);
             this.Controls.Add(this.gridControlForeignLanguage);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "ForeignLanguageListForm";
             this.Text = "Foreign Language List";
             this.Load += new System.EventHandler(this.ForeignLanguageListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlForeignLanguage, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlForeignLanguage)).EndInit();
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlForeignLanguage;
         private UserControls.Grids.MyGridView gridViewForeignLanguage;
         private UserControls.Grids.MyGridColumn colId;

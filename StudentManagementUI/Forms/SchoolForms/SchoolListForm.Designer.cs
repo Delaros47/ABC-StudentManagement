@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlSchoolList = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewSchoolList = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -56,13 +56,13 @@
             this.ribbonControl.Size = new System.Drawing.Size(1110, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 344);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1110, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 342);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1110, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlSchoolList
             // 
@@ -71,7 +71,7 @@
             this.gridControlSchoolList.MainView = this.gridViewSchoolList;
             this.gridControlSchoolList.MenuManager = this.ribbonControl;
             this.gridControlSchoolList.Name = "gridControlSchoolList";
-            this.gridControlSchoolList.Size = new System.Drawing.Size(1110, 242);
+            this.gridControlSchoolList.Size = new System.Drawing.Size(1110, 240);
             this.gridControlSchoolList.TabIndex = 3;
             this.gridControlSchoolList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSchoolList});
@@ -200,13 +200,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 399);
             this.Controls.Add(this.gridControlSchoolList);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "SchoolListForm";
             this.Text = "School List";
             this.Load += new System.EventHandler(this.SchoolListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlSchoolList, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSchoolList)).EndInit();
@@ -218,7 +218,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlSchoolList;
         private UserControls.Grids.MyGridView gridViewSchoolList;
         private UserControls.Grids.MyGridColumn colId;

@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.QuotaForms
         {
             InitializeComponent();
             _quotaService = InstanceFactory.GetInstance<IQuotaService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlQuotas;
         }
 
 

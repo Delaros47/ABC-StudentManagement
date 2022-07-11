@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.bandedGridControlCashes = new StudentManagementUI.UserControls.Grids.MyBandedGridControl();
             this.bandedGridViewlCashes = new StudentManagementUI.UserControls.Grids.MyBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -59,13 +59,13 @@
             this.ribbonControl.Size = new System.Drawing.Size(1269, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1269, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1269, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // bandedGridControlCashes
             // 
@@ -74,7 +74,7 @@
             this.bandedGridControlCashes.MainView = this.bandedGridViewlCashes;
             this.bandedGridControlCashes.MenuManager = this.ribbonControl;
             this.bandedGridControlCashes.Name = "bandedGridControlCashes";
-            this.bandedGridControlCashes.Size = new System.Drawing.Size(1269, 238);
+            this.bandedGridControlCashes.Size = new System.Drawing.Size(1269, 236);
             this.bandedGridControlCashes.TabIndex = 3;
             this.bandedGridControlCashes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridViewlCashes});
@@ -229,13 +229,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 395);
             this.Controls.Add(this.bandedGridControlCashes);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "CashListForm";
             this.Text = "Cash List";
             this.Load += new System.EventHandler(this.CashListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.bandedGridControlCashes, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlCashes)).EndInit();
@@ -247,7 +247,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyBandedGridControl bandedGridControlCashes;
         private UserControls.Grids.MyBandedGridView bandedGridViewlCashes;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;

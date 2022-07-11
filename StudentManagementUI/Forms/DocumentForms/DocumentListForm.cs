@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.DocumentForms
         {
             InitializeComponent();
             _documentService = InstanceFactory.GetInstance<IDocumentService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlDocuments;
         }
 
 

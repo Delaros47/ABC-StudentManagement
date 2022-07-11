@@ -30,6 +30,7 @@ namespace StudentManagementUI.Forms.DistrictForms
             InitializeComponent();
             _districtService = InstanceFactory.GetInstance<IDistrictService>();
             _cityService = InstanceFactory.GetInstance<ICityService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlDistricts;
         }
 
         private void DistrictListForm_Load(object sender, EventArgs e)

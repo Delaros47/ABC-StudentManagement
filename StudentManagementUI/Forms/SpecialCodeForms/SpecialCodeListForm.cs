@@ -33,6 +33,7 @@ namespace StudentManagementUI.Forms.SpecialCodeForms
             InitializeComponent();
             _specialCodeService = InstanceFactory.GetInstance<ISpecialCodeService>();
             btnActivePassiveList.Visibility = BarItemVisibility.Never;
+            longNavigator.controlNavigator.NavigatableControl = gridControlSpecialCodes;
         }
 
 

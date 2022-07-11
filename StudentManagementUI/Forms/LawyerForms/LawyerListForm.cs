@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.LawyerForms
         {
             InitializeComponent();
             _lawyerService = InstanceFactory.GetInstance<ILawyerService>();
+            longNavigator.controlNavigator.NavigatableControl = bandedGridControlLawyers;
         }
 
 

@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.SchoolServiceForms
         {
             InitializeComponent();
             _schoolServiceService = InstanceFactory.GetInstance<ISchoolServiceService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlSchoolServices;
         }
 
 

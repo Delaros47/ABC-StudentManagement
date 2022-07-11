@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.FamilyInformationForms
         {
             InitializeComponent();
             _familyInformationService = InstanceFactory.GetInstance<IFamilyInformationService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlFamilyInformation;
         }
 
         private void FamilyInformationListForm_Load(object sender, EventArgs e)

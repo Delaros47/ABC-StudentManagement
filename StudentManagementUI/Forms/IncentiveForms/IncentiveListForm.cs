@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.IncentiveForms
         {
             InitializeComponent();
             _incentiveService = InstanceFactory.GetInstance<IIncentiveService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlIncentiveList;
         }
 
 

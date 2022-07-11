@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlDocuments = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewDocuments = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -53,13 +53,13 @@
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1120, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlDocuments
             // 
@@ -68,7 +68,7 @@
             this.gridControlDocuments.MainView = this.gridViewDocuments;
             this.gridControlDocuments.MenuManager = this.ribbonControl;
             this.gridControlDocuments.Name = "gridControlDocuments";
-            this.gridControlDocuments.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlDocuments.Size = new System.Drawing.Size(1120, 236);
             this.gridControlDocuments.TabIndex = 3;
             this.gridControlDocuments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDocuments});
@@ -169,13 +169,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 395);
             this.Controls.Add(this.gridControlDocuments);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "DocumentListForm";
             this.Text = "Document List";
             this.Load += new System.EventHandler(this.DocumentListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlDocuments, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDocuments)).EndInit();
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlDocuments;
         private UserControls.Grids.MyGridView gridViewDocuments;
         private UserControls.Grids.MyGridColumn colId;

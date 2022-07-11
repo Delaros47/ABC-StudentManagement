@@ -26,6 +26,7 @@ namespace StudentManagementUI.Forms.ServiceTypeForms
         {
             InitializeComponent();
             _serviceTypeService = InstanceFactory.GetInstance<IServiceTypeService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlServiceTypes;
         }
 
 

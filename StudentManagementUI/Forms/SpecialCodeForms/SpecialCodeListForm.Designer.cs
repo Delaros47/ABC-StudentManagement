@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlSpecialCodes = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewSpecialCodes = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -53,13 +53,13 @@
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1120, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlSpecialCodes
             // 
@@ -68,7 +68,7 @@
             this.gridControlSpecialCodes.MainView = this.gridViewSpecialCodes;
             this.gridControlSpecialCodes.MenuManager = this.ribbonControl;
             this.gridControlSpecialCodes.Name = "gridControlSpecialCodes";
-            this.gridControlSpecialCodes.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlSpecialCodes.Size = new System.Drawing.Size(1120, 236);
             this.gridControlSpecialCodes.TabIndex = 3;
             this.gridControlSpecialCodes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSpecialCodes});
@@ -169,13 +169,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 395);
             this.Controls.Add(this.gridControlSpecialCodes);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "SpecialCodeListForm";
             this.Text = "Special Code List";
             this.Load += new System.EventHandler(this.SpecialCodeListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlSpecialCodes, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSpecialCodes)).EndInit();
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlSpecialCodes;
         private UserControls.Grids.MyGridView gridViewSpecialCodes;
         private UserControls.Grids.MyGridColumn colId;

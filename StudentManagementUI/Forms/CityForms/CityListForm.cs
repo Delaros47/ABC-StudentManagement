@@ -31,6 +31,7 @@ namespace StudentManagementUI.Forms.CityForms
             _cityService = InstanceFactory.GetInstance<ICityService>();
             btnConnectedCards.Caption = "Districts";
             btnConnectedCards.Visibility = BarItemVisibility.Always;
+            longNavigator.controlNavigator.NavigatableControl = gridControlCities;
         }
 
         public void CityListForm_Load(object sender, EventArgs e)

@@ -59,5 +59,15 @@ namespace StudentManagementUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_element_digital_1370296 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-element-digital-1370296", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

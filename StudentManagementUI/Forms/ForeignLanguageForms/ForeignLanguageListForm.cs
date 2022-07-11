@@ -28,6 +28,7 @@ namespace StudentManagementUI.Forms.ForeignLanguageForms
         {
             InitializeComponent();
             _foreignLanguageService = InstanceFactory.GetInstance<IForeignLanguageService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlForeignLanguage;
         }
 
 

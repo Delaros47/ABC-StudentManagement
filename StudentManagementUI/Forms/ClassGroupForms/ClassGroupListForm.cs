@@ -26,6 +26,7 @@ namespace StudentManagementUI.Forms.ClassGroupForms
         {
             InitializeComponent();
             _classGroupService = InstanceFactory.GetInstance<IClassGroupService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlClassGroups;
         }
 
 

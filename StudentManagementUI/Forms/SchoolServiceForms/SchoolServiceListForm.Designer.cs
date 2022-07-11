@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlSchoolServices = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewSchoolServices = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colPrivateCode = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colSchoolServiceName = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.colPrice = new StudentManagementUI.UserControls.Grids.MyGridColumn();
-            this.colDescription = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             this.repositoryItemCalcEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.colDescription = new StudentManagementUI.UserControls.Grids.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSchoolServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSchoolServices)).BeginInit();
@@ -57,13 +57,13 @@
             this.ribbonControl.Size = new System.Drawing.Size(1167, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 338);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1167, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1167, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlSchoolServices
             // 
@@ -171,6 +171,16 @@
             this.colPrice.VisibleIndex = 2;
             this.colPrice.Width = 150;
             // 
+            // repositoryItemCalcEdit
+            // 
+            this.repositoryItemCalcEdit.AutoHeight = false;
+            this.repositoryItemCalcEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCalcEdit.DisplayFormat.FormatString = "n2";
+            this.repositoryItemCalcEdit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemCalcEdit.MaskSettings.Set("mask", "n2");
+            this.repositoryItemCalcEdit.Name = "repositoryItemCalcEdit";
+            // 
             // colDescription
             // 
             this.colDescription.Caption = "Description";
@@ -184,29 +194,19 @@
             this.colDescription.VisibleIndex = 3;
             this.colDescription.Width = 450;
             // 
-            // repositoryItemCalcEdit
-            // 
-            this.repositoryItemCalcEdit.AutoHeight = false;
-            this.repositoryItemCalcEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemCalcEdit.DisplayFormat.FormatString = "n2";
-            this.repositoryItemCalcEdit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryItemCalcEdit.MaskSettings.Set("mask", "n2");
-            this.repositoryItemCalcEdit.Name = "repositoryItemCalcEdit";
-            // 
             // SchoolServiceListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 395);
             this.Controls.Add(this.gridControlSchoolServices);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "SchoolServiceListForm";
             this.Text = "School Service List";
             this.Load += new System.EventHandler(this.SchoolServiceListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlSchoolServices, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSchoolServices)).EndInit();
@@ -219,7 +219,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlSchoolServices;
         private UserControls.Grids.MyGridView gridViewSchoolServices;
         private UserControls.Grids.MyGridColumn colId;

@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.PromotionForms
         {
             InitializeComponent();
             _promotionService = InstanceFactory.GetInstance<IPromotionService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlPromotions;
         }
 
 

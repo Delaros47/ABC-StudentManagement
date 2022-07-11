@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.CashForms
         {
             InitializeComponent();
             _cashService = InstanceFactory.GetInstance<ICashService>();
+            longNavigator.controlNavigator.NavigatableControl = bandedGridControlCashes;
         }
 
 

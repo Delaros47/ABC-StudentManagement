@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.BankAccountForms
         {
             InitializeComponent();
             _bankAccountService = InstanceFactory.GetInstance<IBankAccountService>();
+            longNavigator.controlNavigator.NavigatableControl = bandedGridControlBankAccounts;
         }
 
 
@@ -96,9 +97,17 @@ namespace StudentManagementUI.Forms.BankAccountForms
 
         private void bandedGridViewBankAccounts_DoubleClick(object sender, EventArgs e)
         {
-            BankAccountEditForm.BankAccountId = Convert.ToInt32(bandedGridViewBankAccounts.GetFocusedRowCellValue("Id").ToString());
-            CreateForms<BankAccountEditForm>.ShowDialogEditForm();
-            GetAllBankAccountActiveDetailDto();
+            if (bandedGridViewBankAccounts.FocusedRowHandle > 0)
+            {
+                BankAccountEditForm.BankAccountId = Convert.ToInt32(bandedGridViewBankAccounts.GetFocusedRowCellValue("Id").ToString());
+                CreateForms<BankAccountEditForm>.ShowDialogEditForm();
+                GetAllBankAccountActiveDetailDto();
+            }
+            else
+            {
+                MyMessagesBox.GridRowWrongSelectedMessage();
+            }
+
         }
     }
 }

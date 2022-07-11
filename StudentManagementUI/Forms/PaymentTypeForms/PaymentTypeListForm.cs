@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.PaymentTypeForms
         {
             InitializeComponent();
             _paymentTypeService = InstanceFactory.GetInstance<IPaymentTypeService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlPayments;
         }
 
 

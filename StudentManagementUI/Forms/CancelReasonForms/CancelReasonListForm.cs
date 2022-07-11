@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.CancelReasonForms
         {
             InitializeComponent();
             _cancelReasonService = InstanceFactory.GetInstance<ICancelReasonService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlCancelReason;
         }
 
         private void CancelReasonListForm_Load(object sender, EventArgs e)

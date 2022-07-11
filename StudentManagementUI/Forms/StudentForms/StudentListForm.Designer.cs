@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.bandedGridControlStudents = new StudentManagementUI.UserControls.Grids.MyBandedGridControl();
             this.bandedGridViewStudents = new StudentManagementUI.UserControls.Grids.MyBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -66,13 +66,13 @@
             this.ribbonControl.Size = new System.Drawing.Size(1253, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1253, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1253, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // bandedGridControlStudents
             // 
@@ -81,7 +81,7 @@
             this.bandedGridControlStudents.MainView = this.bandedGridViewStudents;
             this.bandedGridControlStudents.MenuManager = this.ribbonControl;
             this.bandedGridControlStudents.Name = "bandedGridControlStudents";
-            this.bandedGridControlStudents.Size = new System.Drawing.Size(1253, 238);
+            this.bandedGridControlStudents.Size = new System.Drawing.Size(1253, 236);
             this.bandedGridControlStudents.TabIndex = 3;
             this.bandedGridControlStudents.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridViewStudents});
@@ -340,13 +340,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 395);
             this.Controls.Add(this.bandedGridControlStudents);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "StudentListForm";
             this.Text = "Student List";
             this.Load += new System.EventHandler(this.StudentListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.bandedGridControlStudents, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridControlStudents)).EndInit();
@@ -358,7 +358,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyBandedGridControl bandedGridControlStudents;
         private UserControls.Grids.MyBandedGridView bandedGridViewStudents;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;

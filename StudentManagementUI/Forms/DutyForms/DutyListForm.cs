@@ -26,6 +26,7 @@ namespace StudentManagementUI.Forms.DutyForms
         {
             InitializeComponent();
             _dutyService = InstanceFactory.GetInstance<IDutyService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlDuties;
         }
 
 

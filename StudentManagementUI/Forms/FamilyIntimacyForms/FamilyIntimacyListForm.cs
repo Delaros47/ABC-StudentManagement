@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.FamilyIntimacyForms
         {
             InitializeComponent();
             _familyIntimacyService = InstanceFactory.GetInstance<IFamilyIntimacyService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlFamilyIntimacies;
         }
 
 

@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.StudentForms
         {
             InitializeComponent();
             _studentService = InstanceFactory.GetInstance<IStudentService>();
+            longNavigator.controlNavigator.NavigatableControl = bandedGridControlStudents;
         }
 
 

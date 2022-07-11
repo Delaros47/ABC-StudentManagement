@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.GuidanceCounselorForms
         {
             InitializeComponent();
             _guidanceCounselorService = InstanceFactory.GetInstance<IGuidanceCounselorService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlGuidanceCounselors;
         }
 
 

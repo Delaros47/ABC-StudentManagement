@@ -26,6 +26,7 @@ namespace StudentManagementUI.Forms.WorkplaceForms
         {
             InitializeComponent();
             _workplaceService = InstanceFactory.GetInstance<IWorkplaceService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlWorkplaces;
         }
 
 

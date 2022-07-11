@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlCancelReason = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewCancelReason = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -53,13 +53,13 @@
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1120, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlCancelReason
             // 
@@ -68,7 +68,7 @@
             this.gridControlCancelReason.MainView = this.gridViewCancelReason;
             this.gridControlCancelReason.MenuManager = this.ribbonControl;
             this.gridControlCancelReason.Name = "gridControlCancelReason";
-            this.gridControlCancelReason.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlCancelReason.Size = new System.Drawing.Size(1120, 236);
             this.gridControlCancelReason.TabIndex = 3;
             this.gridControlCancelReason.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCancelReason});
@@ -169,13 +169,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 395);
             this.Controls.Add(this.gridControlCancelReason);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "CancelReasonListForm";
             this.Text = "Cancel Reason List";
             this.Load += new System.EventHandler(this.CancelReasonListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlCancelReason, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCancelReason)).EndInit();
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlCancelReason;
         private UserControls.Grids.MyGridView gridViewCancelReason;
         private UserControls.Grids.MyGridColumn colId;

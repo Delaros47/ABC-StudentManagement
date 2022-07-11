@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new StudentManagementUI.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new StudentManagementUI.UserControls.Navigators.LongNavigator();
             this.gridControlOccupations = new StudentManagementUI.UserControls.Grids.MyGridControl();
             this.gridViewOccupations = new StudentManagementUI.UserControls.Grids.MyGridView();
             this.colId = new StudentManagementUI.UserControls.Grids.MyGridColumn();
@@ -53,13 +53,13 @@
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 340);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1120, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 338);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1120, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // gridControlOccupations
             // 
@@ -68,7 +68,7 @@
             this.gridControlOccupations.MainView = this.gridViewOccupations;
             this.gridControlOccupations.MenuManager = this.ribbonControl;
             this.gridControlOccupations.Name = "gridControlOccupations";
-            this.gridControlOccupations.Size = new System.Drawing.Size(1120, 238);
+            this.gridControlOccupations.Size = new System.Drawing.Size(1120, 236);
             this.gridControlOccupations.TabIndex = 3;
             this.gridControlOccupations.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOccupations});
@@ -169,13 +169,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 395);
             this.Controls.Add(this.gridControlOccupations);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "OccupationListForm";
             this.Text = "Occupation List";
             this.Load += new System.EventHandler(this.OccupationListForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.gridControlOccupations, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlOccupations)).EndInit();
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grids.MyGridControl gridControlOccupations;
         private UserControls.Grids.MyGridView gridViewOccupations;
         private UserControls.Grids.MyGridColumn colId;

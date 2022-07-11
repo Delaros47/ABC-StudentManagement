@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.DiscountTypeForms
         {
             InitializeComponent();
             _discountTypeService = InstanceFactory.GetInstance<IDiscountTypeService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlDiscountTypes;
         }
 
 

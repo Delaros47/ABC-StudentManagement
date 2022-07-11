@@ -26,6 +26,7 @@ namespace StudentManagementUI.Forms.OccupationForms
         {
             InitializeComponent();
             _occupationService = InstanceFactory.GetInstance<IOccupationService>();
+            longNavigator.controlNavigator.NavigatableControl = gridControlOccupations;
         }
 
 

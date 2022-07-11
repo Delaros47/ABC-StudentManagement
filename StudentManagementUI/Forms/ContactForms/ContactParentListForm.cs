@@ -25,6 +25,7 @@ namespace StudentManagementUI.Forms.ContactForms
         {
             InitializeComponent();
             _contactParentService = InstanceFactory.GetInstance<IContactParentService>();
+            longNavigator.controlNavigator.NavigatableControl = bandedGridControlContacts;
         }
 
 
